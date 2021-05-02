@@ -1,9 +1,12 @@
 ---
 title: "Introduction to SDMs: theory and practice in R"
-date: "Sapienza University, Rome (June 9-11, 2021)"
-author: "Bob Muscarella"
 output: github_document
 ---
+
+Bob Muscarella  
+*Sapienza University, Rome*  
+*9-11 June, 2021*
+
 
 ### **Introduction**
 

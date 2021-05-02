@@ -1,7 +1,9 @@
 Introduction to SDMs: theory and practice in R
 ================
-Bob Muscarella
-Sapienza University, Rome (June 9-11, 2021)
+
+Bob Muscarella  
+*Sapienza University, Rome*  
+*9-11 June, 2021*
 
 ### **Introduction**
 
