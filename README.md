@@ -134,7 +134,7 @@ are some suggestions:
 -   [Zurell, D., Franklin, J., König, C., Bouchet, P.J., Dormann, C.F.,
     Elith, J., et al. (2020). A standard protocol for reporting species
     distribution models. Ecography, 43,
-    1261–1277.](https://github.com/bobmuscarella/Sapienza-SDM-course/blob/25d9eb50324a9f66c596b7af0b5da10553fa2c06/Literature/Zurell%20et%20al.%202020%20Ecography.pdf)
+    1261–1277.](https://github.com/bobmuscarella/SDM-Sapienza/blob/aea7aa0309f762e29413c0096c44d67256bf14db/Literature/Zurell_etal_Ecography_2020.pdf)
 
 -   Araújo, M. B., R. P. Anderson, A. M. Barbosa, C. M. Beale, C. F.
     Dormann, R. Early, R. A. Garcia, et al. 2019. “Standards for
