@@ -21,9 +21,8 @@ Bob Muscarella
 **Reading**: Please read these papers before the course begins as they
 provide important background information. We will discuss them on Day 1.
 
--   <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.00845" target="_blank">Merow
-    et al. (2014) What do we gain from simplicity versus complexity in
-    species distribution models? Ecography, 37, 1267–1281.</a>
+-   [Merow et al. (2014) What do we gain from simplicity versus complexity in
+    species distribution models? Ecography, 37, 1267–1281.](https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.00845)
 
 -   Elith, J., & Graham, C. H. (2009) Do they? How do they? WHY do they
     differ? On finding reasons for differing performances of species
