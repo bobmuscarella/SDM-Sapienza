@@ -2,10 +2,7 @@
 title: "Introduction to SDMs: theory and practice in R"
 date: "Sapienza University, Rome (June 9-11, 2021)"
 author: "Bob Muscarella"
-output: 
-  html_document:
-    toc: yes
-    toc_float: yes
+output: github_document
 ---
 
 ### **Introduction**
