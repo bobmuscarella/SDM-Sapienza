@@ -106,7 +106,7 @@ are some suggestions:
     -   [Schedule with downloadable slide
         PDFs](https://docs.google.com/spreadsheets/d/1RQu1XRKyYfrnFI2V1g677d0sf8tFxC2xUvb96cbP02s/edit?usp=sharing)
     -   [YouTube playlist of
-        lectures](https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam){:target="\_blank"}
+        lectures](https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam)
 -   [Intro to SDMs course by Damaris
     Zurell](https://damariszurell.github.io/SDM-Intro/)
 -   [Intro to SDMs course by Cory
@@ -131,7 +131,10 @@ are some suggestions:
     model complexity for Maxent ecological niche models. Methods Ecol.
     Evol., 5, 1198–1205.
 
--   <a href="https://github.com/bobmuscarella/SDM-Sapienza/blob/aea7aa0309f762e29413c0096c44d67256bf14db/Literature/Zurell_etal_Ecography_2020.pdf" target="_blank">Zurell, D., Franklin, J., König, C., Bouchet, P.J., Dormann, C.F., Elith, J., et al. (2020). A standard protocol for reporting species distribution models. Ecography, 43, 1261–1277.</a>
+-   [Zurell, D., Franklin, J., König, C., Bouchet, P.J., Dormann, C.F.,
+    Elith, J., et al. (2020). A standard protocol for reporting species
+    distribution models. Ecography, 43,
+    1261–1277.](https://github.com/bobmuscarella/SDM-Sapienza/blob/aea7aa0309f762e29413c0096c44d67256bf14db/Literature/Zurell_etal_Ecography_2020.pdf)
 
 -   Araújo, M. B., R. P. Anderson, A. M. Barbosa, C. M. Beale, C. F.
     Dormann, R. Early, R. A. Garcia, et al. 2019. “Standards for
