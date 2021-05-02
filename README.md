@@ -105,7 +105,8 @@ are some suggestions:
 -   ENM2020 course (organized by Townsend Peterson)
     -   [Schedule with downloadable slide
         PDFs](https://docs.google.com/spreadsheets/d/1RQu1XRKyYfrnFI2V1g677d0sf8tFxC2xUvb96cbP02s/edit?usp=sharing)
-    -   <a href="https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam" target="_blank">YouTube playlist of lectures</a>
+    -   [YouTube playlist of
+        lectures](https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam){:target="\_blank"}
 -   [Intro to SDMs course by Damaris
     Zurell](https://damariszurell.github.io/SDM-Intro/)
 -   [Intro to SDMs course by Cory
