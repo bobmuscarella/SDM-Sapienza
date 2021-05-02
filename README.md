@@ -22,16 +22,16 @@ Bob Muscarella
 provide important background information. We will discuss them on Day 1.
 
 -   <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.00845" target="_blank">Merow
-    et al. (2014) What do we gain from simplicity versus complexity in
+    et al. (2014) What do we gain from simplicity versus complexity in
     species distribution models? Ecography, 37, 1267–1281.</a>
 
--   [Elith, J., & Graham, C. H. (2009) Do they? How do they? WHY do they
+-   Elith, J., & Graham, C. H. (2009) Do they? How do they? WHY do they
     differ? On finding reasons for differing performances of species
-    distribution models. Ecography 32(1), 66-77.]()
+    distribution models. Ecography 32(1), 66-77.
 
--   [Elith, J., & Leathwick, J. R. (2009). Species distribution models:
+-   Elith, J., & Leathwick, J. R. (2009). Species distribution models:
     ecological explanation and prediction across space and time. Annual
-    Review of Ecology, Evolution, and Systematics 40, 677-697.]()
+    Review of Ecology, Evolution, and Systematics 40, 677-697.
 
 **R Exercise**: Please download and complete these following R exercise.
 
