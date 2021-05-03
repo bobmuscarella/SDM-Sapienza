@@ -1,5 +1,5 @@
 ---
-title: "1. Species Data"
+title: "1. Species data"
 output:
   html_document:
     toc: true
@@ -8,11 +8,6 @@ output:
     number_sections: false
     toc_depth: 3
 ---
-
-Bob Muscarella  
-*Sapienza University, Rome*  
-*9-11 June, 2021*
-
 
 ### **Introduction**
 

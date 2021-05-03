@@ -1,5 +1,5 @@
 ---
-title: "0. Getting started in R"
+title: "4. Evaluation and projection"
 output:
   html_document:
     toc: true
@@ -13,12 +13,6 @@ output:
 
 In this pre-course exercise, you will:
 
-- Create an R Project to use for this course.
-- Install all the required packages
-- Refresh your memory about some general operations in R
+- Download and manage spatial environmental data.
 
 ### **Getting Started**
-
-```{r}
-1+1
-```

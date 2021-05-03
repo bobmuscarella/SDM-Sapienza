@@ -1,0 +1,33 @@
+---
+title: "3. Overview of algorithms"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 3
+---
+
+### **Introduction**
+
+In this pre-course exercise, you will:
+
+- Download and manage spatial environmental data.
+
+### **Getting Started**
+- Overview of algorithms
+  - Maxent
+  - Embarcadero
+  - HSDM
+
+
+  - Presence-absence
+  - Presence-only
+  - "Next generation"
+    - Joint SDMs
+    - [hSDM](https://ecology.ghislainv.fr/hSDM/)
+    - HMSC (*hierarchical modeling of species and communities*)
+      - [HMSC Homepage](https://www2.helsinki.fi/en/researchgroups/statistical-ecology/hmsc)
+      - [MEE publication](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13345)
+      - [Github page](https://github.com/hmsc-r/HMSC)

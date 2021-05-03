@@ -325,7 +325,7 @@ div.tocify {
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    R exerecises
+    R exercises
      
     <span class="caret"></span>
   </a>
@@ -335,16 +335,23 @@ div.tocify {
     </li>
     <li class="dropdown-header">Day 1</li>
     <li>
-      <a href="Exercise1.html">1. Species Data</a>
+      <a href="Exercise1.html">1. Species data</a>
     </li>
     <li>
-      <a href="Exercise2.html">2. Environment Data</a>
+      <a href="Exercise2.html">2. Environment data</a>
     </li>
     <li class="dropdown-header">Day 2</li>
-    <li class="dropdown-header"></li>
+    <li>
+      <a href="Exercise3.html">3. SDMs: algorithms</a>
+    </li>
     <li class="dropdown-header">Day 3</li>
-    <li class="dropdown-header"></li>
+    <li>
+      <a href="Exercise4.html">4. SDMs: evaluation &amp; projection</a>
+    </li>
   </ul>
+</li>
+<li>
+  <a href="Resources.html">Resources</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -380,9 +387,9 @@ div.tocify {
 <h3><strong>Day 0</strong>: Before the course</h3>
 <p><strong>Reading</strong>: Please read these papers before the course begins as they provide important background information. We will discuss them on Day 1.</p>
 <ul>
-<li><p><a href="pdfs/Merow%20et%20al.%202014.pdf">Merow et al. (2014) What do we gain from simplicity versus complexity in species distribution models? Ecography, 37, 1267–1281.</a></p></li>
-<li><p><a href="pdfs/Elith%20and%20Graham%202009.pdf">Elith, J., &amp; Graham, C. H. (2009) Do they? How do they? WHY do they differ? On finding reasons for differing performances of species distribution models. Ecography 32(1), 66-77.</a></p></li>
-<li><p><a href="pdfs/Elith%20and%20Leathwick%202009.pdf">Elith, J., &amp; Leathwick, J. R. (2009). Species distribution models: ecological explanation and prediction across space and time. Annual Review of Ecology, Evolution, and Systematics 40, 677-697.</a></p></li>
+<li><a href="pdfs/Merow%20et%20al.%202014.pdf">Merow et al. (2014) What do we gain from simplicity versus complexity in species distribution models? Ecography, 37, 1267–1281.</a></li>
+<li><a href="pdfs/Elith%20and%20Graham%202009.pdf">Elith, J., &amp; Graham, C. H. (2009) Do they? How do they? WHY do they differ? On finding reasons for differing performances of species distribution models. Ecography 32(1), 66-77.</a></li>
+<li><a href="pdfs/Elith%20and%20Leathwick%202009.pdf">Elith, J., &amp; Leathwick, J. R. (2009). Species distribution models: ecological explanation and prediction across space and time. Annual Review of Ecology, Evolution, and Systematics 40, 677-697.</a></li>
 </ul>
 <p><strong>R Exercise</strong>: Please download and complete these following R exercise.</p>
 <ul>
@@ -394,8 +401,8 @@ div.tocify {
 <p><strong>Morning session</strong> (<em>Theory</em>)</p>
 <ul>
 <li>Overview and personal introductions</li>
-<li><strong>Lecture 1:</strong> The what, how, why of SDMs/ENMs</li>
-<li><strong>Lecture 2:</strong> Data-to-model: Walk-through an example analysis</li>
+<li><a href="">Lecture 1: The what, how, why of SDMs/ENMs</a></li>
+<li><a href="">Lecture 2: Data-to-model: Walk-through an example analysis</a></li>
 </ul>
 <p><strong>Afternoon session</strong> (<em>Practical</em>)</p>
 <p>Obtaining and cleaning data</p>
@@ -408,61 +415,22 @@ div.tocify {
 <h3><strong>Day 2</strong>: Models: algorithms and evaluations</h3>
 <p><strong>Morning session</strong> (<em>Theory</em>)</p>
 <ul>
-<li><strong>Lecture 3:</strong> Variety of modeling algorithms
-<ul>
-<li>Presence-absence</li>
-<li>Presence-only</li>
-<li>“Next generation”
-<ul>
-<li>Joint SDMs</li>
-<li><a href="https://ecology.ghislainv.fr/hSDM/">hSDM</a></li>
-<li>HMSC (<em>hierarchical modeling of species and communities</em>)
-<ul>
-<li><a href="https://www2.helsinki.fi/en/researchgroups/statistical-ecology/hmsc">HMSC Homepage</a></li>
-<li><a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13345">MEE publication</a></li>
-<li><a href="https://github.com/hmsc-r/HMSC">Github page</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
+<li><a href="">Lecture 3: SDM algorithms</a></li>
 </ul>
 <p><strong>Afternoon session</strong> (<em>Practical</em>)</p>
 <ul>
-<li>Overview of algorithms
-<ul>
-<li>Maxent</li>
-<li>Embarcadero</li>
-<li>HSDM</li>
-</ul></li>
+<li><a href="Exercise3.html">Exercise 3: Overview of algorithms</a></li>
 </ul>
 </div>
 <div id="day-3-applications-possibilities-and-precautions" class="section level3">
 <h3><strong>Day 3</strong>: Applications: possibilities and precautions</h3>
 <p><strong>Morning session</strong> (<em>Theory</em>)</p>
-<p>Topics - Model evaluation - Projection</p>
-<p><strong>Afternoon session</strong> (<em>Practical</em>)</p>
-</div>
-<div id="additional-resources" class="section level3">
-<h3><strong>Additional Resources</strong></h3>
-<p>This course is a very brief introduction to the broad topic of SDMs / ENMs. There are lots of other excellent resources available online. Here are some suggestions:</p>
 <ul>
-<li>ENM2020 course (organized by Townsend Peterson)
-<ul>
-<li><a href="https://docs.google.com/spreadsheets/d/1RQu1XRKyYfrnFI2V1g677d0sf8tFxC2xUvb96cbP02s/edit?usp=sharing">Schedule with downloadable slide PDFs</a></li>
-<li><a href="https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam">YouTube playlist of lectures</a></li>
-</ul></li>
-<li><a href="https://damariszurell.github.io/SDM-Intro/">Intro to SDMs course by Damaris Zurell</a></li>
-<li><a href="https://cmerow.github.io/RDataScience/101SDMs.html">Intro to SDMs course by Cory Merow</a></li>
-<li><a href="http://www.earthskysea.org/best-practices-in-species-distribution-modeling-a-workshop-in-r/">Intro to SDMs course by Adam Smith</a></li>
+<li><a href="">Lecture 4: Applications: possibilities and precautions</a></li>
 </ul>
-</div>
-<div id="reading" class="section level3">
-<h3><strong>Reading</strong></h3>
+<p><strong>Afternoon session</strong> (<em>Practical</em>)</p>
 <ul>
-<li><p>Merow, C., Smith, M.J., Edwards, T.C., Jr, Guisan, A., McMahon, S.M., Normand, S., et al. (2014). What do we gain from simplicity versus complexity in species distribution models? Ecography , 37, 1267–1281.</p></li>
-<li><p>Merow, C., Smith, M. &amp; Silander, J.A. (2013). A practical guide to Maxent: what it does, and why inputs and settings matter. Ecography , 36, 1–12.</p></li>
-<li><p>Muscarella, R., Galante, P.J., Soley-Guardia, M., Boria, R.A., Kass, J.M., Uriarte, M., et al. (2014). ENMeval: An R package for conducting spatially independent evaluations and estimating optimal model complexity for Maxent ecological niche models. Methods Ecol. Evol., 5, 1198–1205.</p></li>
-<li><p><a href="https://github.com/bobmuscarella/SDM-Sapienza/blob/aea7aa0309f762e29413c0096c44d67256bf14db/Literature/Zurell_etal_Ecography_2020.pdf">Zurell, D., Franklin, J., König, C., Bouchet, P.J., Dormann, C.F., Elith, J., et al. (2020). A standard protocol for reporting species distribution models. Ecography, 43, 1261–1277.</a></p></li>
-<li><p>Araújo, M. B., R. P. Anderson, A. M. Barbosa, C. M. Beale, C. F. Dormann, R. Early, R. A. Garcia, et al. 2019. “Standards for Distribution Models in Biodiversity Assessments.” Science Advances 5: eaat4858.</p></li>
+<li><a href="Exercise4.html">Exercise 4: Evaluation and projection</a></li>
 </ul>
 </div>
 

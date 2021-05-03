@@ -6,17 +6,22 @@ navbar:
       href: index.html
     - text: "Course schedule"
       href: syllabus.html
-    - text: "R exerecises"  
+    - text: "R exercises"  
       menu:
         - text: "0. Getting Started in R"
           href: Exercise0.html
         - text: "Day 1"  
-        - text: "1. Species Data"
+        - text: "1. Species data"
           href: Exercise1.html
-        - text: "2. Environment Data"
+        - text: "2. Environment data"
           href: Exercise2.html
         - text: "Day 2"
-        - text: ""
+        - text: "3. SDMs: algorithms"
+          href: Exercise3.html
         - text: "Day 3"
-        - text: ""
+        - text: "4. SDMs: evaluation & projection"
+          href: Exercise4.html
+    - text: "Resources"
+      href: Resources.html
+
 output_dir: "docs"

@@ -1,0 +1,33 @@
+---
+title: "Additional Resources"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 3
+---
+
+This course is a very brief introduction to the broad topic of SDMs / ENMs. There are lots of other excellent resources available online.  Here are some suggestions:
+
+- ENM2020 course (organized by Townsend Peterson)
+  - [Schedule with downloadable slide PDFs](https://docs.google.com/spreadsheets/d/1RQu1XRKyYfrnFI2V1g677d0sf8tFxC2xUvb96cbP02s/edit?usp=sharing)
+  - [YouTube playlist of lectures](https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam)
+- [Intro to SDMs course by Damaris Zurell](https://damariszurell.github.io/SDM-Intro/)
+- [Intro to SDMs course by Cory Merow](https://cmerow.github.io/RDataScience/101SDMs.html)
+- [Intro to SDMs course by Adam Smith](http://www.earthskysea.org/best-practices-in-species-distribution-modeling-a-workshop-in-r/)
+
+
+### **Reading**
+
+- Merow, C., Smith, M.J., Edwards, T.C., Jr, Guisan, A., McMahon, S.M., Normand, S., et al. (2014). What do we gain from simplicity versus complexity in species distribution models? Ecography , 37, 1267–1281.
+
+- Merow, C., Smith, M. & Silander, J.A. (2013). A practical guide to Maxent: what it does, and why inputs and settings matter. Ecography , 36, 1–12.
+
+- Muscarella, R., Galante, P.J., Soley-Guardia, M., Boria, R.A., Kass, J.M., Uriarte, M., et al. (2014). ENMeval: An R package for conducting spatially independent evaluations and estimating optimal model complexity for Maxent ecological niche models. Methods Ecol. Evol., 5, 1198–1205.
+
+- [Zurell, D., Franklin, J., König, C., Bouchet, P.J., Dormann, C.F., Elith, J., et al. (2020). A standard protocol for reporting species distribution models. Ecography, 43, 1261–1277.](pdfs/Zurell_etal_Ecography_2020.pdf)
+
+- Araújo, M. B., R. P. Anderson, A. M. Barbosa, C. M. Beale, C. F. Dormann, R. Early, R. A. Garcia, et al. 2019. “Standards for Distribution Models in Biodiversity Assessments.” Science Advances 5: eaat4858.
+
