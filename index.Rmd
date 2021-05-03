@@ -29,7 +29,7 @@ Course participants should have a general understanding of R programming.  Parti
 
 Return to [the Muscarella Group homepage](https://bobmuscarella.github.io/)
 
-Visit the [Github repository for this course](https://bobmuscarella.github.io/)
+Visit the [Github repository for this course](https://github.com/bobmuscarella/SDM-course)
 
 </div>
 <div class="col-sm-6">
