@@ -48,21 +48,10 @@ Bob Muscarella
 
 **Afternoon session** (*Practical*)
 
-- Obtaining and cleaning data
-  - Occurrence records
-    - [rgbif](https://docs.ropensci.org/rgbif/index.html)
-    - [CoordinateCleaner](https://ropensci.github.io/CoordinateCleaner/)
-  - Climate variables
-    - Manual downloads ([Chela](https://chelsa-climate.org/); [WorldClim](https://www.worldclim.org/))
-    - [raster](https://cran.r-project.org/web/packages/raster/raster.pdf)
-    - [climatedata](https://github.com/MirzaCengic/climatedata)
-    - [chelsaDL](https://github.com/matthewkling/chelsaDL)
-    - [climateR](https://github.com/mikejohnson51/climateR)
-  - Other
-    - Elevation
-    - Land-use
-    - Soil: HWSD
-    - …
+Obtaining and cleaning data
+
+- [Exercise 1: Species data](Exercise1.html)
+- [Exercise 2: Environment data](Exercise2.html)
 
 ### **Day 2**: Models: algorithms and evaluations
 

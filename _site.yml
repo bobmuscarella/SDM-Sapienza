@@ -12,9 +12,9 @@ navbar:
           href: Exercise0.html
         - text: "Day 1"  
         - text: "1. Species Data"
-          href: 1_Species_data.html
+          href: Exercise1.html
         - text: "2. Environment Data"
-          href: 2_Env_data.html
+          href: Exercise2.html
         - text: "Day 2"
         - text: ""
         - text: "Day 3"

@@ -1,0 +1,47 @@
+---
+title: "2. Environmental Data"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 3
+---
+
+Bob Muscarella  
+*Sapienza University, Rome*  
+*9-11 June, 2021*
+
+
+### **Introduction**
+
+In this pre-course exercise, you will:
+
+- Download and manage spatial environmental data.
+
+### **Getting Started**
+
+You will use the following packages
+
+  - Climate variables
+    - Manual downloads:
+      - [Chelsa](https://chelsa-climate.org/)
+      - [WorldClim](https://www.worldclim.org/)
+    - Automated downloads in R:
+      - [raster](https://cran.r-project.org/web/packages/raster/raster.pdf)
+      - [climatedata](https://github.com/MirzaCengic/climatedata)
+      - [chelsaDL](https://github.com/matthewkling/chelsaDL)
+      - [climateR](https://github.com/mikejohnson51/climateR)
+  
+  - Other
+    - Elevation (STRM)
+    - Land-use
+    - Soil
+      - HWSD
+
+
+```{r}
+library(rgbif)
+library(CoordinateCleaner)
+```

@@ -1,5 +1,5 @@
 ---
-title: "0. Getting Started in R"
+title: "1. Species Data"
 output:
   html_document:
     toc: true
@@ -18,12 +18,17 @@ Bob Muscarella
 
 In this pre-course exercise, you will:
 
-- Create an R Project to use for this course.
-- Install all the required packages
-- Refresh your memory about some general operations in R
+- Download species occurrence data
 
 ### **Getting Started**
 
+You will use the following packages
+
+- [rgbif](https://docs.ropensci.org/rgbif/index.html)
+- [CoordinateCleaner](https://ropensci.github.io/CoordinateCleaner/)
+
+
 ```{r}
-1+1
+library(rgbif)
+library(CoordinateCleaner)
 ```
