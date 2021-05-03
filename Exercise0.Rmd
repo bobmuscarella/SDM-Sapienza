@@ -21,4 +21,6 @@ In this pre-course exercise, you will:
 
 ```{r}
 1+1
+
+2+2
 ```
