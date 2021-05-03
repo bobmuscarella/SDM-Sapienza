@@ -9,6 +9,8 @@ output:
     toc_depth: 3
 ---
 
+### **Online tutorials and workshops**
+
 This course is a very brief introduction to the broad topic of SDMs / ENMs. There are lots of other excellent resources available online.  Here are some suggestions:
 
 - ENM2020 course (organized by Townsend Peterson)
