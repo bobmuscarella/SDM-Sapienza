@@ -4,16 +4,19 @@ navbar:
   left:
     - text: "SDM Course"
       href: index.html
-    - text: "Course outline"
+    - text: "Course schedule"
+      href: syllabus.html
+    - text: "R exerecises"  
       menu:
-        - text: "Syllabus"
-          href: syllabus.html
-        - text: "Day 1"
-        - text: "Lectures"
-          href: lectures1.html
-        - text: "Exercises"
-          href: exercises1.html
+        - text: "0. Getting Started in R"
+          href: Exercise0.html
+        - text: "Day 1"  
+        - text: "1. Species Data"
+          href: 1_Species_data.html
+        - text: "2. Environment Data"
+          href: 2_Env_data.html
         - text: "Day 2"
-        - text: "Lectures"
-        - text: "Excercises"
+        - text: ""
+        - text: "Day 3"
+        - text: ""
 output_dir: "docs"

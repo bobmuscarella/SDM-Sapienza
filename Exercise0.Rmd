@@ -1,0 +1,29 @@
+---
+title: "Getting Started in R"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 3
+---
+
+Bob Muscarella  
+*Sapienza University, Rome*  
+*9-11 June, 2021*
+
+
+### **Introduction**
+
+In this pre-course exercise, you will:
+
+- Create an R Project to use for this course.
+- Install all the required packages
+- Refresh your memory about some general operations in R
+
+### **Getting Started**
+
+```{r}
+1+1
+```

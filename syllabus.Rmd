@@ -33,10 +33,9 @@ Bob Muscarella
 
 - [Elith, J., & Leathwick, J. R. (2009). Species distribution models: ecological explanation and prediction across space and time. Annual Review of Ecology, Evolution, and Systematics 40, 677-697.](pdfs/Elith and Leathwick 2009.pdf)
 
-
 **R Exercise**: Please download and complete these following R exercise.
 
-- R Exercise 1: Getting Started
+- [Exercise 0: Getting Started in R](Exercise0.html)
 
 
 ### **Day 1**: Introduction: data acquisition and cleaning
