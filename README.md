@@ -1,141 +1,43 @@
-Introduction to SDMs: theory and practice in R
-================
+# Bob Muscarella's website
+An R Markdown website can be found here:  [https://bobmuscarella.github.io/index.html](https://bobmuscarella.github.io/index.html)
 
-Bob Muscarella  
-*Sapienza University, Rome*  
-*9-11 June, 2021*
+To use this, click the download as .zip button to start from a local computer, or skip down to the github example to fork this and get started that way.
 
-### **Introduction**
+The unzipped folder contains all of the files you need to compile a website in R Markdown. This should all work fine if you have the latest version of R and R-studio installed.
 
-**Learning objectives**: By the end of this course, you will be able to:
+## Steps for compiling on your local computer
 
--   Know the basic theory and concepts behind SDMs / ENMs
--   Design, build and evaluate SDMs / ENMs using automated R scripts
--   Understand the strengths and limitations of SDMs / ENMs for
-    different purposes
--   Use SDMs / ENMs to describe, predict, and project species
-    distributions in space and time
+1. Make sure R and R-studio are installed
+3. Make sure the rmarkdown package is installed in R-studio. Open R-studio, click the packages tab in the lower left hand corner, click install packages, type in rmarkdown, make sure "install dependencies" is clicked on, then press install. Close R-studio.
+2. Navigate to the folder you just downloaded, open the 'LabJournalWebsite.Proj' file. This should automatically open R-studio, and your current working environment will be inside this project. That means everything you save will be auto saved to this folder (unless you tell R-studio to save something somewhere else.
+3. Inside R-studio you should see a files tab in the bottom right hand corner. Most files you click will be opened up as text files in the R-studio editor. Click the "Index.Rmd" file.
+4. To compile the entire website, find the build tab in the top right hand corner. You should see the option to "build website". Click this. The website should be built.
+5. After the website is built, you should be able to see it in the R-studio browser. There is a little button (blue arrow with a little browser icon) that allows you to pop the website into your default web-browser. This way you can look at the website in your browser. 
 
-### **Day 0**: Before the course
+Important: After compilation, all of the files for displaying your website are saved in the folder where your R project resides. When you look at these in a browser (for example, by going to the folder and dragging the index.html file into a browser), you are loading from your disk. Only you will be able to see the website, because it is on your hard-drive. You need to upload to a web server to serve the webpage on the internet.
 
-**Reading**: Please read these papers before the course begins as they
-provide important background information. We will discuss them on Day 1.
+## Steps for serving your webpage using github pages.
 
--   [Merow et al. (2014) What do we gain from simplicity versus complexity in
-    species distribution models? Ecography, 37, 1267–1281.](https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.00845)
+This is the source code repository for making the webpage in R-studio. At the same time, the resulting website is being served from this repository at this link [https://bobmuscarella.github.io/index.html](https://bobmuscarella.github.io/index.html).
 
--   Elith, J., & Graham, C. H. (2009) Do they? How do they? WHY do they
-    differ? On finding reasons for differing performances of species
-    distribution models. Ecography 32(1), 66-77.
+Every github repository has the capability of serving html files (web page files) contained in the repository, this is called github pages. How this works depends a little bit on the specific repository you are using. For this repository. The webpage is served from the docs folder. The example files are set so that when you compile the example in R-studio, the output automatically goes into the docs folder. As a result, when you have these files in a github repository, github will serve the html files in your docs folder as a website.
 
--   Elith, J., & Leathwick, J. R. (2009). Species distribution models:
-    ecological explanation and prediction across space and time. Annual
-    Review of Ecology, Evolution, and Systematics 40, 677-697.
+**Steps**
 
-**R Exercise**: Please download and complete these following R exercise.
+1. For this repo to your github (press the fork button in top right hand corner, then choose your github account)
+2. You should now see a copy of this repo in your github account
+3. Click the Settings (also near top right), scroll down to Github Pages options
+4. click the optino to serve from docs folder
+5. You should see a little green message above the github pages options with a link to your new webpage.
 
--   R Exercise 1: Getting Started
+**Editing webpage and serving on github**
 
-### **Day 1**: Introduction: data acquisition and cleaning
+1. download [github desktop](https://desktop.github.com)
+2. make sure it is connected to your account
+3. clone the website repo to your local computer
+4. Open up the project file in the folder for your repo on your local computer (.rproj file)
+5. Edit the .rmd files in R-studio
+6. Recompile website (build website when index.rmd is loaded), or knit individual .rmd files
+7. send your changes back to the online github repository (note this can be done in github desktop, or directly in R-studio, in R-studio you will see a git tab if you are working in a git repo. Click the git tab, click the diff button, which will show you if there are any new changes. Click each of the files that you want to commit. Write a short note to describe the changes. Press the commit button. Wait a couple seconds, your changes should now be served on your website).
 
-**Morning session** (*Theory*)
 
--   Overview and personal introductions
--   **Lecture 1:** The what, how, why of SDMs/ENMs
--   **Lecture 2:** Data-to-model: Walk-through an example analysis
-
-**Afternoon session** (*Practical*)
-
--   Obtaining and cleaning data
-    -   Occurrence records
-        -   [rgbif](https://docs.ropensci.org/rgbif/index.html)
-        -   [CoordinateCleaner](https://ropensci.github.io/CoordinateCleaner/)
-    -   Climate variables
-        -   Manual downloads ([Chela](https://chelsa-climate.org/);
-            [WorldClim](https://www.worldclim.org/))
-        -   [raster](https://cran.r-project.org/web/packages/raster/raster.pdf)
-        -   [climatedata](https://github.com/MirzaCengic/climatedata)
-        -   [chelsaDL](https://github.com/matthewkling/chelsaDL)
-        -   [climateR](https://github.com/mikejohnson51/climateR)
-    -   Other
-        -   Elevation
-        -   Land-use
-        -   Soil: HWSD
-        -   …
-
-### **Day 2**: Models: algorithms and evaluations
-
-**Morning session** (*Theory*)
-
--   **Lecture 3:** Variety of modeling algorithms
-    -   Presence-absence
-    -   Presence-only
-    -   “Next generation”
-        -   Joint SDMs
-        -   [hSDM](https://ecology.ghislainv.fr/hSDM/)
-        -   HMSC (*hierarchical modeling of species and communities*)
-            -   [HMSC
-                Homepage](https://www2.helsinki.fi/en/researchgroups/statistical-ecology/hmsc)
-            -   [MEE
-                publication](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13345)
-            -   [Github page](https://github.com/hmsc-r/HMSC)
-
-**Afternoon session** (*Practical*)
-
--   Overview of algorithms
-    -   Maxent
-    -   Embarcadero
-    -   HSDM
-
-### **Day 3**: Applications: possibilities and precautions
-
-**Morning session** (*Theory*)
-
-Topics - Model evaluation - Projection
-
-**Afternoon session** (*Practical*)
-
-### **Additional Resources**
-
-This course is a very brief introduction to the broad topic of SDMs /
-ENMs. There are lots of other excellent resources available online. Here
-are some suggestions:
-
--   ENM2020 course (organized by Townsend Peterson)
-    -   [Schedule with downloadable slide
-        PDFs](https://docs.google.com/spreadsheets/d/1RQu1XRKyYfrnFI2V1g677d0sf8tFxC2xUvb96cbP02s/edit?usp=sharing)
-    -   [YouTube playlist of
-        lectures](https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam)
--   [Intro to SDMs course by Damaris
-    Zurell](https://damariszurell.github.io/SDM-Intro/)
--   [Intro to SDMs course by Cory
-    Merow](https://cmerow.github.io/RDataScience/101SDMs.html)
--   [Intro to SDMs course by Adam
-    Smith](http://www.earthskysea.org/best-practices-in-species-distribution-modeling-a-workshop-in-r/)
-
-### **Reading**
-
--   Merow, C., Smith, M.J., Edwards, T.C., Jr, Guisan, A., McMahon,
-    S.M., Normand, S., et al. (2014). What do we gain from simplicity
-    versus complexity in species distribution models? Ecography , 37,
-    1267–1281.
-
--   Merow, C., Smith, M. & Silander, J.A. (2013). A practical guide to
-    Maxent: what it does, and why inputs and settings matter. Ecography
-    , 36, 1–12.
-
--   Muscarella, R., Galante, P.J., Soley-Guardia, M., Boria, R.A., Kass,
-    J.M., Uriarte, M., et al. (2014). ENMeval: An R package for
-    conducting spatially independent evaluations and estimating optimal
-    model complexity for Maxent ecological niche models. Methods Ecol.
-    Evol., 5, 1198–1205.
-
--   [Zurell, D., Franklin, J., König, C., Bouchet, P.J., Dormann, C.F.,
-    Elith, J., et al. (2020). A standard protocol for reporting species
-    distribution models. Ecography, 43,
-    1261–1277.](https://github.com/bobmuscarella/SDM-Sapienza/blob/aea7aa0309f762e29413c0096c44d67256bf14db/Literature/Zurell_etal_Ecography_2020.pdf)
-
--   Araújo, M. B., R. P. Anderson, A. M. Barbosa, C. M. Beale, C. F.
-    Dormann, R. Early, R. A. Garcia, et al. 2019. “Standards for
-    Distribution Models in Biodiversity Assessments.” Science Advances
-    5: eaat4858.

@@ -1,0 +1,19 @@
+name: "Bob Muscarella"
+navbar:
+  title: ""
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Course outline"
+      menu:
+        - text: "Syllabus"
+          href: syllabus.html
+        - text: "Day 1"
+        - text: "Lectures"
+          href: lectures1.html
+        - text: "Exercises"
+          href: exercises1.html
+        - text: "Day 2"
+        - text: "Lectures"
+        - text: "Excercises"
+output_dir: "docs"
