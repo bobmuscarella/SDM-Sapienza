@@ -27,6 +27,8 @@ This short course will include:
 
 Course participants should have a general understanding of R programming.  Participants are welcome (but not required) to join the course with their own data / project ideas.  A pre-course reading list and R exercise will be provided after course registration is completed.  Questions about the course should be sent to Bob Muscarella <robert.muscarella@ebc.uu.se>.
 
+Return to [the Muscarella Group homepage](https://bobmuscarella.github.io/)
+
 </div>
 <div class="col-sm-6">
 
