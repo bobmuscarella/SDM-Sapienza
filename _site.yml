@@ -2,7 +2,7 @@ name: "Bob Muscarella"
 navbar:
   title: ""
   left:
-    - text: "Home"
+    - text: "SDM Course"
       href: index.html
     - text: "Course outline"
       menu:
