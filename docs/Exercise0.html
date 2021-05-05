@@ -367,21 +367,99 @@ div.tocify {
 </div>
 
 
-<div id="introduction" class="section level3">
-<h3><strong>Introduction</strong></h3>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
 <p>In this pre-course exercise, you will:</p>
 <ul>
-<li>Create an R Project to use for this course.</li>
-<li>Install all the required packages</li>
+<li>Create an R Project to use for this course</li>
+<li>Install all packages required for the course exercises</li>
 <li>Refresh your memory about some general operations in R</li>
 </ul>
 </div>
-<div id="getting-started" class="section level3">
-<h3><strong>Getting Started</strong></h3>
-<pre class="r"><code>1+1</code></pre>
-<pre><code>## [1] 2</code></pre>
-<pre class="r"><code>2+2</code></pre>
-<pre><code>## [1] 4</code></pre>
+<div id="getting-help" class="section level1">
+<h1>Getting help</h1>
+<ul>
+<li>Google it! Looking for help online is an integral part of modern coding. Any professional programmer who claims not to do this regularly is lying to you.</li>
+<li>All R functions should have documentation that you can access by typing <code>help(x)</code> or <code>?x</code>, where <code>x</code> is a function name.</li>
+<li>The <a href="https://www.statmethods.net/">quick R website</a> has some excellent and brief tutorials on the most important topics.</li>
+<li>Hadley Wickham’s book ‘R for Data Science’ provides a very gentle guide from the very basics to running your own analysis. You can read it for free at <a href="http://r4ds.had.co.nz/">here</a>.</li>
+</ul>
+</div>
+<div id="getting-started" class="section level1">
+<h1>Getting started</h1>
+<div id="install-and-load-r" class="section level3">
+<h3>Install and load R</h3>
+<ul>
+<li>The R language can be downloaded from <a href="https://www.r-project.org/">R project website</a>.</li>
+<li>It is highly recommended to write and perform analyses in <a href="https://www.rstudio.com/">RStudio</a>.</li>
+<li>RStudio allows you to create <strong>projects</strong> that keep all your work on a project together in a single folder. This helps enormously to keep your work organised and ideas together. To create a project for Ecological Methods:
+<ul>
+<li>Click <code>File</code> -&gt; <code>New project</code></li>
+<li>In the window that opens click <code>New directory</code> then <code>New project</code></li>
+<li>Enter a name for the project and the folder that will contain it, for example <code>SDM-course</code>, and the directory where you want that folder to be located.</li>
+</ul></li>
+</ul>
+</div>
+<div id="the-rstudio-environment" class="section level3">
+<h3>The RStudio environment</h3>
+<ul>
+<li>In a fresh RStudio session, the first thing to do is <strong>open a new R script</strong> by clicking <code>File</code> -&gt; <code>New</code> -&gt; <code>R script</code>, or through the the button with the green cross in the upper-left-hand corner.</li>
+<li>It is best to write your script in the <em>editor</em> window, and run sections of code using <code>Crtl</code>+<code>Return</code>. That way you will have a record of the code you have run so far.</li>
+<li>As you run code, it will appear in the <em>console</em> window</li>
+<li>As you progress, <em>objects</em> that you save (e.g., variables and tables) are listed in the <em>environment</em> window. When you close R, you will be asked if you want to save your workspace. This is not recommended; it is better to save the script that documents the analysis.</li>
+<li>The <em>plot</em> window is primarily for displaying graphics, and viewing <em>help</em> pages.</li>
+<li>RStudio can do <strong>tab-completion</strong> of function and object names, which is really handy. Start typing a name, for example the first few letters of the awkwardly named <code>getAllSuperClasses</code>, hit tab, and R will give you a list of suggestions.</li>
+</ul>
+</div>
+<div id="basic-concepts" class="section level3">
+<h3>Basic concepts</h3>
+<ul>
+<li><strong>Functions</strong> tell R to perform an action, and are always followed by round brackets. For example:</li>
+</ul>
+<pre class="r"><code>c(1,2,3) # concatenate the numbers 1, 2 and 3
+mean(c(1,2,3)) # take the average of 1, 2 and 3</code></pre>
+<ul>
+<li>Functions take various <strong>arguments</strong> within the round brackets, that are separated by commas.</li>
+<li>We assign a name to data by using <code>&lt;-</code> so we can use it later. For example:</li>
+</ul>
+<pre class="r"><code>x &lt;- c(1,2,3)
+mean(x)</code></pre>
+<ul>
+<li>Square brackets are used to <strong>subset</strong> data. See the section on working with data for more…</li>
+<li>Sometimes we want to write <strong>comments</strong> for ourselves. The <code>#</code> symbol indicates that everything that follows on the same line is only a comment, and R should not try to evaluate it.</li>
+</ul>
+<pre class="r"><code># First concatenate the values
+x &lt;- c(1,2,3)
+mean(x) # Then take the mean</code></pre>
+</div>
+<div id="additional-packages" class="section level3">
+<h3>Additional packages</h3>
+<ul>
+<li>R has an enormous database of addition packages stored on the Comprehensive R Archive Network (CRAN).</li>
+<li>Install a package using <code>install.packages</code>. For example, we will need the following package to import data from Excel files:</li>
+</ul>
+<pre class="r"><code>install.packages(&#39;readxl&#39;)</code></pre>
+<ul>
+<li>Once installed, you can load the package using <code>library</code>:</li>
+</ul>
+<pre class="r"><code>library(readxl)</code></pre>
+</div>
+</div>
+<div id="working-with-data" class="section level1">
+<h1>Working with data</h1>
+<div id="working-directory" class="section level3">
+<h3>Working directory</h3>
+<ul>
+<li>If you use an RStudio project, the working directory is automatically set to the project directory (this is the easy way to go!).</li>
+<li>When you import or export files, you specify their location relative to the working directory.</li>
+<li>You can find out what is your <strong>current working directory</strong> with:</li>
+</ul>
+<pre class="r"><code>getwd()</code></pre>
+<ul>
+<li>You can <strong>change your working directory</strong> by specifying a new path using something like:</li>
+</ul>
+<pre class="r"><code>setwd(&#39;~/Documents/SDM-course&#39;)</code></pre>
+</div>
 </div>
 
 

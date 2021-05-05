@@ -9,18 +9,83 @@ output:
     toc_depth: 3
 ---
 
-### **Introduction**
-
+# Introduction
 In this pre-course exercise, you will:
 
-- Create an R Project to use for this course.
-- Install all the required packages
+- Create an R Project to use for this course
+- Install all packages required for the course exercises
 - Refresh your memory about some general operations in R
 
-### **Getting Started**
 
-```{r}
-1+1
+# Getting help
+- Google it! Looking for help online is an integral part of modern coding. Any professional programmer who claims not to do this regularly is lying to you.
+- All R functions should have documentation that you can access by typing `help(x)` or `?x`, where `x` is a function name.
+- The [quick R website](https://www.statmethods.net/) has some excellent and brief tutorials on the most important topics.
+- Hadley Wickham's book 'R for Data Science' provides a very gentle guide from the very basics to running your own analysis. You can read it for free at [here](http://r4ds.had.co.nz/).
 
-2+2
+# Getting started
+### Install and load R
+* The R language can be downloaded from [R project website](https://www.r-project.org/).
+* It is highly recommended to write and perform analyses in [RStudio](https://www.rstudio.com/).
+* RStudio allows you to create **projects** that keep all your work on a project together in a single folder. This helps enormously to keep your work organised and ideas together. To create a project for Ecological Methods:
+    + Click `File` -> `New project`
+    + In the window that opens click `New directory` then `New project`
+    + Enter a name for the project and the folder that will contain it, for example `SDM-course`, and the directory where you want that folder to be located.
+
+### The RStudio environment
+* In a fresh RStudio session, the first thing to do is **open a new R script** by clicking `File` -> `New` -> `R script`, or through the the button with the green cross in the upper-left-hand corner.
+* It is best to write your script in the *editor* window, and run sections of code using `Crtl`+`Return`. That way you will have a record of the code you have run so far.
+* As you run code, it will appear in the *console* window
+* As you progress, *objects* that you save (e.g., variables and tables) are listed in the *environment* window. When you close R, you will be asked if you want to save your workspace. This is not recommended; it is better to save the script that documents the analysis.
+* The *plot* window is primarily for displaying graphics, and viewing *help* pages.
+* RStudio can do **tab-completion** of function and object names, which is really handy. Start typing a name, for example the first few letters of the awkwardly named `getAllSuperClasses`, hit tab, and R will give you a list of suggestions.
+
+### Basic concepts
+* **Functions** tell R to perform an action, and are always followed by round brackets. For example:
+```{r, eval=F}
+c(1,2,3) # concatenate the numbers 1, 2 and 3
+mean(c(1,2,3)) # take the average of 1, 2 and 3
 ```
+* Functions take various **arguments** within the round brackets, that are separated by commas.
+* We assign a name to data by using `<-` so we can use it later. For example:
+```{r, eval=F}
+x <- c(1,2,3)
+mean(x)
+```
+* Square brackets are used to **subset** data. See the section on working with data for more...
+* Sometimes we want to write **comments** for ourselves. The `#` symbol indicates that everything that follows on the same line is only a comment, and R should not try to evaluate it.
+```{r, eval=F}
+# First concatenate the values
+x <- c(1,2,3)
+mean(x) # Then take the mean
+```
+
+
+### Additional packages
+* R has an enormous database of addition packages stored on the Comprehensive R Archive Network (CRAN).
+* Install a package using `install.packages`. For example, we will need the following package to import data from Excel files:
+```{r, eval=FALSE}
+install.packages('readxl')
+```
+
+* Once installed, you can load the package using `library`:
+```{r}
+library(readxl)
+```
+
+
+# Working with data
+### Working directory
+
+* If you use an RStudio project, the working directory is automatically set to the project directory (this is the easy way to go!).
+* When you import or export files, you specify their location relative to the working directory.
+* You can find out what is your **current working directory** with:
+```{r, eval=FALSE}
+getwd()
+```
+* You can **change your working directory** by specifying a new path using something like:
+```{r, eval=FALSE}
+setwd('~/Documents/SDM-course')
+```
+
+

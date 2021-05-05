@@ -11,8 +11,19 @@ output:
 
 ### **Introduction**
 
-In this pre-course exercise, you will:
+In this exercise, you will:
 
-- Download and manage spatial environmental data.
+- Use [`ENMeval`](https://github.com/jamiemkass/ENMeval) to evaluate Maxent SDMs
+- Get familiar with the [ODMAP (Overview, Data, Model, Assessment and Prediction) protocol)](https://odmap.wsl.ch/)
 
+![](images/workflow.jpg)
+
+  
+  
 ### **Getting Started**
+
+- 
+
+
+
+
