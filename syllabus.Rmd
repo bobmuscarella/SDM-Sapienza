@@ -15,7 +15,7 @@ Bob Muscarella
 
 $~$
 
-### **Introduction**
+### Introduction
 
 **Learning objectives**: By the end of this course, you will be able to:
 
@@ -26,11 +26,11 @@ $~$
 
 $~$
 
-### **Day 0**: Before the course
+### Before the course
 
 **Reading**
 
-Please read these papers before the course begins as they provide important background information.  We will discuss them on Day 1.
+Please read these papers before the course begins as they provide important background information.  We will discuss them on Day 1 of the course.
 
 - [Merow et al. (2014) What do we gain from simplicity versus complexity in species distribution models? Ecography, 37, 1267–1281.](pdfs/Merow et al. 2014.pdf)
 - [Elith, J., & Graham, C. H. (2009) Do they? How do they? WHY do they differ? On finding reasons for differing performances of species distribution models. Ecography 32(1), 66-77.](pdfs/Elith and Graham 2009.pdf)

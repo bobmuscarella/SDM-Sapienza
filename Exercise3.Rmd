@@ -13,25 +13,21 @@ $~$
 
 ### Introduction
 
-In this pre-course exercise, you will:
+In this exercise, we will get some experience working with a variety of different algorithms used for ENMs/SDMs.
 
-- Download and manage spatial environmental data.
+**Overview of algorithms**
+
+- Presence-absence
+  - GLM
+- Presence-only
+  - `maxnet`([R package](https://cran.r-project.org/web/packages/maxnet/maxnet.pdf))
+- Hybrid
+  - `embarcadero` ([R package](https://github.com/cjcarlson/embarcadero); [publication](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13389))
+- Joint SDMs
+    - `hSDM` ([R package](https://ecology.ghislainv.fr/hSDM/))
+    - `HMSC` ([Homepage](https://www2.helsinki.fi/en/researchgroups/statistical-ecology/hmsc), [publication](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13345), [Github](https://github.com/hmsc-r/HMSC))
 
 $~$
 
 ### Getting Started
-- Overview of algorithms
-  - Maxent
-  - Embarcadero
-  - HSDM
-
-
-  - Presence-absence
-  - Presence-only
-  - "Next generation"
-    - Joint SDMs
-    - [hSDM](https://ecology.ghislainv.fr/hSDM/)
-    - HMSC (*hierarchical modeling of species and communities*)
-      - [HMSC Homepage](https://www2.helsinki.fi/en/researchgroups/statistical-ecology/hmsc)
-      - [MEE publication](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13345)
-      - [Github page](https://github.com/hmsc-r/HMSC)
+...

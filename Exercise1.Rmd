@@ -16,25 +16,57 @@ $~$
 In this pre-course exercise, you will:
 
 - Download species occurrence data
+- Clean species occurrence data
+- Generate data for a *virtual* species
 
 $~$
 
 ### Getting Started
 
-You will use the following packages
+We will use the following packages:
 
 - [rgbif](https://docs.ropensci.org/rgbif/index.html)
 - [CoordinateCleaner](https://ropensci.github.io/CoordinateCleaner/)
 
 $~$
 
+### Obtaining data
+
+- General principles
+- From GBIF using `rgbif`
 
 ```{r}
 library(rgbif)
-library(CoordinateCleaner)
 ```
 
 $~$
 
-### Coordinate Cleaner
-https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html
+### Cleaning coordinates
+
+WHY WE NEED TO CLEAN COORDINATES...
+
+We will use the tutorial from the [`CoordinateCleaner` R Package](https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html)
+
+
+```{r}
+library(CoordinateCleaner)
+```
+
+
+
+### Virtual species
+
+Cut from the `embarcadero` vignette (Carlson 2020)
+
+```{r, eval=F}
+nelandscape <- function(x) {NLMR::nlm_gaussianfield(nrow = 150,
+                                                     ncol = 150,
+                                                     rescale = FALSE)}
+climate <- stack(lapply(c(1:8), onelandscape))
+xnames <- c('x1','x2','x3','x4','x5','x6','x7','x8')
+names(climate) <- xnames
+
+plot(climate[[1]],main='An imaginary variable', 
+     box=F, axes=F)
+```
+

@@ -370,24 +370,47 @@ div.tocify {
 <p>In this pre-course exercise, you will:</p>
 <ul>
 <li>Download species occurrence data</li>
+<li>Clean species occurrence data</li>
+<li>Generate data for a <em>virtual</em> species</li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="getting-started" class="section level3">
 <h3>Getting Started</h3>
-<p>You will use the following packages</p>
+<p>We will use the following packages:</p>
 <ul>
 <li><a href="https://docs.ropensci.org/rgbif/index.html">rgbif</a></li>
 <li><a href="https://ropensci.github.io/CoordinateCleaner/">CoordinateCleaner</a></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
-<pre class="r"><code>library(rgbif)
-library(CoordinateCleaner)</code></pre>
+</div>
+<div id="obtaining-data" class="section level3">
+<h3>Obtaining data</h3>
+<ul>
+<li>General principles</li>
+<li>From GBIF using <code>rgbif</code></li>
+</ul>
+<pre class="r"><code>library(rgbif)</code></pre>
 <p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="coordinate-cleaner" class="section level3">
-<h3>Coordinate Cleaner</h3>
-<p><a href="https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html" class="uri">https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html</a></p>
+<div id="cleaning-coordinates" class="section level3">
+<h3>Cleaning coordinates</h3>
+<p>WHY WE NEED TO CLEAN COORDINATES…</p>
+<p>We will use the tutorial from the <a href="https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html"><code>CoordinateCleaner</code> R Package</a></p>
+<pre class="r"><code>library(CoordinateCleaner)</code></pre>
+</div>
+<div id="virtual-species" class="section level3">
+<h3>Virtual species</h3>
+<p>Cut from the <code>embarcadero</code> vignette (Carlson 2020)</p>
+<pre class="r"><code>nelandscape &lt;- function(x) {NLMR::nlm_gaussianfield(nrow = 150,
+                                                     ncol = 150,
+                                                     rescale = FALSE)}
+climate &lt;- stack(lapply(c(1:8), onelandscape))
+xnames &lt;- c(&#39;x1&#39;,&#39;x2&#39;,&#39;x3&#39;,&#39;x4&#39;,&#39;x5&#39;,&#39;x6&#39;,&#39;x7&#39;,&#39;x8&#39;)
+names(climate) &lt;- xnames
+
+plot(climate[[1]],main=&#39;An imaginary variable&#39;, 
+     box=F, axes=F)</code></pre>
 </div>
 
 
