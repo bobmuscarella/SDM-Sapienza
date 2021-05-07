@@ -9,13 +9,17 @@ output:
     toc_depth: 3
 ---
 
-### **Introduction**
+$~$
+
+### Introduction
 
 In this pre-course exercise, you will:
 
 - Download and manage spatial environmental data.
 
-### **Getting Started**
+$~$
+
+### Getting Started
 - Overview of algorithms
   - Maxent
   - Embarcadero

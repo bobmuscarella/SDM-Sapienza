@@ -9,28 +9,40 @@ output:
     toc_depth: 3
 ---
 
+$~$
 
-
-### **Online tutorials and workshops**
+### Online tutorials and workshops
 
 This course is a very brief introduction to the broad topic of SDMs / ENMs. There are lots of other excellent resources available online.  Here are some suggestions:
 
-- ENM2020 course (organized by Townsend Peterson)
-  - [YouTube playlist with lectures](https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam)
+**Resources specifically about SDM/ENMs**
+
+- [ENM2020 course (YouTube playlist with lectures)](https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam) *organized by T. Peterson*
   - [Schedule with PDFs of presentations](https://docs.google.com/spreadsheets/d/1RQu1XRKyYfrnFI2V1g677d0sf8tFxC2xUvb96cbP02s/edit?usp=sharing)
-- [Intro to SDMs course by Damaris Zurell](https://damariszurell.github.io/SDM-Intro/)
-- [Intro to SDMs course by Cory Merow](https://cmerow.github.io/RDataScience/101SDMs.html)
-- [Intro to SDMs course by Adam Smith](http://www.earthskysea.org/best-practices-in-species-distribution-modeling-a-workshop-in-r/)
+- [Intro to SDM in R](https://damariszurell.github.io/SDM-Intro/) *by D. Zurell*
+- [Best Practices in Species Distribution Modeling: A Workshop in R](http://www.earthskysea.org/best-practices-in-species-distribution-modeling-a-workshop-in-r/) *by A. Smith*
+<!-- - [Intro to SDMs course](https://cmerow.github.io/RDataScience/101SDMs.html) *by C. Merow* -->
 
-### **Recommended Reading**
+**General resources for Spatial Data analysis in R**
 
-- Merow, C., Smith, M.J., Edwards, T.C., Jr, Guisan, A., McMahon, S.M., Normand, S., et al. (2014). What do we gain from simplicity versus complexity in species distribution models? Ecography , 37, 1267–1281.
+- [Spatial Data Science](https://www.rspatial.org/raster/index.html) *by R. Hijmans*
+- [Spatial Data Science with applications in R](https://keen-swartz-3146c4.netlify.app/) *by E. Pebesma and R. Bivand*
+- [Geocomputation in R](https://geocompr.robinlovelace.net/) *by R. Lovelace, J. Nowosad, J. Muenchow*
 
-- Merow, C., Smith, M. & Silander, J.A. (2013). A practical guide to Maxent: what it does, and why inputs and settings matter. Ecography , 36, 1–12.
+$~$
 
-- Muscarella, R., Galante, P.J., Soley-Guardia, M., Boria, R.A., Kass, J.M., Uriarte, M., et al. (2014). ENMeval: An R package for conducting spatially independent evaluations and estimating optimal model complexity for Maxent ecological niche models. Methods Ecol. Evol., 5, 1198–1205.
+### Recommended Reading 
+
+*Work in progress...*
+
+- [Merow, C., Smith, M.J., Edwards, T.C., Jr, Guisan, A., McMahon, S.M., Normand, S., et al. (2014). What do we gain from simplicity versus complexity in species distribution models? Ecography , 37, 1267–1281.](https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.00845)
+
+- [Merow, C., Smith, M. & Silander, J.A. (2013). A practical guide to Maxent: what it does, and why inputs and settings matter. Ecography , 36, 1–12.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0587.2013.07872.x)
+
+- [Muscarella, R., Galante, P.J., Soley-Guardia, M., Boria, R.A., Kass, J.M., Uriarte, M., et al. (2014). ENMeval: An R package for conducting spatially independent evaluations and estimating optimal model complexity for Maxent ecological niche models. Methods Ecol. Evol., 5, 1198–1205.](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12261)
 
 - [Zurell, D., Franklin, J., König, C., Bouchet, P.J., Dormann, C.F., Elith, J., et al. (2020). A standard protocol for reporting species distribution models. Ecography, 43, 1261–1277.](pdfs/Zurell_etal_Ecography_2020.pdf)
 
-- Araújo, M. B., R. P. Anderson, A. M. Barbosa, C. M. Beale, C. F. Dormann, R. Early, R. A. Garcia, et al. 2019. “Standards for Distribution Models in Biodiversity Assessments.” Science Advances 5: eaat4858.
+- [Araújo, M. B., R. P. Anderson, A. M. Barbosa, C. M. Beale, C. F. Dormann, R. Early, R. A. Garcia, et al. 2019. “Standards for Distribution Models in Biodiversity Assessments.” Science Advances 5: eaat4858.](https://advances.sciencemag.org/content/5/1/eaat4858)
+
 

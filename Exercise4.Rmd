@@ -9,7 +9,7 @@ output:
     toc_depth: 3
 ---
 
-### **Introduction**
+### Introduction
 
 In this exercise, you will:
 
@@ -20,7 +20,7 @@ In this exercise, you will:
 
   
   
-### **Getting Started**
+### Getting Started
 
 - 
 

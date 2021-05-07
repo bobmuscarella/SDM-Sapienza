@@ -9,21 +9,32 @@ output:
     toc_depth: 3
 ---
 
-### **Introduction**
+$~$
+
+### Introduction
 
 In this pre-course exercise, you will:
 
 - Download species occurrence data
 
-### **Getting Started**
+$~$
+
+### Getting Started
 
 You will use the following packages
 
 - [rgbif](https://docs.ropensci.org/rgbif/index.html)
 - [CoordinateCleaner](https://ropensci.github.io/CoordinateCleaner/)
 
+$~$
+
 
 ```{r}
 library(rgbif)
 library(CoordinateCleaner)
 ```
+
+$~$
+
+### Coordinate Cleaner
+https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html

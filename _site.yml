@@ -8,8 +8,8 @@ navbar:
       href: syllabus.html
     - text: "R exercises"  
       menu:
-        - text: "0. Getting Started in R"
-          href: Exercise0.html
+        # - text: "0. Getting Started in R"
+        #   href: Exercise0.html
         - text: "1. Species data"
           href: Exercise1.html
         - text: "2. Environment data"

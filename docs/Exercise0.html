@@ -29,9 +29,6 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
-<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
-<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -221,69 +218,6 @@ $(document).ready(function () {
 
 
 
-<style type="text/css">
-
-#TOC {
-  margin: 25px 0px 20px 0px;
-}
-@media (max-width: 768px) {
-#TOC {
-  position: relative;
-  width: 100%;
-}
-}
-
-@media print {
-.toc-content {
-  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
-  float: right;
-}
-}
-
-.toc-content {
-  padding-left: 30px;
-  padding-right: 40px;
-}
-
-div.main-container {
-  max-width: 1200px;
-}
-
-div.tocify {
-  width: 20%;
-  max-width: 260px;
-  max-height: 85%;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  div.tocify {
-    width: 25%;
-  }
-}
-
-@media (max-width: 767px) {
-  div.tocify {
-    width: 100%;
-    max-width: none;
-  }
-}
-
-.tocify ul, .tocify li {
-  line-height: 20px;
-}
-
-.tocify-subheader .tocify-item {
-  font-size: 0.90em;
-}
-
-.tocify .list-group-item {
-  border-radius: 0px;
-}
-
-
-</style>
-
-
 
 </head>
 
@@ -291,16 +225,6 @@ div.tocify {
 
 
 <div class="container-fluid main-container">
-
-
-<!-- setup 3col/9col grid for toc_float and main content  -->
-<div class="row">
-<div class="col-sm-12 col-md-4 col-lg-3">
-<div id="TOC" class="tocify">
-</div>
-</div>
-
-<div class="toc-content col-sm-12 col-md-8 col-lg-9">
 
 
 
@@ -330,9 +254,6 @@ div.tocify {
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="Exercise0.html">0. Getting Started in R</a>
-    </li>
     <li>
       <a href="Exercise1.html">1. Species data</a>
     </li>
@@ -367,105 +288,73 @@ div.tocify {
 </div>
 
 
-<div id="introduction" class="section level1">
-<h1>Introduction</h1>
-<p>In this pre-course exercise, you will:</p>
-<ul>
-<li>Create an R Project to use for this course</li>
-<li>Install all packages required for the course exercises</li>
-<li>Refresh your memory about some general operations in R</li>
-</ul>
-</div>
-<div id="getting-help" class="section level1">
-<h1>Getting help</h1>
-<ul>
-<li>Google it! Looking for help online is an integral part of modern coding. Any professional programmer who claims not to do this regularly is lying to you.</li>
-<li>All R functions should have documentation that you can access by typing <code>help(x)</code> or <code>?x</code>, where <code>x</code> is a function name.</li>
-<li>The <a href="https://www.statmethods.net/">quick R website</a> has some excellent and brief tutorials on the most important topics.</li>
-<li>Hadley Wickham’s book ‘R for Data Science’ provides a very gentle guide from the very basics to running your own analysis. You can read it for free at <a href="http://r4ds.had.co.nz/">here</a>.</li>
-</ul>
-</div>
-<div id="getting-started" class="section level1">
-<h1>Getting started</h1>
-<div id="install-and-load-r" class="section level3">
-<h3>Install and load R</h3>
-<ul>
-<li>The R language can be downloaded from <a href="https://www.r-project.org/">R project website</a>.</li>
-<li>It is highly recommended to write and perform analyses in <a href="https://www.rstudio.com/">RStudio</a>.</li>
-<li>RStudio allows you to create <strong>projects</strong> that keep all your work on a project together in a single folder. This helps enormously to keep your work organised and ideas together. To create a project for Ecological Methods:
-<ul>
-<li>Click <code>File</code> -&gt; <code>New project</code></li>
-<li>In the window that opens click <code>New directory</code> then <code>New project</code></li>
-<li>Enter a name for the project and the folder that will contain it, for example <code>SDM-course</code>, and the directory where you want that folder to be located.</li>
-</ul></li>
-</ul>
-</div>
-<div id="the-rstudio-environment" class="section level3">
-<h3>The RStudio environment</h3>
-<ul>
-<li>In a fresh RStudio session, the first thing to do is <strong>open a new R script</strong> by clicking <code>File</code> -&gt; <code>New</code> -&gt; <code>R script</code>, or through the the button with the green cross in the upper-left-hand corner.</li>
-<li>It is best to write your script in the <em>editor</em> window, and run sections of code using <code>Crtl</code>+<code>Return</code>. That way you will have a record of the code you have run so far.</li>
-<li>As you run code, it will appear in the <em>console</em> window</li>
-<li>As you progress, <em>objects</em> that you save (e.g., variables and tables) are listed in the <em>environment</em> window. When you close R, you will be asked if you want to save your workspace. This is not recommended; it is better to save the script that documents the analysis.</li>
-<li>The <em>plot</em> window is primarily for displaying graphics, and viewing <em>help</em> pages.</li>
-<li>RStudio can do <strong>tab-completion</strong> of function and object names, which is really handy. Start typing a name, for example the first few letters of the awkwardly named <code>getAllSuperClasses</code>, hit tab, and R will give you a list of suggestions.</li>
-</ul>
-</div>
-<div id="basic-concepts" class="section level3">
-<h3>Basic concepts</h3>
-<ul>
-<li><strong>Functions</strong> tell R to perform an action, and are always followed by round brackets. For example:</li>
-</ul>
-<pre class="r"><code>c(1,2,3) # concatenate the numbers 1, 2 and 3
-mean(c(1,2,3)) # take the average of 1, 2 and 3</code></pre>
-<ul>
-<li>Functions take various <strong>arguments</strong> within the round brackets, that are separated by commas.</li>
-<li>We assign a name to data by using <code>&lt;-</code> so we can use it later. For example:</li>
-</ul>
-<pre class="r"><code>x &lt;- c(1,2,3)
-mean(x)</code></pre>
-<ul>
-<li>Square brackets are used to <strong>subset</strong> data. See the section on working with data for more…</li>
-<li>Sometimes we want to write <strong>comments</strong> for ourselves. The <code>#</code> symbol indicates that everything that follows on the same line is only a comment, and R should not try to evaluate it.</li>
-</ul>
-<pre class="r"><code># First concatenate the values
-x &lt;- c(1,2,3)
-mean(x) # Then take the mean</code></pre>
-</div>
-<div id="additional-packages" class="section level3">
-<h3>Additional packages</h3>
-<ul>
-<li>R has an enormous database of addition packages stored on the Comprehensive R Archive Network (CRAN).</li>
-<li>Install a package using <code>install.packages</code>. For example, we will need the following package to import data from Excel files:</li>
-</ul>
-<pre class="r"><code>install.packages(&#39;readxl&#39;)</code></pre>
-<ul>
-<li>Once installed, you can load the package using <code>library</code>:</li>
-</ul>
-<pre class="r"><code>library(readxl)</code></pre>
-</div>
-</div>
-<div id="working-with-data" class="section level1">
-<h1>Working with data</h1>
-<div id="working-directory" class="section level3">
-<h3>Working directory</h3>
-<ul>
-<li>If you use an RStudio project, the working directory is automatically set to the project directory (this is the easy way to go!).</li>
-<li>When you import or export files, you specify their location relative to the working directory.</li>
-<li>You can find out what is your <strong>current working directory</strong> with:</li>
-</ul>
-<pre class="r"><code>getwd()</code></pre>
-<ul>
-<li>You can <strong>change your working directory</strong> by specifying a new path using something like:</li>
-</ul>
-<pre class="r"><code>setwd(&#39;~/Documents/SDM-course&#39;)</code></pre>
-</div>
+<div id="introduction" class="section level3">
+<h3>Introduction</h3>
+<p>To prepare for the course, we will use some tutorials produced by the excellent Data Carpentry organization. Follow through the exercises below to refresh your general R skills and get you started with geospatial data and analyses. The 3rd lesson is optional; to complete it, you will need to <a href="https://datacarpentry.org/geospatial-workshop/setup.html">follow the setup page here</a>.</p>
+<p>(You are free to skip around in these materials based on your prior knowledge but I encourage you to follow through everything)</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://datacarpentry.org/r-intro-geospatial/01-rstudio-intro/index.html">Data Carpentry: Introduction to R and RStudio</a></li>
+<li><a href="https://datacarpentry.org/organization-geospatial/">Data Carpentry: Introduction to Geospatial Concepts</a></li>
+<li><strong><em>Optional:</em></strong> <a href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction to Geospatial Raster and Vector Data with R</a></li>
+</ol>
+<!-- # Getting started -->
+<!-- ### Install and load R -->
+<!-- * The R language can be downloaded from [R project website](https://www.r-project.org/). -->
+<!-- * It is highly recommended to write and perform analyses in [RStudio](https://www.rstudio.com/). -->
+<!-- * RStudio allows you to create **projects** that keep all your work on a project together in a single folder. This helps enormously to keep your work organised and ideas together. To create a project for Ecological Methods: -->
+<!--     + Click `File` -> `New project` -->
+<!--     + In the window that opens click `New directory` then `New project` -->
+<!--     + Enter a name for the project and the folder that will contain it, for example `SDM-course`, and the directory where you want that folder to be located. -->
+<!-- ### Basic concepts -->
+<!-- * **Functions** tell R to perform an action, and are always followed by round brackets. For example: -->
+<!-- ```{r, eval=F} -->
+<!-- c(1,2,3) # concatenate the numbers 1, 2 and 3 -->
+<!-- mean(c(1,2,3)) # take the average of 1, 2 and 3 -->
+<!-- ``` -->
+<!-- * Functions take various **arguments** within the round brackets, that are separated by commas. -->
+<!-- * We assign a name to data by using `<-` so we can use it later. For example: -->
+<!-- ```{r, eval=F} -->
+<!-- x <- c(1,2,3) -->
+<!-- mean(x) -->
+<!-- ``` -->
+<!-- * Square brackets are used to **subset** data. See the section on working with data for more... -->
+<!-- * Sometimes we want to write **comments** for ourselves. The `#` symbol indicates that everything that follows on the same line is only a comment, and R should not try to evaluate it. -->
+<!-- ```{r, eval=F} -->
+<!-- # First concatenate the values -->
+<!-- x <- c(1,2,3) -->
+<!-- mean(x) # Then take the mean -->
+<!-- ``` -->
+<!-- ### Additional packages -->
+<!-- * R has an enormous database of addition packages stored on the Comprehensive R Archive Network (CRAN). -->
+<!-- * Install a package using `install.packages`. For example, we will need the following package to import data from Excel files: -->
+<!-- ```{r, eval=FALSE} -->
+<!-- install.packages('readxl') -->
+<!-- ``` -->
+<!-- * Once installed, you can load the package using `library`: -->
+<!-- ```{r} -->
+<!-- library(readxl) -->
+<!-- ``` -->
+<!-- # Working with data -->
+<!-- ### Working directory -->
+<!-- * If you use an RStudio project, the working directory is automatically set to the project directory (this is the easy way to go!). -->
+<!-- * When you import or export files, you specify their location relative to the working directory. -->
+<!-- * You can find out what is your **current working directory** with: -->
+<!-- ```{r, eval=FALSE} -->
+<!-- getwd() -->
+<!-- ``` -->
+<!-- * You can **change your working directory** by specifying a new path using something like: -->
+<!-- ```{r, eval=FALSE} -->
+<!-- setwd('~/Documents/SDM-course') -->
+<!-- ``` -->
+<!-- ### Other suggestions... -->
+<!-- - Google it! Looking for help online is an integral part of modern coding. Any professional programmer who claims not to do this regularly is lying to you. -->
+<!-- - All R functions should have documentation that you can access by typing `help(x)` or `?x`, where `x` is a function name. -->
+<!-- - The [quick R website](https://www.statmethods.net/) has some excellent and brief tutorials on the most important topics. -->
+<!-- - Hadley Wickham's book 'R for Data Science' provides a very gentle guide from the very basics to running your own analysis. You can read it for free at [here](http://r4ds.had.co.nz/). -->
 </div>
 
 
 
-</div>
-</div>
 
 </div>
 
@@ -498,32 +387,6 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
