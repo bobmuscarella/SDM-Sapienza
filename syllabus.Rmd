@@ -42,9 +42,9 @@ To prepare for the course, we will use some tutorials produced by the excellent 
 
 1. [Data Carpentry: Introduction to R and RStudio](https://datacarpentry.org/r-intro-geospatial/01-rstudio-intro/index.html)
 2. [Data Carpentry: Introduction to Geospatial Concepts](https://datacarpentry.org/organization-geospatial/)
-3. ***Optional:*** [Introduction to Geospatial Raster and Vector Data with R](https://datacarpentry.org/r-raster-vector-geospatial/)
+3. ***Optional:*** [Introduction to Geospatial Raster and Vector Data with R](https://datacarpentry.org/r-raster-vector-geospatial/). To complete this exercise, you will first need to [follow the setup instructions](https://datacarpentry.org/geospatial-workshop/setup.html).
 
-*Note: To complete the 3rd lesson, you will need to [follow the setup page here](https://datacarpentry.org/geospatial-workshop/setup.html).*
+*Note: If you are very new to R and want a more detailed introduction, I recommend:* [Data Carpentry: Data Analysis and Visualization in R for Ecologists](https://datacarpentry.org/R-ecology-lesson/index.html). *Note that going through this entire exercise will take about one full day.*
 
 $~$
 
