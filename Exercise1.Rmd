@@ -25,8 +25,9 @@ $~$
 
 We will use the following packages:
 
-- [rgbif](https://docs.ropensci.org/rgbif/index.html)
-- [CoordinateCleaner](https://ropensci.github.io/CoordinateCleaner/)
+- [`spocc`](https://docs.ropensci.org/spocc/)
+<!-- - [rgbif](https://docs.ropensci.org/rgbif/index.html) -->
+- [`CoordinateCleaner`](https://ropensci.github.io/CoordinateCleaner/)
 
 $~$
 
@@ -36,7 +37,10 @@ $~$
 - From GBIF using `rgbif`
 
 ```{r}
-library(rgbif)
+library(spocc)
+
+occ("")
+
 ```
 
 $~$
