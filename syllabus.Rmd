@@ -70,7 +70,7 @@ $~$
 **Morning session** (*Theory*)
 
 - [Lecture 3: SDM algorithms]()
-- [Lecture 4: Model Evaluation](): *Guest lecture by Jamie Kass*
+- [Lecture 4: Model Evaluation](): Guest lecture by [Jamie Kass](https://scholar.google.com/citations?user=LM_UNdkAAAAJ&hl=en)
 
 **Afternoon session** (*Practical*)
 
