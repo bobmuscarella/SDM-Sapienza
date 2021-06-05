@@ -55,8 +55,6 @@ myspecies <- "Coccoloba diversifolia"
 
 # Only include records from broadly Europe
 gbif_data <- occ_data(scientificName = myspecies)
-
-
 ```
 
 $~$
@@ -78,20 +76,18 @@ library(CoordinateCleaner)
 ```
 
 
+$~$
+
 
 ### Virtual species
 
-Cut from the `embarcadero` vignette (Carlson 2020)
+```{r}
+library(virtualspecies)
 
-```{r, eval=F}
-nelandscape <- function(x) {NLMR::nlm_gaussianfield(nrow = 150,
-                                                     ncol = 150,
-                                                     rescale = FALSE)}
-climate <- stack(lapply(c(1:8), onelandscape))
-xnames <- c('x1','x2','x3','x4','x5','x6','x7','x8')
-names(climate) <- xnames
+?`virtualspecies-package`
 
-plot(climate[[1]],main='An imaginary variable', 
-     box=F, axes=F)
+
 ```
+
+There are, as usual, different ways to do things.  For example, the vignette for the `embarcadero` package (Carlson 2020) demonstrates another approach to generate the distribution of a virtual species.
 

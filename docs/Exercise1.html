@@ -415,19 +415,15 @@ gbif_data &lt;- occ_data(scientificName = myspecies)</code></pre>
 <p>WHY WE NEED TO CLEAN COORDINATES…</p>
 <p>We will use the tutorial from the <a href="https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html"><code>CoordinateCleaner</code> R Package</a></p>
 <pre class="r"><code>library(CoordinateCleaner)</code></pre>
+<p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="virtual-species" class="section level3">
 <h3>Virtual species</h3>
-<p>Cut from the <code>embarcadero</code> vignette (Carlson 2020)</p>
-<pre class="r"><code>nelandscape &lt;- function(x) {NLMR::nlm_gaussianfield(nrow = 150,
-                                                     ncol = 150,
-                                                     rescale = FALSE)}
-climate &lt;- stack(lapply(c(1:8), onelandscape))
-xnames &lt;- c(&#39;x1&#39;,&#39;x2&#39;,&#39;x3&#39;,&#39;x4&#39;,&#39;x5&#39;,&#39;x6&#39;,&#39;x7&#39;,&#39;x8&#39;)
-names(climate) &lt;- xnames
-
-plot(climate[[1]],main=&#39;An imaginary variable&#39;, 
-     box=F, axes=F)</code></pre>
+<pre class="r"><code>library(virtualspecies)</code></pre>
+<pre><code>## Loading required package: raster</code></pre>
+<pre><code>## Loading required package: sp</code></pre>
+<pre class="r"><code>?`virtualspecies-package`</code></pre>
+<p>There are, as usual, different ways to do things. For example, the vignette for the <code>embarcadero</code> package (Carlson 2020) demonstrates another approach to generate the distribution of a virtual species.</p>
 </div>
 
 
