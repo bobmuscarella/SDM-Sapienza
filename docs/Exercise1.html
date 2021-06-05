@@ -378,9 +378,11 @@ div.tocify {
 <div id="getting-started" class="section level3">
 <h3>Getting Started</h3>
 <p>We will use the following packages:</p>
+<!-- - [`spocc`](https://docs.ropensci.org/spocc/) -->
 <ul>
-<li><a href="https://docs.ropensci.org/spocc/"><code>spocc</code></a> <!-- - [rgbif](https://docs.ropensci.org/rgbif/index.html) --></li>
+<li><a href="https://docs.ropensci.org/rgbif/index.html"><code>rgbif</code></a></li>
 <li><a href="https://ropensci.github.io/CoordinateCleaner/"><code>CoordinateCleaner</code></a></li>
+<li><a href="http://borisleroy.com/files/virtualspecies-tutorial.html"><code>virtualspecies</code></a></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
@@ -390,13 +392,22 @@ div.tocify {
 <li>General principles</li>
 <li>From GBIF using <code>rgbif</code></li>
 </ul>
-<pre class="r"><code>library(spocc)
+<p>The <code>rgbif</code> package has a lot of functionality and <a href="http://borisleroy.com/files/virtualspecies-tutorial.html">a detailed vignette here</a>. In this short exercise, we will see a very abbreviated demonstration of using the package to download data for a set of focal species (<em>Coccoloba diversifolia</em>) from GBIF.</p>
+<pre class="r"><code>library(rgbif)
 
-occ(&quot;&quot;)</code></pre>
-<pre><code>## Searched: gbif
-## Occurrences - Found: 1,698,262,872, Returned: 500
-## Search type: Scientific
-##   gbif: (500)</code></pre>
+myspecies &lt;- c(&quot;Canis lupus&quot;)
+
+myspecies &lt;- &quot;Coccoloba diversifolia&quot;
+
+# name_lookup(query=myspecies)
+
+# occ_count(myspecies)
+
+# Download GBIF occurrence data for this species.
+# (this can takes some time if there are many data points!)
+
+# Only include records from broadly Europe
+gbif_data &lt;- occ_data(scientificName = myspecies)</code></pre>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="cleaning-coordinates" class="section level3">

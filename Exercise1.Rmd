@@ -25,9 +25,10 @@ $~$
 
 We will use the following packages:
 
-- [`spocc`](https://docs.ropensci.org/spocc/)
-<!-- - [rgbif](https://docs.ropensci.org/rgbif/index.html) -->
+<!-- - [`spocc`](https://docs.ropensci.org/spocc/) -->
+- [`rgbif`](https://docs.ropensci.org/rgbif/index.html)
 - [`CoordinateCleaner`](https://ropensci.github.io/CoordinateCleaner/)
+- [`virtualspecies`](http://borisleroy.com/files/virtualspecies-tutorial.html)
 
 $~$
 
@@ -36,14 +37,34 @@ $~$
 - General principles
 - From GBIF using `rgbif`
 
-```{r}
-library(spocc)
+The `rgbif` package has a lot of functionality and [a detailed vignette here](http://borisleroy.com/files/virtualspecies-tutorial.html). In this short exercise, we will see a very abbreviated demonstration of using the package to download data for a set of focal species (*Coccoloba diversifolia*) from GBIF.
 
-occ("")
+```{r}
+library(rgbif)
+
+myspecies <- c("Canis lupus")
+
+myspecies <- "Coccoloba diversifolia"
+
+# name_lookup(query=myspecies)
+
+# occ_count(myspecies)
+
+# Download GBIF occurrence data for this species.
+# (this can takes some time if there are many data points!)
+
+# Only include records from broadly Europe
+gbif_data <- occ_data(scientificName = myspecies)
+
 
 ```
 
 $~$
+
+
+
+
+
 
 ### Cleaning coordinates
 
