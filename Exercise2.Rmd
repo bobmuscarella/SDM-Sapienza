@@ -1,5 +1,5 @@
 ---
-title: "2. Environmental data"
+title: "2. Environmental data
 output:
   html_document:
     toc: true
@@ -13,15 +13,15 @@ $~$
 
 ### Introduction
 
-In this pre-course exercise, you will:
+In this exercise, you will:
 
-- Download and manage spatial environmental data.
+- Download and manage spatial environmental data
+- Use 
 
 $~$
 
-### Getting Started
 
-You will use the following packages
+### Getting Started
 
   - Climate variables
     - Manual downloads:
@@ -40,7 +40,3 @@ You will use the following packages
       - HWSD
 
 
-```{r}
-library(rgbif)
-library(CoordinateCleaner)
-```

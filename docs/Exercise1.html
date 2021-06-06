@@ -367,32 +367,18 @@ div.tocify {
 <p><span class="math inline">\(~\)</span></p>
 <div id="introduction" class="section level3">
 <h3>Introduction</h3>
-<p>In this pre-course exercise, you will:</p>
+<p>In this exercise, you will:</p>
 <ul>
-<li>Download species occurrence data</li>
-<li>Clean species occurrence data</li>
-<li>Generate data for a <em>virtual</em> species</li>
-</ul>
-<p><span class="math inline">\(~\)</span></p>
-</div>
-<div id="getting-started" class="section level3">
-<h3>Getting Started</h3>
-<p>We will use the following packages:</p>
-<!-- - [`spocc`](https://docs.ropensci.org/spocc/) -->
-<ul>
-<li><a href="https://docs.ropensci.org/rgbif/index.html"><code>rgbif</code></a></li>
-<li><a href="https://ropensci.github.io/CoordinateCleaner/"><code>CoordinateCleaner</code></a></li>
-<li><a href="http://borisleroy.com/files/virtualspecies-tutorial.html"><code>virtualspecies</code></a></li>
+<li>Download species occurrence data from GBIF using <a href="https://docs.ropensci.org/rgbif/index.html"><code>rgbif</code></a></li>
+<li>Clean species occurrence data using <a href="https://ropensci.github.io/CoordinateCleaner/"><code>CoordinateCleaner</code></a></li>
+<li>Generate data for a <em>virtual</em> species using <a href="http://borisleroy.com/files/virtualspecies-tutorial.html"><code>virtualspecies</code></a></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="obtaining-data" class="section level3">
 <h3>Obtaining data</h3>
-<ul>
-<li>General principles</li>
-<li>From GBIF using <code>rgbif</code></li>
-</ul>
-<p>The <code>rgbif</code> package has a lot of functionality and <a href="http://borisleroy.com/files/virtualspecies-tutorial.html">a detailed vignette here</a>. In this short exercise, we will see a very abbreviated demonstration of using the package to download data for a set of focal species (<em>Coccoloba diversifolia</em>) from GBIF.</p>
+<p>There is a large and growing number of databases that contain species occurrence records (e.g., GBIF, eBird, iNaturalist, BIEN, etc.). These databases are sometimes based on certain taxa or geographic regions so it is important to find a source that best meets the needs of your project. While we won’t focus on it in this exercise, note that the <a href="https://docs.ropensci.org/spocc/"><code>spocc</code></a> package can be used to query and collect species occurrence data from many sources.</p>
+<p>We will focus on obtaining data from GBIF using the <code>rgbif</code> package, which has a lot of functionality and <a href="http://borisleroy.com/files/virtualspecies-tutorial.html">a detailed vignette here</a>. In this short exercise, we will see a very abbreviated demonstration of using the package to download data for a set of focal species. The following section on cleaning coordinates also includes a section on downloading data from GBIF.</p>
 <pre class="r"><code>library(rgbif)
 
 myspecies &lt;- c(&quot;Canis lupus&quot;)
@@ -412,9 +398,12 @@ gbif_data &lt;- occ_data(scientificName = myspecies)</code></pre>
 </div>
 <div id="cleaning-coordinates" class="section level3">
 <h3>Cleaning coordinates</h3>
-<p>WHY WE NEED TO CLEAN COORDINATES…</p>
-<p>We will use the tutorial from the <a href="https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html"><code>CoordinateCleaner</code> R Package</a></p>
-<pre class="r"><code>library(CoordinateCleaner)</code></pre>
+<p>The fact that we have species occurrence data at our fingertips has largely driven the increased use of SDMs/ENMs. Unfortunately, these data sometimes contain errors of various types and it is important to <em>clean</em> the data prior to use in order to avoid problems and erroneous conclusions.</p>
+<p>For this exercise, we will work through the tutorial from the <a href="https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html"><code>CoordinateCleaner</code></a> package to acquire and clean data from GBIF. Make sure you install and load the package before beginning.</p>
+<pre class="r"><code>install.packages(&quot;CoordinateCleaner&quot;)
+library(&quot;CoordinateCleaner&quot;)</code></pre>
+<p>Then proceed to work through this vignette: <a href="https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html">https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html</a></p>
+<p>Note that there are other packages to clean occurrence data (e.g., <a href="https://github.com/ropensci/scrubr"><code>scrubr</code></a>). The <code>CoordinateCleaner</code> vignette includes a nice comparison of different packages (<a href="https://ropensci.github.io/CoordinateCleaner/articles/Comparison_other_software.html">see here</a>).</p>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="virtual-species" class="section level3">
@@ -423,7 +412,11 @@ gbif_data &lt;- occ_data(scientificName = myspecies)</code></pre>
 <pre><code>## Loading required package: raster</code></pre>
 <pre><code>## Loading required package: sp</code></pre>
 <pre class="r"><code>?`virtualspecies-package`</code></pre>
-<p>There are, as usual, different ways to do things. For example, the vignette for the <code>embarcadero</code> package (Carlson 2020) demonstrates another approach to generate the distribution of a virtual species.</p>
+</div>
+<div id="resources" class="section level3">
+<h3>Resources</h3>
+<p><strong>Obtaining occurrence data</strong></p>
+<p><strong>Cleaning occurrence records</strong></p>
 </div>
 
 
