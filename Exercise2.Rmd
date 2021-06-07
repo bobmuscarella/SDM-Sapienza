@@ -1,5 +1,5 @@
 ---
-title: "2. Environmental data
+title: "2. Environmental data"
 output:
   html_document:
     toc: true
@@ -15,28 +15,76 @@ $~$
 
 In this exercise, you will:
 
+- Familiarize yourself with a variety of spatial environmental data resources
 - Download and manage spatial environmental data
-- Use 
+
+Note that this exercise gives only a very quick overview. For more detailed background and practice, I highly recommend these lessons from Software Carpentry:
+
+- [Introduction to Geospatial Concepts](https://datacarpentry.org/organization-geospatial/)
+- [Introduction to R for Geospatial Data](https://datacarpentry.org/r-intro-geospatial/)
+- [Introduction to Geospatial Raster and Vector Data with R](https://datacarpentry.org/r-raster-vector-geospatial/)
 
 $~$
 
-
 ### Getting Started
 
-  - Climate variables
-    - Manual downloads:
-      - [Chelsa](https://chelsa-climate.org/)
-      - [WorldClim](https://www.worldclim.org/)
-    - Automated downloads in R:
-      - [raster](https://cran.r-project.org/web/packages/raster/raster.pdf)
-      - [climatedata](https://github.com/MirzaCengic/climatedata)
-      - [chelsaDL](https://github.com/matthewkling/chelsaDL)
-      - [climateR](https://github.com/mikejohnson51/climateR)
-  
-  - Other
-    - Elevation (STRM)
-    - Land-use
-    - Soil
-      - HWSD
+As with species occurrence data, it is critical to begin by thinking carefully about the variables you will use to build your models. Key questions include:
+
+- *What is the biological process I am trying to understand?*
+- *What are the environmental conditions that might affect this process?*
+- *What is the spatial / temporal scale that is relevant for my question?*
+
+Clear answers to these questions will help you immensely in the modeling process and beyond.
+
+$~$
+
+### Data availability
+
+There is a wide range of environmental variables readily available for download. The list below mentions some of the most commonly used sources (that cover the global scale) but remember that there may be higher resolution or higher quality data sets available for a particular study area. Take some time to explore these links and think about what types of data might be most relevant for your project.
+
+  - Climate
+    - [Chelsa](https://chelsa-climate.org/): interpolated climate variables at ~1km resolution, includes climate layers for various time periods and variables, ranging from the Last glacial maximum, to current times, to several future scenarios.
+    - [WorldClim](https://www.worldclim.org/): interpolated climate variables at variable resolutions, including historical climate and weather as well as climate under several future scenarios.
+    - [ENVIREM](http://envirem.github.io/): numerous derived climatic and topographic variables (e.g., annual potential evapotranspiration, growing degree days).
+  - Elevation / topography 
+    - [STRM elevation](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-digital-elevation-shuttle-radar-topography-mission-srtm-non?qt-science_center_objects=0#qt-science_center_objects): Data from the Shuttle Radar Topography Mission used to generate elevation data with a global resolution of 3 arc-seconds (~90 m).
+  - Land-use/land-cover
+    - [Global Land](https://land.copernicus.eu/global/content/annual-100m-global-land-cover-maps-available) produced a global 100 m land cover map for 2015.
+    - [The Global Land Survey (GLS)](https://www.usgs.gov/core-science-systems/nli/landsat/global-land-survey-gls?qt-science_support_page_related_con=0#) were created as a collaboration between NASA and the USGS from 2009 through 2011.
+  - Soils
+    - The [Harmonized World Soil Database](http://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/harmonized-world-soil-database-v12/en/) is a 30 arc-second raster database with over 15000 different soil mapping units that combines existing regional and national updates of soil information worldwide.
+    - [SoilGrids](https://www.isric.org/explore/soilgrids) is a system for global digital soil mapping that uses machine learning methods to map the global distribution of soil properties.
+
+*Note: working with large and high resolution raster data in R can lead to computational challenges, which are outside the scope of this exercise. Some of the datasets listed above are very large and so you need to select a certain region before downloading.
+
+**Note: The resources above are heavily biased towards terrestrial ecosystems. For marine variables, see [this video lecture by Hannah Owens](https://www.youtube.com/watch?v=UxaOwrZXMDo) (data sources are covered in the 2nd half).
+
+In general, the resources above can be downloaded from the web, saved to your computer, and later read into R for visualization and analysis.  Alternatively, there are several R packages that allow you to download some of these data sources directly in R. For example:
+
+- [raster](https://cran.r-project.org/web/packages/raster/raster.pdf) (the `getData` function)
+- [climatedata](https://github.com/MirzaCengic/climatedata)
+- [chelsaDL](https://github.com/matthewkling/chelsaDL)
+- [climateR](https://github.com/mikejohnson51/climateR)
+- [rhwsd](https://github.com/dlebauer/rhwsd/): package for working with the Harmonized World Soil Database.  Also see [this tutorial](http://www.css.cornell.edu/faculty/dgr2/_static/files/R_PDF/R_HWSD.pdf).
+
+$~$
+
+### Working with raster data in R
+
+For the rest of this exercise, you should work through [this tutorial from NEON](https://www.neonscience.org/resources/learning-hub/tutorials/raster-data-r).  To start, you will need to:
+
+- Make sure you have the `raster` and `rgdal` packages installed
+- Download the data for the exercise [here](https://ndownloader.figshare.com/files/7907590)
+
+### Other resources
+
+The following series of video lectures (from the ENM2020 course organized by T. Peterson) provide much more background on environmental data for SDMs/ENMs:
+
+- [Overview of environmental data by Sara Varela](https://www.youtube.com/watch?v=iXt0gCuM0Zk)
+- [Climate variables by Dirk Karger](https://www.youtube.com/watch?v=I8N9qHcCPyk)
+- [Soils data by Gabriela Zuquim](https://youtu.be/icuYr8Z3ewg)
+- [Marine environment data by Hannah Owens](https://www.youtube.com/watch?v=UxaOwrZXMDo)
+- [Topographic data by Giuseppe Amatuli](https://youtu.be/BQauisbsMsA)
+- [Paleoclimate data Erin Saupe](https://youtu.be/XSvIXogf2wY)
 
 

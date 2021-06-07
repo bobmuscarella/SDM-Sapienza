@@ -13,7 +13,7 @@
 
 <title>Additional Resources</title>
 
-<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -295,12 +295,12 @@ div.tocify {
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row">
-<div class="col-sm-12 col-md-4 col-lg-3">
+<div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
 </div>
 
-<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -364,75 +364,51 @@ div.tocify {
 </div>
 
 
+<!-- $~$ -->
+<!-- ## Online tutorials and workshops -->
+<p>This course is a very brief introduction to the broad topic of SDMs / ENMs. There are lots of other excellent resources available online.</p>
 <p><span class="math inline">\(~\)</span></p>
-<div id="online-tutorials-and-workshops" class="section level2">
-<h2>Online tutorials and workshops</h2>
-<p>This course is a very brief introduction to the broad topic of SDMs / ENMs. There are lots of other excellent resources available online. Here are some suggestions:</p>
-<div id="resources-specifically-about-sdmenms" class="section level3">
-<h3>Resources specifically about SDM/ENMs</h3>
+<div id="sdmenms" class="section level3">
+<h3>SDM/ENMs</h3>
 <ul>
 <li><a href="https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam">ENM2020 course (YouTube playlist with lectures)</a> <em>organized by T. Peterson</em>
 <ul>
 <li><a href="https://docs.google.com/spreadsheets/d/1RQu1XRKyYfrnFI2V1g677d0sf8tFxC2xUvb96cbP02s/edit?usp=sharing">Schedule with PDFs of presentations</a></li>
 </ul></li>
 <li><a href="https://damariszurell.github.io/SDM-Intro/">Intro to SDM in R</a> <em>by D. Zurell</em></li>
-<li><a href="http://www.earthskysea.org/best-practices-in-species-distribution-modeling-a-workshop-in-r/">Best Practices in Species Distribution Modeling: A Workshop in R</a> <em>by A. Smith</em> <!-- - [Intro to SDMs course](https://cmerow.github.io/RDataScience/101SDMs.html) *by C. Merow* --></li>
+<li><a href="http://www.earthskysea.org/best-practices-in-species-distribution-modeling-a-workshop-in-r/">Best Practices in Species Distribution Modeling: A Workshop in R</a> <em>by A. Smith</em></li>
+<li><a href="https://rspatial.org/raster/sdm/index.html">Species distribution modeling in R</a> <em>by R. Hijmans and J. Elith</em></li>
 </ul>
+<p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="general-resources-for-spatial-data-analysis-in-r" class="section level3">
-<h3>General resources for Spatial Data analysis in R</h3>
+<div id="general-spatial-data-analysis-in-r" class="section level3">
+<h3>General spatial data analysis in R</h3>
 <ul>
 <li><a href="https://www.rspatial.org/raster/index.html">Spatial Data Science</a> <em>by R. Hijmans</em></li>
 <li><a href="https://keen-swartz-3146c4.netlify.app/">Spatial Data Science with applications in R</a> <em>by E. Pebesma and R. Bivand</em></li>
 <li><a href="https://geocompr.robinlovelace.net/">Geocomputation in R</a> <em>by R. Lovelace, J. Nowosad, J. Muenchow</em></li>
+<li><a href="https://www.neonscience.org/resources/learning-hub/tutorials">NEON data science tutorials</a></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
+<!-- ## Other R packages -->
+<!-- ### Obtaining occurrence data -->
+<!-- - [TBD]() -->
+<!-- ### Occurrence data cleaning -->
+<!-- - [`bRacatus` (Arlé, E., Zizka, A., Keil, P., Winter, M., Essl, F., Knight, T., Weigelt, P., Jiménez‐Muñoz, M. and Meyer, C. (2021), bRacatus: a method to estimate the accuracy and biogeographical status of georeferenced biological data. Methods in Ecology and Evolution.](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13629) -->
+<!-- - [TBD]() -->
+<!-- ### Environment data -->
+<!-- - [TBD]() -->
+<!-- ### Modeling algorithms -->
+<!-- - [TBD]() -->
+<!-- ### Evaluation -->
+<!-- - [`ENMeval`(Kass, J.M., Muscarella, R., Galante, P.J., Bohl, C.L., Pinilla‐Buitrago, G.E., Boria, R.A., Soley‐Guardia, M. and Anderson, R.P. (2021), ENMeval 2.0: redesigned for customizable and reproducible modeling of species’ niches and distributions. Methods in Ecology and Evolution.)](https://doi.org/10.1111/2041-210X.13628) -->
+<!-- - [TBD]() -->
+<!-- ### Virtual species / simulation -->
+<!-- - [TBD]() -->
+<!-- $~$ -->
 </div>
-</div>
-<div id="other-r-packages" class="section level2">
-<h2>Other R packages</h2>
-<div id="obtaining-occurrence-data" class="section level3">
-<h3>Obtaining occurrence data</h3>
-<ul>
-<li><a href="">TBD</a></li>
-</ul>
-</div>
-<div id="occurrence-data-cleaning" class="section level3">
-<h3>Occurrence data cleaning</h3>
-<ul>
-<li><a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13629"><code>bRacatus</code> (Arlé, E., Zizka, A., Keil, P., Winter, M., Essl, F., Knight, T., Weigelt, P., Jiménez‐Muñoz, M. and Meyer, C. (2021), bRacatus: a method to estimate the accuracy and biogeographical status of georeferenced biological data. Methods in Ecology and Evolution.</a></li>
-<li><a href="">TBD</a></li>
-</ul>
-</div>
-<div id="environment-data" class="section level3">
-<h3>Environment data</h3>
-<ul>
-<li><a href="">TBD</a></li>
-</ul>
-</div>
-<div id="modeling-algorithms" class="section level3">
-<h3>Modeling algorithms</h3>
-<ul>
-<li><a href="">TBD</a></li>
-</ul>
-</div>
-<div id="evaluation" class="section level3">
-<h3>Evaluation</h3>
-<ul>
-<li><a href="https://doi.org/10.1111/2041-210X.13628"><code>ENMeval</code>(Kass, J.M., Muscarella, R., Galante, P.J., Bohl, C.L., Pinilla‐Buitrago, G.E., Boria, R.A., Soley‐Guardia, M. and Anderson, R.P. (2021), ENMeval 2.0: redesigned for customizable and reproducible modeling of species’ niches and distributions. Methods in Ecology and Evolution.)</a></li>
-<li><a href="">TBD</a></li>
-</ul>
-</div>
-<div id="virtual-species-simulation" class="section level3">
-<h3>Virtual species / simulation</h3>
-<ul>
-<li><a href="">TBD</a></li>
-</ul>
-<p><span class="math inline">\(~\)</span></p>
-</div>
-</div>
-<div id="recommended-reading" class="section level2">
-<h2>Recommended Reading</h2>
+<div id="recommended-reading" class="section level3">
+<h3>Recommended Reading</h3>
 <p><em>Work in progress…</em></p>
 <ul>
 <li><p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.00845">Merow, C., Smith, M.J., Edwards, T.C., Jr, Guisan, A., McMahon, S.M., Normand, S., et al. (2014). What do we gain from simplicity versus complexity in species distribution models? Ecography , 37, 1267–1281.</a></p></li>

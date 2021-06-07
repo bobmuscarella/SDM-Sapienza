@@ -13,7 +13,7 @@
 
 <title>2. Environmental data</title>
 
-<script src="site_libs/header-attrs-2.7/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -295,12 +295,12 @@ div.tocify {
 
 <!-- setup 3col/9col grid for toc_float and main content  -->
 <div class="row">
-<div class="col-sm-12 col-md-4 col-lg-3">
+<div class="col-xs-12 col-sm-4 col-md-3">
 <div id="TOC" class="tocify">
 </div>
 </div>
 
-<div class="toc-content col-sm-12 col-md-8 col-lg-9">
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -367,43 +367,86 @@ div.tocify {
 <p><span class="math inline">\(~\)</span></p>
 <div id="introduction" class="section level3">
 <h3>Introduction</h3>
-<p>In this pre-course exercise, you will:</p>
+<p>In this exercise, you will:</p>
 <ul>
-<li>Download and manage spatial environmental data.</li>
+<li>Familiarize yourself with a variety of spatial environmental data resources</li>
+<li>Download and manage spatial environmental data</li>
+</ul>
+<p>Note that this exercise gives only a very quick overview. For more detailed background and practice, I highly recommend these lessons from Software Carpentry:</p>
+<ul>
+<li><a href="https://datacarpentry.org/organization-geospatial/">Introduction to Geospatial Concepts</a></li>
+<li><a href="https://datacarpentry.org/r-intro-geospatial/">Introduction to R for Geospatial Data</a></li>
+<li><a href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction to Geospatial Raster and Vector Data with R</a></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="getting-started" class="section level3">
 <h3>Getting Started</h3>
-<p>You will use the following packages</p>
+<p>As with species occurrence data, it is critical to begin by thinking carefully about the variables you will use to build your models. Key questions include:</p>
 <ul>
-<li>Climate variables
+<li><em>What is the biological process I am trying to understand?</em></li>
+<li><em>What are the environmental conditions that might affect this process?</em></li>
+<li><em>What is the spatial / temporal scale that is relevant for my question?</em></li>
+</ul>
+<p>Clear answers to these questions will help you immensely in the modeling process and beyond.</p>
+<p><span class="math inline">\(~\)</span></p>
+</div>
+<div id="data-availability" class="section level3">
+<h3>Data availability</h3>
+<p>There is a wide range of environmental variables readily available for download. The list below mentions some of the most commonly used sources (that cover the global scale) but remember that there may be higher resolution or higher quality data sets available for a particular study area. Take some time to explore these links and think about what types of data might be most relevant for your project.</p>
 <ul>
-<li>Manual downloads:
+<li>Climate
 <ul>
-<li><a href="https://chelsa-climate.org/">Chelsa</a></li>
-<li><a href="https://www.worldclim.org/">WorldClim</a></li>
+<li><a href="https://chelsa-climate.org/">Chelsa</a>: interpolated climate variables at ~1km resolution, includes climate layers for various time periods and variables, ranging from the Last glacial maximum, to current times, to several future scenarios.</li>
+<li><a href="https://www.worldclim.org/">WorldClim</a>: interpolated climate variables at variable resolutions, including historical climate and weather as well as climate under several future scenarios.</li>
+<li><a href="http://envirem.github.io/">ENVIREM</a>: numerous derived climatic and topographic variables (e.g., annual potential evapotranspiration, growing degree days).</li>
 </ul></li>
-<li>Automated downloads in R:
+<li>Elevation / topography
 <ul>
-<li><a href="https://cran.r-project.org/web/packages/raster/raster.pdf">raster</a></li>
+<li><a href="https://www.usgs.gov/centers/eros/science/usgs-eros-archive-digital-elevation-shuttle-radar-topography-mission-srtm-non?qt-science_center_objects=0#qt-science_center_objects">STRM elevation</a>: Data from the Shuttle Radar Topography Mission used to generate elevation data with a global resolution of 3 arc-seconds (~90 m).</li>
+</ul></li>
+<li>Land-use/land-cover
+<ul>
+<li><a href="https://land.copernicus.eu/global/content/annual-100m-global-land-cover-maps-available">Global Land</a> produced a global 100 m land cover map for 2015.</li>
+<li><a href="https://www.usgs.gov/core-science-systems/nli/landsat/global-land-survey-gls?qt-science_support_page_related_con=0#">The Global Land Survey (GLS)</a> were created as a collaboration between NASA and the USGS from 2009 through 2011.</li>
+</ul></li>
+<li>Soils
+<ul>
+<li>The <a href="http://www.fao.org/soils-portal/data-hub/soil-maps-and-databases/harmonized-world-soil-database-v12/en/">Harmonized World Soil Database</a> is a 30 arc-second raster database with over 15000 different soil mapping units that combines existing regional and national updates of soil information worldwide.</li>
+<li><a href="https://www.isric.org/explore/soilgrids">SoilGrids</a> is a system for global digital soil mapping that uses machine learning methods to map the global distribution of soil properties.</li>
+</ul></li>
+</ul>
+<p>*Note: working with large and high resolution raster data in R can lead to computational challenges, which are outside the scope of this exercise. Some of the datasets listed above are very large and so you need to select a certain region before downloading.</p>
+<p>**Note: The resources above are heavily biased towards terrestrial ecosystems. For marine variables, see <a href="https://www.youtube.com/watch?v=UxaOwrZXMDo">this video lecture by Hannah Owens</a> (data sources are covered in the 2nd half).</p>
+<p>In general, the resources above can be downloaded from the web, saved to your computer, and later read into R for visualization and analysis. Alternatively, there are several R packages that allow you to download some of these data sources directly in R. For example:</p>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/raster/raster.pdf">raster</a> (the <code>getData</code> function)</li>
 <li><a href="https://github.com/MirzaCengic/climatedata">climatedata</a></li>
 <li><a href="https://github.com/matthewkling/chelsaDL">chelsaDL</a></li>
 <li><a href="https://github.com/mikejohnson51/climateR">climateR</a></li>
-</ul></li>
-</ul></li>
-<li>Other
-<ul>
-<li>Elevation (STRM)</li>
-<li>Land-use</li>
-<li>Soil
-<ul>
-<li>HWSD</li>
-</ul></li>
-</ul></li>
+<li><a href="https://github.com/dlebauer/rhwsd/">rhwsd</a>: package for working with the Harmonized World Soil Database. Also see <a href="http://www.css.cornell.edu/faculty/dgr2/_static/files/R_PDF/R_HWSD.pdf">this tutorial</a>.</li>
 </ul>
-<pre class="r"><code>library(rgbif)
-library(CoordinateCleaner)</code></pre>
+<p><span class="math inline">\(~\)</span></p>
+</div>
+<div id="working-with-raster-data-in-r" class="section level3">
+<h3>Working with raster data in R</h3>
+<p>For the rest of this exercise, you should work through <a href="https://www.neonscience.org/resources/learning-hub/tutorials/raster-data-r">this tutorial from NEON</a>. To start, you will need to:</p>
+<ul>
+<li>Make sure you have the <code>raster</code> and <code>rgdal</code> packages installed</li>
+<li>Download the data for the exercise <a href="https://ndownloader.figshare.com/files/7907590">here</a></li>
+</ul>
+</div>
+<div id="other-resources" class="section level3">
+<h3>Other resources</h3>
+<p>The following series of video lectures (from the ENM2020 course organized by T. Peterson) provide much more background on environmental data for SDMs/ENMs:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=iXt0gCuM0Zk">Overview of environmental data by Sara Varela</a></li>
+<li><a href="https://www.youtube.com/watch?v=I8N9qHcCPyk">Climate variables by Dirk Karger</a></li>
+<li><a href="https://youtu.be/icuYr8Z3ewg">Soils data by Gabriela Zuquim</a></li>
+<li><a href="https://www.youtube.com/watch?v=UxaOwrZXMDo">Marine environment data by Hannah Owens</a></li>
+<li><a href="https://youtu.be/BQauisbsMsA">Topographic data by Giuseppe Amatuli</a></li>
+<li><a href="https://youtu.be/XSvIXogf2wY">Paleoclimate data Erin Saupe</a></li>
+</ul>
 </div>
 
 

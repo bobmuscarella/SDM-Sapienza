@@ -9,60 +9,64 @@ output:
     toc_depth: 3
 ---
 
+<!-- $~$ -->
+
+<!-- ## Online tutorials and workshops -->
+
+This course is a very brief introduction to the broad topic of SDMs / ENMs. There are lots of other excellent resources available online.
+
 $~$
 
-## Online tutorials and workshops
-
-This course is a very brief introduction to the broad topic of SDMs / ENMs. There are lots of other excellent resources available online.  Here are some suggestions:
-
-### Resources specifically about SDM/ENMs
+### SDM/ENMs
 
 - [ENM2020 course (YouTube playlist with lectures)](https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam) *organized by T. Peterson*
   - [Schedule with PDFs of presentations](https://docs.google.com/spreadsheets/d/1RQu1XRKyYfrnFI2V1g677d0sf8tFxC2xUvb96cbP02s/edit?usp=sharing)
 - [Intro to SDM in R](https://damariszurell.github.io/SDM-Intro/) *by D. Zurell*
 - [Best Practices in Species Distribution Modeling: A Workshop in R](http://www.earthskysea.org/best-practices-in-species-distribution-modeling-a-workshop-in-r/) *by A. Smith*
-<!-- - [Intro to SDMs course](https://cmerow.github.io/RDataScience/101SDMs.html) *by C. Merow* -->
+- [Species distribution modeling in R](https://rspatial.org/raster/sdm/index.html) *by R. Hijmans and J. Elith*
 
-### General resources for Spatial Data analysis in R
+$~$
+
+### General spatial data analysis in R
 
 - [Spatial Data Science](https://www.rspatial.org/raster/index.html) *by R. Hijmans*
 - [Spatial Data Science with applications in R](https://keen-swartz-3146c4.netlify.app/) *by E. Pebesma and R. Bivand*
 - [Geocomputation in R](https://geocompr.robinlovelace.net/) *by R. Lovelace, J. Nowosad, J. Muenchow*
+- [NEON data science tutorials](https://www.neonscience.org/resources/learning-hub/tutorials)
 
 $~$
 
-## Other R packages
+<!-- ## Other R packages -->
 
-### Obtaining occurrence data
+<!-- ### Obtaining occurrence data -->
 
-- [TBD]()
+<!-- - [TBD]() -->
 
-### Occurrence data cleaning
+<!-- ### Occurrence data cleaning -->
 
-- [`bRacatus` (Arlé, E., Zizka, A., Keil, P., Winter, M., Essl, F., Knight, T., Weigelt, P., Jiménez‐Muñoz, M. and Meyer, C. (2021), bRacatus: a method to estimate the accuracy and biogeographical status of georeferenced biological data. Methods in Ecology and Evolution.](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13629)
-- [TBD]()
+<!-- - [`bRacatus` (Arlé, E., Zizka, A., Keil, P., Winter, M., Essl, F., Knight, T., Weigelt, P., Jiménez‐Muñoz, M. and Meyer, C. (2021), bRacatus: a method to estimate the accuracy and biogeographical status of georeferenced biological data. Methods in Ecology and Evolution.](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13629) -->
+<!-- - [TBD]() -->
 
-### Environment data
+<!-- ### Environment data -->
 
-- [TBD]()
+<!-- - [TBD]() -->
 
-### Modeling algorithms
+<!-- ### Modeling algorithms -->
 
-- [TBD]()
+<!-- - [TBD]() -->
 
-### Evaluation
+<!-- ### Evaluation -->
 
-- [`ENMeval`(Kass, J.M., Muscarella, R., Galante, P.J., Bohl, C.L., Pinilla‐Buitrago, G.E., Boria, R.A., Soley‐Guardia, M. and Anderson, R.P. (2021), ENMeval 2.0: redesigned for customizable and reproducible modeling of species’ niches and distributions. Methods in Ecology and Evolution.)](https://doi.org/10.1111/2041-210X.13628)
-- [TBD]()
+<!-- - [`ENMeval`(Kass, J.M., Muscarella, R., Galante, P.J., Bohl, C.L., Pinilla‐Buitrago, G.E., Boria, R.A., Soley‐Guardia, M. and Anderson, R.P. (2021), ENMeval 2.0: redesigned for customizable and reproducible modeling of species’ niches and distributions. Methods in Ecology and Evolution.)](https://doi.org/10.1111/2041-210X.13628) -->
+<!-- - [TBD]() -->
 
-### Virtual species / simulation
+<!-- ### Virtual species / simulation -->
 
-- [TBD]()
+<!-- - [TBD]() -->
 
+<!-- $~$ -->
 
-$~$
-
-## Recommended Reading 
+### Recommended Reading 
 
 *Work in progress...*
 

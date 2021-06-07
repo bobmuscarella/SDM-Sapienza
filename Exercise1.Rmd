@@ -17,7 +17,7 @@ In this exercise, you will:
 
 - Download species occurrence data from GBIF using [`rgbif`](https://docs.ropensci.org/rgbif/index.html)
 - Clean species occurrence data using [`CoordinateCleaner`](https://ropensci.github.io/CoordinateCleaner/)
-- Generate data for a *virtual* species using [`virtualspecies`](http://borisleroy.com/files/virtualspecies-tutorial.html)
+- Generate data for a *virtual* species using [`virtualspecies`](http://borisleroy.com/virtualspecies_tutorial/)
 
 $~$
 
@@ -25,25 +25,64 @@ $~$
 
 There is a large and growing number of databases that contain species occurrence records (e.g., GBIF, eBird, iNaturalist, BIEN, etc.).  These databases are sometimes based on certain taxa or geographic regions so it is important to find a source that best meets the needs of your project.  While we won't focus on it in this exercise, note that the [`spocc`](https://docs.ropensci.org/spocc/) package can be used to query and collect species occurrence data from many sources.
 
-We will focus on obtaining data from GBIF using the `rgbif` package, which has its own [detailed vignette here](http://borisleroy.com/files/virtualspecies-tutorial.html).In this short exercise, we will see a very abbreviated demonstration of using the package to download data for a focal species.  The following section on cleaning coordinates also includes a section on downloading data from GBIF. Of course you need to install and load the package before starting.
+We will focus on obtaining data from GBIF using the `rgbif` package, which has its own [detailed vignette](https://docs.ropensci.org/rgbif/articles/rgbif.html) as well as a helpful [screencast](https://vimeo.com/127119010).
 
-```{r, eval=FALSE}
-install.packages("rgbif")
+In this short exercise, we will download data for a focal species.  You will also download data from GBIF in the following section on cleaning occurrence data.
+
+```{r, results='hide'}
 library(rgbif)
 
-myspecies <- c("Canis lupus")
+# You can query GBIF using a species name or a taxonomic key
+# One way to find the key for your study species is:
+key <- name_suggest(q="Canis lupus", rank="species")$data$key[1]
 
-key <- name_suggest(q="Canis lupus", rank='species')$data$key[1]
+# Now download occurrence data for your species
+# Note: by default, this function will only be limited to 500 observations
+# Note: this can takes some time if there are many observations
+gbif_data <- occ_search(taxonKey=key, # query by taxonomic key
+                        limit=10000, # increase the number of records downloaded
+                        hasCoordinate=TRUE) # only get records with geographic coordinates
 
-# Download GBIF occurrence data for this species.
-# (this can takes some time if there are many data points!)
-occs <- occ_search(taxonKey = key)
+# You can also search directly by species name, e.g.,
+occ_search(scientificName="Canis lupus")
 
-occ_search(scientificName = myspecies)
-
-# Only include records from broadly Europe
-gbif_data <- occ_data(scientificName = myspecies)
+# There are many options to filter the records returned, e.g.,
+gbif_data <- occ_search(scientificName="Canis lupus",
+                        continent="europe",  # only get records from Europe
+                        limit=10000,
+                        hasCoordinate=TRUE,
+                        hasGeospatialIssue=FALSE)
 ```
+
+We have downloaded data but what do we actually have?  
+
+The `occ_search` function returns an object of class `gbif`.  This is essentially a list with slots for metadata (meta), the occurrence data itself (data), the taxonomic hierarchy data (hier), and media metadata (media). For more details, see `?occ_search`.  Generally, we are most interested in the actual occurrence data, which is available in the (data) slot.
+
+```{r, eval=FALSE}
+gbif_data$data
+```
+
+As you will see, there is a lot of information held here but, for now, we focus only on the geographic locations of records.  Let's plot the records we downloaded on a map (with help from the `maps` package).
+
+```{r}
+library(maps)
+map(fill=TRUE, col='grey')
+points(gbif_data$data$decimalLongitude, 
+       gbif_data$data$decimalLatitude, 
+       bg=rgb(1,0,0,0.5), pch=21, lwd=0.5)
+```
+
+There are a lot of points scattered around Europe but also some seemingly strange points.  Wolves in Greenland? Wolves in the Canary Islands?  Hmmm... Let's zoom in on Europe.
+
+```{r}
+map(xlim = c(-20, 59),
+    ylim = c(35, 71), fill=T, col='grey')
+points(gbif_data$data$decimalLongitude, 
+       gbif_data$data$decimalLatitude, 
+       bg=rgb(1,0,0,0.5), pch=21, lwd=0.5)
+```
+
+This looks nice...  But are there wolves in the North sea?  Why so many observations in Spain and so few in France? It seems that we need to think more about these observations in terms of potential errors as well as biases.
 
 $~$
 
@@ -62,16 +101,18 @@ Then proceed to work through this vignette: [https://ropensci.github.io/Coordina
 
 Note that there are other packages to clean occurrence data (e.g., [`scrubr`](https://github.com/ropensci/scrubr)). The `CoordinateCleaner` vignette includes a nice comparison of different packages ([see here](https://ropensci.github.io/CoordinateCleaner/articles/Comparison_other_software.html)).
 
-$~$
+***If you have time: Use `CoordinateCleaner` with the data we downloaded for Canis lupus. What records are flagged?***
 
+$~$
 
 ### Virtual species
 
-Sometimes it is useful to generate our own *virtual* species, with a known properties (spatial distribution, abundance, relationship with environmental variables) to run simulations or, for example, testing species distribution modeling protocols.  In principle, you can simulate a species distribution in many different ways in R.  There are, however, very helpful tools (especially with regard to SDMs, specifically) in the `virtualspecies` package.  We will use the [`virtualspecies` tutorial](borisleroy.com/virtualspecies) in this exercise.  As above, make sure you install and load the package before beginning.
+It can be useful to generate a *virtual* species, with known properties (spatial distribution, relationship with environmental variables, abundance) for various reasons. For example, to test methodological choices when building species distribution models. It is possible to simulate the distribution of a virtual species in many different ways but here we will use the `virtualspecies` package (you can read the paper associated with the package [here](https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.01388)).  Of course, you need to first install and load the package:
 
-```{r}
+```{r, eval=FALSE}
 install.packages("virtualspecies")
 library("virtualspecies")
 ```
 
-Then work through the `virtualspecies` tutorial here: [borisleroy.com/virtualspecies](borisleroy.com/virtualspecies) 
+Then work through the `virtualspecies` tutorial here: [http://borisleroy.com/virtualspecies_tutorial/](http://borisleroy.com/virtualspecies_tutorial/)
+
