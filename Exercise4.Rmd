@@ -1,5 +1,5 @@
 ---
-title: "4. Evaluation and projection"
+title: "4. Overview of algorithms"
 output:
   html_document:
     toc: true
@@ -9,21 +9,31 @@ output:
     toc_depth: 3
 ---
 
+$~$
+
 ### Introduction
 
 In this exercise, you will:
 
-- Use [`ENMeval`](https://github.com/jamiemkass/ENMeval) to evaluate Maxent SDMs
-- Get familiar with the [ODMAP (Overview, Data, Model, Assessment and Prediction) protocol)](https://odmap.wsl.ch/)
+- Gain experience working with a variety of different algorithms used for ENMs/SDMs
 
-![](images/workflow.jpg)
+**Overview of algorithms**
 
-  
-  
+There is a wide range of different algorithms.
+
+- Presence-absence
+  - GLM
+
+- Presence-only
+  - `maxnet`: [R package](https://cran.r-project.org/web/packages/maxnet/maxnet.pdf)
+  - `biomod2`: [R package](https://github.com/biomodhub/biomod2)
+  - `embarcadero`: [R package](https://github.com/cjcarlson/embarcadero)
+
+- Joint SDMs (multi-species)
+    - `hSDM`: [R package](https://ecology.ghislainv.fr/hSDM/)
+    - `HMSC`: [Homepage](https://www2.helsinki.fi/en/researchgroups/statistical-ecology/hmsc), [publication](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13345), [Github](https://github.com/hmsc-r/HMSC)
+
+$~$
+
 ### Getting Started
-
-- 
-
-
-
-
+...

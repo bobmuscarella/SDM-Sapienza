@@ -1,5 +1,5 @@
 ---
-title: "3. Overview of algorithms"
+title: "3. Evaluation and projection"
 output:
   html_document:
     toc: true
@@ -9,25 +9,21 @@ output:
     toc_depth: 3
 ---
 
-$~$
-
 ### Introduction
 
-In this exercise, we will get some experience working with a variety of different algorithms used for ENMs/SDMs.
+In this exercise, you will:
 
-**Overview of algorithms**
+- Use [`ENMeval`](https://github.com/jamiemkass/ENMeval) to evaluate Maxent SDMs
+- Get familiar with the [ODMAP (Overview, Data, Model, Assessment and Prediction) protocol)](https://odmap.wsl.ch/)
 
-- Presence-absence
-  - GLM
-- Presence-only
-  - `maxnet`([R package](https://cran.r-project.org/web/packages/maxnet/maxnet.pdf))
-- Hybrid
-  - `embarcadero` ([R package](https://github.com/cjcarlson/embarcadero); [publication](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13389))
-- Joint SDMs
-    - `hSDM` ([R package](https://ecology.ghislainv.fr/hSDM/))
-    - `HMSC` ([Homepage](https://www2.helsinki.fi/en/researchgroups/statistical-ecology/hmsc), [publication](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13345), [Github](https://github.com/hmsc-r/HMSC))
+![](images/workflow.jpg)
 
-$~$
-
+  
+  
 ### Getting Started
-...
+
+- 
+
+
+
+

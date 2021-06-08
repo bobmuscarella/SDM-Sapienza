@@ -53,10 +53,11 @@ $~$
 
 **Morning session** (*Theory*)
 
-- Overview and introductions
-- [Lecture 1: The what, how, why of SDMs/ENMs]()
+- [Overview and introductions](lectures/0. Overview and introduction.pdf)
+- [Lecture 1: The what, how, why of SDMs/ENMs](lectures/1. The what how why of SDMs ENMs.pdf)
 - Discussion of pre-course readings
-<!-- - [Lecture 2: Data-to-model: Walk-through an example analysis]() -->
+  - *What did you find most interesting / confusing?*
+  - *What seems to be the most challenging aspect of building species distribution model?*
 
 **Afternoon session** (*Practical*)
 
@@ -76,8 +77,8 @@ $~$
 
 **Afternoon session** (*Practical*)
 
-- [Exercise 3: Overview of algorithms](Exercise3.html)
-- [Exercise 4: Model evaluation of algorithms]()
+- [Exercise 3: Model evaluation of algorithms]()
+- [Exercise 4: Overview of algorithms](Exercise3.html)
 
 $~$
 
@@ -89,6 +90,6 @@ $~$
 
 **Afternoon session** (*Practical*)
 
-- [Exercise 4: Evaluation and projection](Exercise4.html)
+- [Exercise 5: Evaluation and projection](Exercise4.html)
 
 

@@ -76,6 +76,8 @@ For the rest of this exercise, you should work through [this tutorial from NEON]
 - Make sure you have the `raster` and `rgdal` packages installed
 - Download the data for the exercise [here](https://ndownloader.figshare.com/files/7907590)
 
+$~$
+
 ### Other resources
 
 The following series of video lectures (from the ENM2020 course organized by T. Peterson) provide much more background on environmental data for SDMs/ENMs:
@@ -86,5 +88,3 @@ The following series of video lectures (from the ENM2020 course organized by T. 
 - [Marine environment data by Hannah Owens](https://www.youtube.com/watch?v=UxaOwrZXMDo)
 - [Topographic data by Giuseppe Amatuli](https://youtu.be/BQauisbsMsA)
 - [Paleoclimate data Erin Saupe](https://youtu.be/XSvIXogf2wY)
-
-
