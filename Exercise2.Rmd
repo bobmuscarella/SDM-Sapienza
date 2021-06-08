@@ -40,7 +40,7 @@ $~$
 
 ### Data availability
 
-There is a wide range of environmental variables readily available for download. The list below mentions some of the most commonly used sources (that cover the global scale) but remember that there may be higher resolution or higher quality data sets available for a particular study area. Take some time to explore these links and think about what types of data might be most relevant for your project.
+There is a wide range of environmental variables readily available for download. The list below mentions some of the most commonly used sources (that cover the global scale) but remember that there may be higher resolution or higher quality data sets available for a particular study area. Take a little time to explore the links that seem most relevant to your interests and then proceed to the next section, **Working with raster data in R**.
 
   - Climate
     - [Chelsa](https://chelsa-climate.org/): interpolated climate variables at ~1km resolution, includes climate layers for various time periods and variables, ranging from the Last glacial maximum, to current times, to several future scenarios.
@@ -48,7 +48,7 @@ There is a wide range of environmental variables readily available for download.
     - [ENVIREM](http://envirem.github.io/): numerous derived climatic and topographic variables (e.g., annual potential evapotranspiration, growing degree days).
   - Elevation / topography 
     - [STRM elevation](https://www.usgs.gov/centers/eros/science/usgs-eros-archive-digital-elevation-shuttle-radar-topography-mission-srtm-non?qt-science_center_objects=0#qt-science_center_objects): Data from the Shuttle Radar Topography Mission used to generate elevation data with a global resolution of 3 arc-seconds (~90 m).
-  - Land-use/land-cover
+  - Land-use / land-cover
     - [Global Land](https://land.copernicus.eu/global/content/annual-100m-global-land-cover-maps-available) produced a global 100 m land cover map for 2015.
     - [The Global Land Survey (GLS)](https://www.usgs.gov/core-science-systems/nli/landsat/global-land-survey-gls?qt-science_support_page_related_con=0#) were created as a collaboration between NASA and the USGS from 2009 through 2011.
   - Soils

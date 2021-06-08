@@ -11,7 +11,7 @@
 
 
 
-<title>1. Species data</title>
+<title>5. Projections</title>
 
 <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -359,7 +359,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">1. Species data</h1>
+<h1 class="title toc-ignore">5. Projections</h1>
 
 </div>
 
@@ -369,76 +369,9 @@ div.tocify {
 <h3>Introduction</h3>
 <p>In this exercise, you will:</p>
 <ul>
-<li>Download species occurrence data from GBIF using <a href="https://docs.ropensci.org/rgbif/index.html"><code>rgbif</code></a></li>
-<li>Clean species occurrence data using <a href="https://ropensci.github.io/CoordinateCleaner/"><code>CoordinateCleaner</code></a></li>
-<li>Generate data for a <em>virtual</em> species using <a href="http://borisleroy.com/virtualspecies_tutorial/"><code>virtualspecies</code></a></li>
+<li>Project fitted SDMs to different areas of space and time</li>
+<li>Evaluate the MESS (Multivariate sim)</li>
 </ul>
-<p><span class="math inline">\(~\)</span></p>
-</div>
-<div id="obtaining-data" class="section level3">
-<h3>Obtaining data</h3>
-<p>There is a large and growing number of databases that contain species occurrence records (e.g., GBIF, eBird, iNaturalist, BIEN, etc.). These databases are sometimes based on certain taxa or geographic regions so it is important to find a source that best meets the needs of your project. While we won’t focus on it in this exercise, note that the <a href="https://docs.ropensci.org/spocc/"><code>spocc</code></a> package can be used to query and collect species occurrence data from many sources.</p>
-<p>We will focus on obtaining data from GBIF using the <code>rgbif</code> package, which has its own <a href="https://docs.ropensci.org/rgbif/articles/rgbif.html">detailed vignette</a> as well as a helpful <a href="https://vimeo.com/127119010">screencast</a>.</p>
-<p>In this short exercise, we will download data for a focal species. You will also download data from GBIF in the following section on cleaning occurrence data.</p>
-<pre class="r"><code>library(rgbif)
-
-# You can query GBIF using a species name or a taxonomic key
-# One way to find the key for your study species is:
-key &lt;- name_suggest(q=&quot;Canis lupus&quot;, rank=&quot;species&quot;)$data$key[1]
-
-# Now download occurrence data for your species
-# Note: by default, this function will only be limited to 500 observations
-# Note: this can takes some time if there are many observations
-gbif_data &lt;- occ_search(taxonKey=key, # query by taxonomic key
-                        limit=10000, # increase the number of records downloaded
-                        hasCoordinate=TRUE) # only get records with geographic coordinates
-
-# You can also search directly by species name, e.g.,
-occ_search(scientificName=&quot;Canis lupus&quot;)
-
-# There are many options to filter the records returned, e.g.,
-gbif_data &lt;- occ_search(scientificName=&quot;Canis lupus&quot;,
-                        continent=&quot;europe&quot;,  # only get records from Europe
-                        limit=10000,
-                        hasCoordinate=TRUE,
-                        hasGeospatialIssue=FALSE)</code></pre>
-<p>We have downloaded data but what do we actually have?</p>
-<p>The <code>occ_search</code> function returns an object of class <code>gbif</code>. This is essentially a list with slots for metadata (meta), the occurrence data itself (data), the taxonomic hierarchy data (hier), and media metadata (media). For more details, see <code>?occ_search</code>. Generally, we are most interested in the actual occurrence data, which is available in the (data) slot.</p>
-<pre class="r"><code>gbif_data$data</code></pre>
-<p>As you will see, there is a lot of information held here but, for now, we focus only on the geographic locations of records. Let’s plot the records we downloaded on a map (with help from the <code>maps</code> package).</p>
-<pre class="r"><code>library(maps)
-map(fill=TRUE, col=&#39;grey&#39;)
-points(gbif_data$data$decimalLongitude, 
-       gbif_data$data$decimalLatitude, 
-       bg=rgb(1,0,0,0.5), pch=21, lwd=0.5)</code></pre>
-<p><img src="Exercise1_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>There are a lot of points scattered around Europe but also some seemingly strange points. Wolves in Greenland? Wolves in the Canary Islands? Hmmm… Let’s zoom in on Europe.</p>
-<pre class="r"><code>map(xlim = c(-20, 59),
-    ylim = c(35, 71), fill=T, col=&#39;grey&#39;)
-points(gbif_data$data$decimalLongitude, 
-       gbif_data$data$decimalLatitude, 
-       bg=rgb(1,0,0,0.5), pch=21, lwd=0.5)</code></pre>
-<p><img src="Exercise1_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
-<p>This looks nice… But are there wolves in the North sea? Why so many observations in Spain / Belgium and yet so few in France? It seems that we need to think more about these observations in terms of potential errors as well as biases.</p>
-<p><span class="math inline">\(~\)</span></p>
-</div>
-<div id="cleaning-coordinates" class="section level3">
-<h3>Cleaning coordinates</h3>
-<p>The fact that we have species occurrence data at our fingertips has largely driven the increased use of SDMs/ENMs. Unfortunately, these data sometimes contain errors of various types and it is important to <em>clean</em> the data prior to use in order to avoid problems and erroneous conclusions.</p>
-<p>For this exercise, we will work through the tutorial from the <a href="https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html"><code>CoordinateCleaner</code></a> package to acquire and clean data from GBIF. Make sure you install and load the package before beginning.</p>
-<pre class="r"><code>install.packages(&quot;CoordinateCleaner&quot;)
-library(&quot;CoordinateCleaner&quot;)</code></pre>
-<p>Then proceed to work through this vignette: <a href="https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html">https://ropensci.github.io/CoordinateCleaner/articles/Cleaning_GBIF_data_with_CoordinateCleaner.html</a></p>
-<p>Note that there are other packages to clean occurrence data (e.g., <a href="https://github.com/ropensci/scrubr"><code>scrubr</code></a>). The <code>CoordinateCleaner</code> vignette includes a nice comparison of different packages (<a href="https://ropensci.github.io/CoordinateCleaner/articles/Comparison_other_software.html">see here</a>).</p>
-<p><strong><em>If you have time: Use <code>CoordinateCleaner</code> with the data we downloaded for Canis lupus. What records are flagged?</em></strong></p>
-<p><span class="math inline">\(~\)</span></p>
-</div>
-<div id="virtual-species" class="section level3">
-<h3>Virtual species</h3>
-<p>It can be useful to generate a <em>virtual</em> species, with known properties (spatial distribution, relationship with environmental variables, abundance) for various reasons. For example, to test methodological choices when building species distribution models. It is possible to simulate the distribution of a virtual species in many different ways but here we will use the <code>virtualspecies</code> package (you can read the paper associated with the package <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.01388">here</a>). Of course, you need to first install and load the package:</p>
-<pre class="r"><code>install.packages(&quot;virtualspecies&quot;)
-library(&quot;virtualspecies&quot;)</code></pre>
-<p>Then work through the <code>virtualspecies</code> tutorial here: <a href="http://borisleroy.com/virtualspecies_tutorial/">http://borisleroy.com/virtualspecies_tutorial/</a></p>
 </div>
 
 

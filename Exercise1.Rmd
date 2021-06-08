@@ -82,7 +82,7 @@ points(gbif_data$data$decimalLongitude,
        bg=rgb(1,0,0,0.5), pch=21, lwd=0.5)
 ```
 
-This looks nice...  But are there wolves in the North sea?  Why so many observations in Spain and so few in France? It seems that we need to think more about these observations in terms of potential errors as well as biases.
+This looks nice...  But are there wolves in the North sea?  Why so many observations in Spain / Belgium and yet so few in France? It seems that we need to think more about these observations in terms of potential errors as well as biases.
 
 $~$
 

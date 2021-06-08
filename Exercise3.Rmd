@@ -1,5 +1,5 @@
 ---
-title: "3. Evaluation and projection"
+title: "3. Evaluation"
 output:
   html_document:
     toc: true
@@ -13,17 +13,29 @@ output:
 
 In this exercise, you will:
 
-- Use [`ENMeval`](https://github.com/jamiemkass/ENMeval) to evaluate Maxent SDMs
+- Use [`ENMeval`](https://github.com/jamiemkass/ENMeval) to build and evaluate Maxent SDMs
 - Get familiar with the [ODMAP (Overview, Data, Model, Assessment and Prediction) protocol)](https://odmap.wsl.ch/)
 
-![](images/workflow.jpg)
+$~$
 
+### Part 1: Model evaluation with `ENMeval`
+
+In this exercise, we will work through the new [`ENMeval` vignette](https://jamiemkass.github.io/ENMeval/articles/ENMeval-2.0.0-vignette.html). Before beginning, you should download the development version of the package:
+
+```{r, eval=FALSE}
+devtools::install_packages("jamiemkass/ENMeval")
+```
+
+You can read more about the [latest version of the ENMeval package in this paper](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13628).
+
+$~$
   
-  
-### Getting Started
+### Part 2: ODMAP protocol
 
-- 
+Recently, the ODMAP protocol (Overview, Data, Model, Assessment and Prediction) was introduced by [Zurell *et al.* (2020)](https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.05700) as a way to ensure quality and repeatability of SDMs.
 
+There is a web app to complete this protocol here: [https://odmap.wsl.ch/](https://odmap.wsl.ch/)
 
+For this exercise, complete [the ODMAP protocol on the web app](https://odmap.wsl.ch/) using information from one of the previous R exercises (or just invent an example).  You do not necessarily need to complete all the fields - the aim is to become familiar with the type of information included in the form, and to view a completed version.
 
-
+![](images/workflow.jpg){width=50%}

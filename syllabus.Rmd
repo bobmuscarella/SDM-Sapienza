@@ -73,12 +73,12 @@ $~$
 **Morning session** (*Theory*)
 
 - [Lecture 3: Model Evaluation](): Guest lecture by [Jamie Kass](https://scholar.google.com/citations?user=LM_UNdkAAAAJ&hl=en)
-- [Lecture 4: SDM algorithms]()
+- Lecture 4: SDM algorithms
 
 **Afternoon session** (*Practical*)
 
-- [Exercise 3: Model evaluation of algorithms]()
-- [Exercise 4: Overview of algorithms](Exercise3.html)
+- [Exercise 3: Model evaluation](Exercise3.html)
+- [Exercise 4: Overview of algorithms](Exercise4.html)
 
 $~$
 
@@ -86,10 +86,10 @@ $~$
 
 **Morning session** (*Theory*)
 
-- [Lecture 4: Applications: possibilities and precautions]()
+- Lecture 5: Applications: possibilities and precautions
 
 **Afternoon session** (*Practical*)
 
-- [Exercise 5: Evaluation and projection](Exercise4.html)
+- Exercise 5: Evaluation and projection
 
 

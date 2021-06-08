@@ -11,7 +11,7 @@
 
 
 
-<title>3. Evaluation and projection</title>
+<title>3. Evaluation</title>
 
 <script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
@@ -337,10 +337,10 @@ div.tocify {
       <a href="Exercise2.html">2. Environment data</a>
     </li>
     <li>
-      <a href="Exercise3.html">3. SDMs: algorithms</a>
+      <a href="Exercise3.html">3. SDMs: evaluation</a>
     </li>
     <li>
-      <a href="Exercise4.html">4. SDMs: evaluation &amp; projection</a>
+      <a href="Exercise4.html">4. SDMs: algorithms</a>
     </li>
   </ul>
 </li>
@@ -359,7 +359,7 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">3. Evaluation and projection</h1>
+<h1 class="title toc-ignore">3. Evaluation</h1>
 
 </div>
 
@@ -368,16 +368,24 @@ div.tocify {
 <h3>Introduction</h3>
 <p>In this exercise, you will:</p>
 <ul>
-<li>Use <a href="https://github.com/jamiemkass/ENMeval"><code>ENMeval</code></a> to evaluate Maxent SDMs</li>
+<li>Use <a href="https://github.com/jamiemkass/ENMeval"><code>ENMeval</code></a> to build and evaluate Maxent SDMs</li>
 <li>Get familiar with the <a href="https://odmap.wsl.ch/">ODMAP (Overview, Data, Model, Assessment and Prediction) protocol)</a></li>
 </ul>
-<p><img src="images/workflow.jpg" /></p>
+<p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="getting-started" class="section level3">
-<h3>Getting Started</h3>
-<ul>
-<li></li>
-</ul>
+<div id="part-1-model-evaluation-with-enmeval" class="section level3">
+<h3>Part 1: Model evaluation with <code>ENMeval</code></h3>
+<p>In this exercise, we will work through the new <a href="https://jamiemkass.github.io/ENMeval/articles/ENMeval-2.0.0-vignette.html"><code>ENMeval</code> vignette</a>. Before beginning, you should download the development version of the package:</p>
+<pre class="r"><code>devtools::install_packages(&quot;jamiemkass/ENMeval&quot;)</code></pre>
+<p>You can read more about the <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13628">latest version of the ENMeval package in this paper</a>.</p>
+<p><span class="math inline">\(~\)</span></p>
+</div>
+<div id="part-2-odmap-protocol" class="section level3">
+<h3>Part 2: ODMAP protocol</h3>
+<p>Recently, the ODMAP protocol (Overview, Data, Model, Assessment and Prediction) was introduced by <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.05700">Zurell <em>et al.</em> (2020)</a> as a way to ensure quality and repeatability of SDMs.</p>
+<p>There is a web app to complete this protocol here: <a href="https://odmap.wsl.ch/">https://odmap.wsl.ch/</a></p>
+<p>For this exercise, complete <a href="https://odmap.wsl.ch/">the ODMAP protocol on the web app</a> using information from one of the previous R exercises (or just invent an example). You do not necessarily need to complete all the fields - the aim is to become familiar with the type of information included in the form, and to view a completed version.</p>
+<p><img src="images/workflow.jpg" style="width:50.0%" /></p>
 </div>
 
 

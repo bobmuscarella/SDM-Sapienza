@@ -337,10 +337,10 @@ div.tocify {
       <a href="Exercise2.html">2. Environment data</a>
     </li>
     <li>
-      <a href="Exercise3.html">3. SDMs: algorithms</a>
+      <a href="Exercise3.html">3. SDMs: evaluation</a>
     </li>
     <li>
-      <a href="Exercise4.html">4. SDMs: evaluation &amp; projection</a>
+      <a href="Exercise4.html">4. SDMs: algorithms</a>
     </li>
   </ul>
 </li>
@@ -369,32 +369,56 @@ div.tocify {
 <h3>Introduction</h3>
 <p>In this exercise, you will:</p>
 <ul>
-<li>Gain experience working with a variety of different algorithms used for ENMs/SDMs</li>
+<li>Gain familiarity and experience working with a variety of different algorithms used for SDMs/ENMs</li>
 </ul>
-<p><strong>Overview of algorithms</strong></p>
-<p>There is a wide range of different algorithms.</p>
+<p>Please spend a short time to look through some of the materials in the <strong>Overview of algorithms</strong> section. But there is a lot of information there and impossible to absorb in a short period. When you feel motivated, move on to the <strong>R Practical</strong> section to work through some examples.</p>
+<p><span class="math inline">\(~\)</span></p>
+</div>
+<div id="overview-of-algorithms" class="section level3">
+<h3>Overview of algorithms</h3>
+<p>There is a wide range of different modeling algorithms used for correlative SDMs/ENMs (mechanistic SDMs are not covered here). For presence-only or presence-absence data, these range from envelope (or ‘profile’) methods (e.g., BIOCLIM), to GLMs (e.g., logistic regression), machine-learning algorithms (e.g., maxent, Random Forest), and complex methods that can be used to model multiple species at once (‘joint SDMs’).</p>
+<p>The Biodiversity and Climate Change Virtual Laboratory has compiled <a href="https://support.bccvl.org.au/support/solutions/articles/6000083199-overview-of-sdm-methods-in-bccvl">this useful site</a> that provides a detailed description of different model algorithms but does not include R examples.</p>
+<p>Some of the most commonly used R packages for SDMs, based on the general type of algorithm are provided in the list below:</p>
 <ul>
-<li>Presence-absence
+<li>Presence-absence algorithms
 <ul>
-<li>GLM</li>
+<li>GLM (base R <code>stats</code> packae): D. Zurell has <a href="https://damariszurell.github.io/HU-GCIB/3_SDM_intro.html">this nice example of fitting a simple SDM using GLMs</a>, and here is <a href="https://rspatial.org/raster/sdm/5_sdm_models.html">another exampe in R</a> from R Spatial.</li>
 </ul></li>
-<li>Presence-only
+<li>Presence-only algorithms
 <ul>
-<li><code>maxnet</code>: <a href="https://cran.r-project.org/web/packages/maxnet/maxnet.pdf">R package</a></li>
-<li><code>biomod2</code>: <a href="https://github.com/biomodhub/biomod2">R package</a></li>
-<li><code>embarcadero</code>: <a href="https://github.com/cjcarlson/embarcadero">R package</a></li>
+<li><code>BIOCLIM</code>, as implemented in the <a href="https://www.rdocumentation.org/packages/dismo/versions/1.3-3/topics/bioclim"><code>dismo</code> R package</a>.</li>
+<li><code>maxent</code> is available as a <a href="https://biodiversityinformatics.amnh.org/open_source/maxent/">Java program</a>, which can be called in R with the <a href="https://www.rdocumentation.org/packages/dismo/versions/1.3-3/topics/maxent"><code>dismo</code> package</a>.</li>
+<li><a href="https://cran.r-project.org/web/packages/maxnet/maxnet.pdf"><code>maxnet</code></a> is a new and slightly different implementation of <code>maxent</code>. See code on <a href="https://github.com/mrmaxent/maxnet">Github</a>.</li>
+<li><a href="https://github.com/biomodhub/biomod2"><code>biomod2</code></a> is an <em>ensemble</em> approach where results from multiple algorithms are combined.</li>
+<li><a href="https://github.com/cjcarlson/embarcadero"><code>embarcadero</code></a> uses Bayesian additive regression trees (BARTs) as an alternative to popular classification tree methods. There is <a href="https://github.com/cjcarlson/pier39">an extended tutorial here</a>.</li>
+<li><a href="https://cran.r-project.org/web/packages/randomForest/randomForest.pdf"><code>randomForest</code></a> is another machine learning method, see an <a href="http://spatialecology.weebly.com/r-code--data/category/sdm-random-forests">R tutorial here</a>.</li>
+<li><a href="https://cran.r-project.org/web/packages/brt/index.html"><code>brt</code></a> (‘boosted regression trees’) is another machine learning method. See an <a href="https://rspatial.org/raster/sdm/9_sdm_brt.html">R example here</a>, paper by <a href="https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1365-2656.2008.01390.x">Elith <em>et al.</em></a></li>
 </ul></li>
-<li>Joint SDMs (multi-species)
+<li>Joint (multi-species) SDMs
 <ul>
-<li><code>hSDM</code>: <a href="https://ecology.ghislainv.fr/hSDM/">R package</a></li>
-<li><code>HMSC</code>: <a href="https://www2.helsinki.fi/en/researchgroups/statistical-ecology/hmsc">Homepage</a>, <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13345">publication</a>, <a href="https://github.com/hmsc-r/HMSC">Github</a></li>
+<li><a href="https://ecology.ghislainv.fr/hSDM/"><code>hSDM</code></a></li>
+<li><a href="https://www2.helsinki.fi/en/researchgroups/statistical-ecology/hmsc"><code>HMSC</code></a>, <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13345">publication</a>, <a href="https://github.com/hmsc-r/HMSC">Github</a></li>
+</ul></li>
+</ul>
+<p>Although these are beyond the scope of this course, an even wider variety of approaches are available when additional data on abundance or repeat surveys or demographic rates are available (e.g., occupancy models, integral projection models). Here are some links for your own interest:</p>
+<ul>
+<li>Occupancy models
+<ul>
+<li><a href="http://www.seec.uct.ac.za/occupancy-models">A lecture and R exercise by Res Altwegg</a> and <a href="https://fukamilab.github.io/BIO202/09-C-occupancy-models.html">Tad Fukami has a nice R tutorial</a></li>
+<li>MacKenzie <em>et al.’s</em> book <a href="https://www.elsevier.com/books/occupancy-estimation-and-modeling/mackenzie/978-0-12-407197-1">“Occupancy Estimation and Modeling: Inferring Patterns and Dynamics of Species Occurrence”</a> is an authoritative guide on these models.</li>
+</ul></li>
+<li>Integral projection models (IPMs)
+<ul>
+<li><a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12146">Merow <em>et al.’s</em> excellent (2013) paper</a> provides a thorough <a href="https://besjournals.onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2F2041-210X.12146&amp;file=mee312146-sup-0001-AppendixS1.pdf">R tutorial in the appendix</a>.</li>
+<li>Cory Merow also has <a href="https://cmerow.github.io/RDataScience/21_Intro_IPMs.html">this nice presentation</a> on IPMs.</li>
 </ul></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="getting-started" class="section level3">
-<h3>Getting Started</h3>
-<p>…</p>
+<div id="r-practical" class="section level3">
+<h3>R Practical</h3>
+<p>For this part of the exercise, we will work through <a href="https://rspatial.org/raster/sdm/6_sdm_methods.html#">this tutorial by R Spatial</a>.</p>
+<p>For additional examples, I also highly recommend <a href="https://damariszurell.github.io/HU-GCIB/5_SDM_algorithms.html">Damaris Zurell’s “SDM algorithms” exercise</a>.</p>
 </div>
 
 
