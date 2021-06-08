@@ -15,11 +15,15 @@ $~$
 
 In this exercise, you will:
 
-- Gain experience working with a variety of different algorithms used for ENMs/SDMs
+- Gain experience working with a variety of different algorithms used for SDMs/ENMs.
 
 **Overview of algorithms**
 
-There is a wide range of different algorithms.
+There is a wide range of different modeling algorithms used for SDMs/ENMs ranging from simple envelope (or 'profile') methods (e.g., BIOCLIM), to GLMs (e.g., logistic regression), machine-learning algorithms (e.g., maxent, Random Forest), and complex methods that can be used to model multiple species at once ('joint SDMs'). 
+
+The Biodiversity and Climate Change Virtual Laboratory has compiled [this useful site](https://support.bccvl.org.au/support/solutions/articles/6000083199-overview-of-sdm-methods-in-bccvl) that provides a detailed description of different model algorithms but does not include R examples.
+
+The 
 
 - Presence-absence
   - GLM
@@ -35,5 +39,6 @@ There is a wide range of different algorithms.
 
 $~$
 
-### Getting Started
-...
+### 
+
+https://damariszurell.github.io/HU-GCIB/5_SDM_algorithms.html

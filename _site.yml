@@ -14,10 +14,12 @@ navbar:
           href: Exercise1.html
         - text: "2. Environment data"
           href: Exercise2.html
-        - text: "3. SDMs: algorithms"
+        - text: "3. SDMs: evaluation"
           href: Exercise3.html
-        - text: "4. SDMs: evaluation & projection"
+        - text: "4. SDMs: algorithms"
           href: Exercise4.html
+        # - text: "5. SDMs: projections"
+        #   href: Exercise5.html
     - text: "Resources"
       href: Resources.html
 
