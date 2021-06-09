@@ -30,7 +30,7 @@ The Biodiversity and Climate Change Virtual Laboratory has compiled [this useful
 Some of the most commonly used R packages for SDMs, based on the general type of algorithm are provided in the list below:
 
 - Presence-absence algorithms
-  - GLMs (Generalized linear models; base R `stats` packae): D. Zurell has [this nice example of fitting a simple SDM using GLMs](https://damariszurell.github.io/HU-GCIB/3_SDM_intro.html), and here is [another exampe in R](https://rspatial.org/raster/sdm/5_sdm_models.html) from R Spatial.
+  - GLMs (Generalized linear models; base R `stats` packae): D. Zurell has [a nice example of fitting a simple SDM using GLMs](https://damariszurell.github.io/HU-GCIB/3_SDM_intro.html), and here is [another example](https://rspatial.org/raster/sdm/5_sdm_models.html) from R Spatial.
   - GAMs (Generalized additive models; [`gam` R package](https://cran.r-project.org/web/packages/gam/gam.pdf)): Here is [a basic tutorial](http://spatialecology.weebly.com/r-code--data/category/sdm-gam) put together by Phoebe Zarnetske's lab.
 
 - Presence-only algorithms
