@@ -100,3 +100,23 @@ $~$
 
 - [Uden, D.R., Allen, C.R., Angeler, D.G., Corral, L. & Fricke, K.A. (2015) Adaptive invasive species distribution models: A framework for modeling incipient invasions. Biological Invasions, 17, 2831-2850.](Udenart_10 1007_s10530-015-0914-3.pdf)
 
+$~$
+
+### Using citizen science data for SDMs/ENMs
+
+- [Bradsworth, N., White, J.G., Isaac, B. & Cooke, R. (2017) Species distribution models derived from citizen science data predict the fine scale movements of owls in an urbanizing landscape. Biological Conservation, 213, 27-35.](pdfs/citsci/Bradsworth et al. 2017.pdf)
+
+- [Feldman, M.J., Imbeau, L., Marchand, P., Mazerolle, M.J., Darveau, M. et al. (2021) Trends and gaps in the use of citizen science derived data as input for species distribution models: A quantitative review. PLoS ONE, 16, e0234587.](pdfs/citsci/Feldman et al. 2021.pdf)
+
+- [Fournier, A.M.V., Sullivan, A.R., Bump, J.K., Perkins, M., Shieldcastle, M.C. et al. (2017) Combining citizen science species distribution models and stable isotopes reveals migratory connectivity in the secretive virginia rail. Journal of Applied Ecology, 54, 618-627.](pdfs/citsci/Fournier et al. 2017.pdf)
+
+- [Gaul, W., Sadykova, D., White, H.J., Leon-Sanchez, L., Caplat, P. et al. (2020) Data quantity is more important than its spatial bias for predictive species distribution modelling. PeerJ, 8, e10411.](pdfs/citsci/Gaul et al. 2020.pdf)
+
+- [Matutini, F., Baudry, J., Pain, G., Sineau, M. & Pithon, J. (2021) How citizen science could improve species distribution models and their independent assessment. Ecology and Evolution, 11, 3028-3039.](pdfs/citsci/Matutini et al. 2021.pdf)
+
+- [Milanesi, P., Mori, E. & Menchetti, M. (2020) Observer-oriented approach improves species distribution models from citizen science data. Ecology and Evolution, 10, 12104-12114.](pdfs/citsci/Milanesi et al. 2020.pdf)
+
+- [Steen, V.A., Elphick, C.S. & Tingley, M.W. (2019) An evaluation of stringent filtering to improve species distribution models from citizen science data. Diversity and Distributions, 25, 1857-1869.](pdfs/citsci/Steen et al. 2019.pdf)
+
+
+
