@@ -391,10 +391,9 @@ key &lt;- name_suggest(q=&quot;Canis lupus&quot;, rank=&quot;species&quot;)$data
 # Note: this can takes some time if there are many observations
 gbif_data &lt;- occ_search(taxonKey=key, # query by taxonomic key
                         limit=10000, # increase the number of records downloaded
-                        hasCoordinate=TRUE) # only get records with geographic coordinates
-
-# You can also search directly by species name, e.g.,
-occ_search(scientificName=&quot;Canis lupus&quot;)
+                        hasCoordinate=TRUE) # only get records with geographic coordinates</code></pre>
+<p>You can also search directly by species name and filter the results in various ways. For example:</p>
+<pre class="r"><code>occ_search(scientificName=&quot;Canis lupus&quot;)
 
 # There are many options to filter the records returned, e.g.,
 gbif_data &lt;- occ_search(scientificName=&quot;Canis lupus&quot;,
@@ -411,14 +410,14 @@ map(fill=TRUE, col=&#39;grey&#39;)
 points(gbif_data$data$decimalLongitude, 
        gbif_data$data$decimalLatitude, 
        bg=rgb(1,0,0,0.5), pch=21, lwd=0.5)</code></pre>
-<p><img src="Exercise1_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="Exercise1_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 <p>There are a lot of points scattered around Europe but also some seemingly strange points. Wolves in Greenland? Wolves in the Canary Islands? Hmmm… Let’s zoom in on Europe.</p>
 <pre class="r"><code>map(xlim = c(-20, 59),
     ylim = c(35, 71), fill=T, col=&#39;grey&#39;)
 points(gbif_data$data$decimalLongitude, 
        gbif_data$data$decimalLatitude, 
        bg=rgb(1,0,0,0.5), pch=21, lwd=0.5)</code></pre>
-<p><img src="Exercise1_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p><img src="Exercise1_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>This looks nice… But are there wolves in the North sea? Why so many observations in Spain / Belgium and yet so few in France? It seems that we need to think more about these observations in terms of potential errors as well as biases.</p>
 <p><span class="math inline">\(~\)</span></p>
 </div>

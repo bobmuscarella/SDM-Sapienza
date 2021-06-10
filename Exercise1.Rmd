@@ -43,7 +43,11 @@ gbif_data <- occ_search(taxonKey=key, # query by taxonomic key
                         limit=10000, # increase the number of records downloaded
                         hasCoordinate=TRUE) # only get records with geographic coordinates
 
-# You can also search directly by species name, e.g.,
+```
+
+You can also search directly by species name and filter the results in various ways.  For example:
+
+```{r, results='hide'}
 occ_search(scientificName="Canis lupus")
 
 # There are many options to filter the records returned, e.g.,

@@ -72,8 +72,8 @@ $~$
 
 **Morning session** (*Theory*)
 
-- [Lecture 3: Model Evaluation](): Guest lecture by [Jamie Kass](https://scholar.google.com/citations?user=LM_UNdkAAAAJ&hl=en)
-- Lecture 4: SDM algorithms
+- [Lecture 3: Model Evaluation](lectures/2. Kass_mod_eval_sapienzaU_2021.pdf): Guest lecture by [Jamie Kass](https://scholar.google.com/citations?user=LM_UNdkAAAAJ&hl=en)
+<!-- - Lecture 4: SDM algorithms -->
 
 **Afternoon session** (*Practical*)
 
@@ -86,10 +86,11 @@ $~$
 
 **Morning session** (*Theory*)
 
-- Lecture 5: Applications: possibilities and precautions
+- Lecture 4: Applications: possibilities and precautions
 
 **Afternoon session** (*Practical*)
 
-- Exercise 5: Evaluation and projection
+- Continue exercises, apply knowledge to individual projects
+<!-- - Exercise 5: Evaluation and projection -->
 
 
