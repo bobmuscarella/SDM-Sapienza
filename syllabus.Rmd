@@ -77,8 +77,8 @@ $~$
 
 **Afternoon session** (*Practical*)
 
-- [Exercise 3: Model evaluation](Exercise3.html)
-- [Exercise 4: Overview of algorithms](Exercise4.html)
+- [Exercise 3: Overview of algorithms](Exercise3.html)
+- [Exercise 4: Model evaluation](Exercise4.html)
 
 $~$
 
