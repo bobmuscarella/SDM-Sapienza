@@ -13,11 +13,11 @@ output:
 
 <!-- ## Online tutorials and workshops -->
 
-This course is a very brief introduction to the broad topic of SDMs / ENMs. There are lots of other excellent resources available online.
+This course is a very brief introduction to the broad topic of SDMs / ENMs. There are lots of other excellent resources available online, some which are compiled here.
 
 $~$
 
-### SDM/ENMs
+## Tutorials on SDM/ENMs
 
 - [ENM2020 course (YouTube playlist with lectures)](https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam) *organized by T. Peterson*
   - [Schedule with PDFs of presentations](https://docs.google.com/spreadsheets/d/1RQu1XRKyYfrnFI2V1g677d0sf8tFxC2xUvb96cbP02s/edit?usp=sharing)
@@ -27,7 +27,7 @@ $~$
 
 $~$
 
-### General spatial data analysis in R
+## General spatial data analysis in R
 
 - [Spatial Data Science](https://www.rspatial.org/raster/index.html) *by R. Hijmans*
 - [Spatial Data Science with applications in R](https://keen-swartz-3146c4.netlify.app/) *by E. Pebesma and R. Bivand*
@@ -36,40 +36,12 @@ $~$
 
 $~$
 
-<!-- ## Other R packages -->
-
-<!-- ### Obtaining occurrence data -->
-
-<!-- - [TBD]() -->
-
-<!-- ### Occurrence data cleaning -->
-
-<!-- - [`bRacatus` (Arlé, E., Zizka, A., Keil, P., Winter, M., Essl, F., Knight, T., Weigelt, P., Jiménez‐Muñoz, M. and Meyer, C. (2021), bRacatus: a method to estimate the accuracy and biogeographical status of georeferenced biological data. Methods in Ecology and Evolution.](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13629) -->
-<!-- - [TBD]() -->
-
-<!-- ### Environment data -->
-
-<!-- - [TBD]() -->
-
-<!-- ### Modeling algorithms -->
-
-<!-- - [TBD]() -->
-
-<!-- ### Evaluation -->
-
-<!-- - [`ENMeval`(Kass, J.M., Muscarella, R., Galante, P.J., Bohl, C.L., Pinilla‐Buitrago, G.E., Boria, R.A., Soley‐Guardia, M. and Anderson, R.P. (2021), ENMeval 2.0: redesigned for customizable and reproducible modeling of species’ niches and distributions. Methods in Ecology and Evolution.)](https://doi.org/10.1111/2041-210X.13628) -->
-<!-- - [TBD]() -->
-
-<!-- ### Virtual species / simulation -->
-
-<!-- - [TBD]() -->
-
-<!-- $~$ -->
-
-### Recommended Reading 
+## Recommended Reading 
 
 *Work in progress...*
 
+### General
+  
 - [Merow, C., Smith, M.J., Edwards, T.C., Jr, Guisan, A., McMahon, S.M., Normand, S., et al. (2014). What do we gain from simplicity versus complexity in species distribution models? Ecography , 37, 1267–1281.](https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.00845)
 
 - [Merow, C., Smith, M. & Silander, J.A. (2013). A practical guide to Maxent: what it does, and why inputs and settings matter. Ecography , 36, 1–12.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0587.2013.07872.x)
@@ -82,7 +54,7 @@ $~$
 
 $~$
 
-### Incorporating adaptive potential in SDMs/ENMs
+### Incorporating adaptive potential
 
 - [Bush, A., Mokany, K., Catullo, R., Hoffmann, A., Kellermann, V. et al. (2016) Incorporating evolutionary adaptation in species distribution modelling reduces projected vulnerability to climate change. Ecology Letters, 19, 1468-1478.](pdfs/adapt/Bush et al. 2016.pdf)
 
@@ -102,7 +74,7 @@ $~$
 
 $~$
 
-### Using citizen science data for SDMs/ENMs
+### Citizen science data
 
 - [Bradsworth, N., White, J.G., Isaac, B. & Cooke, R. (2017) Species distribution models derived from citizen science data predict the fine scale movements of owls in an urbanizing landscape. Biological Conservation, 213, 27-35.](pdfs/citsci/Bradsworth et al. 2017.pdf)
 
@@ -118,5 +90,81 @@ $~$
 
 - [Steen, V.A., Elphick, C.S. & Tingley, M.W. (2019) An evaluation of stringent filtering to improve species distribution models from citizen science data. Diversity and Distributions, 25, 1857-1869.](pdfs/citsci/Steen et al. 2019.pdf)
 
+$~$
+
+### Model Evaluation
+
+- [`ENMeval`(Kass, J.M., Muscarella, R., Galante, P.J., Bohl, C.L., Pinilla‐Buitrago, G.E., Boria, R.A., Soley‐Guardia, M. and Anderson, R.P. (2021), ENMeval 2.0: redesigned for customizable and reproducible modeling of species’ niches and distributions. Methods in Ecology and Evolution.)](https://doi.org/10.1111/2041-210X.13628)
+
+**pROC**
+
+- [Peterson, A. T., Papeş, M., & Soberón, J. (2008). Rethinking receiver operating characteristic analysis applications in ecological niche modeling. Ecological modelling, 213(1), 63-72.](https://www.sciencedirect.com/science/article/pii/S0304380007006163)
+
+**AUC**
+
+- [Lobo, J. M., Jiménez‐Valverde, A., & Real, R. (2008). AUC: a misleading measure of the performance of predictive distribution models. Global ecology and Biogeography, 17(2), 145-151.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1466-8238.2007.00358.x)
+
+**Continuous Boyce Index**
+
+- [Hirzel, A. H., Le Lay, G., Helfer, V., Randin, C., & Guisan, A. (2006). Evaluating the ability of habitat suitability models to predict species presences. Ecological Modelling, 199(2), 142-152.](https://www.sciencedirect.com/science/article/pii/S0304380006002468)
+
+**AIC for SDMs**
+
+- [Warren, D. L., & Seifert, S. N. (2011). Ecological niche modeling in Maxent: the importance of model complexity and the performance of model selection criteria. Ecological applications, 21(2), 335-342.](https://esajournals.onlinelibrary.wiley.com/doi/10.1890/10-1171.1)
+
+- [Velasco, J. A., & González-Salazar, C. (2019). Akaike information criterion should not be a “test” of geographical prediction accuracy in ecological niche modelling. Ecological Informatics, 51, 25-32.](https://www.sciencedirect.com/science/article/pii/S1574954118302577)
+
+**Leave-one-out CV**
+
+- [Shcheglovitova, M., & Anderson, R. P. (2013). Estimating optimal complexity for ecological niche models: a jackknife approach for species with small sample sizes. Ecological Modelling, 269, 9-17](https://www.sciencedirect.com/science/article/pii/S0304380013004043)
+
+**Spatial blocks**
+
+- [Radosavljevic, A., & Anderson, R. P. (2014). Making better Maxent models of species distributions: complexity, overfitting and evaluation. Journal of Biogeography, 41(4), 629-643.](https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.12227)
+
+**Block partitions in general**
+
+- [Roberts, D. R., Bahn, V., Ciuti, S., Boyce, M. S., Elith, J., Guillera‐Arroita, G., ... & Dormann, C. F. (2017). Cross‐validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure. Ecography, 40(8), 913-929.](https://onlinelibrary.wiley.com/doi/10.1111/ecog.02881)
+
+**blockCV package**
+
+- [Valavi, R., Elith, J., Lahoz‐Monfort, J. J., & Guillera‐Arroita, G. (2019). block CV: An r package for generating spatially or environmentally separated folds for k‐fold cross‐validation of species distribution models. Methods in Ecology and Evolution, 10(2), 225-232.](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13107) and [R package](https://github.com/rvalavi/blockCV)
+
+$~$
+
+### Background selection
+
+- [Barbet-Massin, M., Jiguet, F., Albert, C.H. & Thuiller, W. (2012) Selecting pseudo-absences for species distribution models: How, where and how many? Methods in Ecology and Evolution, 3, 327-338.](https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/j.2041-210X.2011.00172.x)
+
+$~$
+
+### Virtual species / simulation
+
+- [TBD]()
+
+$~$
+
+### Obtaining occurrence data
+
+- [TBD]()
+
+$~$
+
+### Occurrence data cleaning
+
+- [`bRacatus` (Arlé, E., Zizka, A., Keil, P., Winter, M., Essl, F., Knight, T., Weigelt, P., Jiménez‐Muñoz, M. and Meyer, C. (2021), bRacatus: a method to estimate the accuracy and biogeographical status of georeferenced biological data. Methods in Ecology and Evolution.](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13629)
+- [TBD]()
+
+$~$
+
+### Environment data
+
+- [TBD]()
+
+$~$
+
+### Modeling algorithms
+
+- [TBD]()
 
 
