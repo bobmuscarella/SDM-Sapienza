@@ -72,7 +72,7 @@ $~$
 
 **Morning session** (*Theory*)
 
-- [Lecture 2: Model Evaluation](lectures/2. Kass_mod_eval_sapienzaU_2021.pdf) (guest lecture by [Jamie Kass](https://scholar.google.com/citations?user=LM_UNdkAAAAJ&hl=en)). Video recording [here](https://youtu.be/GzF57egpIgQ).
+- [Lecture 2: Model Evaluation](lectures/2. Kass_mod_eval_sapienzaU_2021.pdf) (guest lecture by [Jamie Kass](https://scholar.google.com/citations?user=LM_UNdkAAAAJ&hl=en)). Video recording [here](https://youtu.be/GzF57egpIgQ)
 
 **Afternoon session** (*Practical*)
 
@@ -86,7 +86,7 @@ $~$
 
 **Morning session** (*Theory*)
 
-- [Lecture 3: Applications: Potentials and pitfalls](lectures/3. Potentials and pitfalls.pdf)
+- [Lecture 3: Applications: Potentials and pitfalls](lectures/3. Potentials and pitfalls.pdf). Video recording [here](https://youtu.be/rw6fR_Nj0Ws)
 
 **Afternoon session** (*Practical*)
 
