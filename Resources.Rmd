@@ -44,13 +44,15 @@ $~$
   
 - [Merow, C., Smith, M.J., Edwards, T.C., Jr, Guisan, A., McMahon, S.M., Normand, S., et al. (2014). What do we gain from simplicity versus complexity in species distribution models? Ecography , 37, 1267–1281.](https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.00845)
 
-- [Merow, C., Smith, M. & Silander, J.A. (2013). A practical guide to Maxent: what it does, and why inputs and settings matter. Ecography , 36, 1–12.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0587.2013.07872.x)
+$~$
 
-- [Muscarella, R., Galante, P.J., Soley-Guardia, M., Boria, R.A., Kass, J.M., Uriarte, M., et al. (2014). ENMeval: An R package for conducting spatially independent evaluations and estimating optimal model complexity for Maxent ecological niche models. Methods Ecol. Evol., 5, 1198–1205.](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12261)
+### Best practices
 
 - [Zurell, D., Franklin, J., König, C., Bouchet, P.J., Dormann, C.F., Elith, J., et al. (2020). A standard protocol for reporting species distribution models. Ecography, 43, 1261–1277.](pdfs/Zurell_etal_Ecography_2020.pdf)
 
 - [Araújo, M. B., R. P. Anderson, A. M. Barbosa, C. M. Beale, C. F. Dormann, R. Early, R. A. Garcia, et al. 2019. “Standards for Distribution Models in Biodiversity Assessments.” Science Advances 5: eaat4858.](https://advances.sciencemag.org/content/5/1/eaat4858)
+
+- [Merow, C., Maitner, B.S., Owens, H.L., Kass, J.M., Enquist, B.J. et al. (2019) Species' range model metadata standards: Rmms. Global Ecology and Biogeography, 28, 1912-1924.](https://onlinelibrary.wiley.com/doi/full/10.1111/geb.12993)
 
 $~$
 
@@ -94,7 +96,9 @@ $~$
 
 ### Model Evaluation
 
-- [`ENMeval`(Kass, J.M., Muscarella, R., Galante, P.J., Bohl, C.L., Pinilla‐Buitrago, G.E., Boria, R.A., Soley‐Guardia, M. and Anderson, R.P. (2021), ENMeval 2.0: redesigned for customizable and reproducible modeling of species’ niches and distributions. Methods in Ecology and Evolution.)](https://doi.org/10.1111/2041-210X.13628)
+- [Muscarella, R., Galante, P.J., Soley-Guardia, M., Boria, R.A., Kass, J.M., Uriarte, M., et al. (2014). ENMeval: An R package for conducting spatially independent evaluations and estimating optimal model complexity for Maxent ecological niche models. Methods Ecol. Evol., 5, 1198–1205.](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12261)
+
+- [Kass, J.M., Muscarella, R., Galante, P.J., Bohl, C.L., Pinilla‐Buitrago, G.E., Boria, R.A., Soley‐Guardia, M. and Anderson, R.P. (2021), ENMeval 2.0: redesigned for customizable and reproducible modeling of species’ niches and distributions. Methods in Ecology and Evolution.)](https://doi.org/10.1111/2041-210X.13628)
 
 **pROC**
 
@@ -138,16 +142,43 @@ $~$
 
 $~$
 
-### SDMs as biotic predictor variables
+### SDMs as biotic variables
 
 - [Kass, J.M., Anderson, R.P., Espinosa-Lucas, A., Juárez-Jaimes, V., Martínez-Salas, E. et al. (2020) Biotic predictors with phenological information improve range estimates for migrating monarch butterflies in mexico. Ecography, 43, 341-352.](https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.04886)
+
+- [Palacio, F.X. & Girini, J.M. (2018) Biotic interactions in species distribution models enhance model performance and shed light on natural history of rare birds: A case study using the straight-billed reedhaunter limnoctites rectirostris. Journal of Avian Biology, 49, e01743.](https://onlinelibrary.wiley.com/doi/10.1111/jav.01743)
+
+- [Heikkinen, R.K., Luoto, M., Virkkala, R., Pearson, R.G. & Körber, J.-H. (2007) Biotic interactions improve prediction of boreal bird distributions at macro-scales. Global Ecology and Biogeography, 16, 754-763.](https://onlinelibrary.wiley.com/doi/10.1111/j.1466-8238.2007.00345.x)
+
+- [Araújo, M.B. & Luoto, M. (2007) The importance of biotic interactions for modelling species distributions under climate change. Global Ecology and Biogeography, 16, 743-753.](https://onlinelibrary.wiley.com/doi/10.1111/j.1466-8238.2007.00359.x)
+
+- [Bateman, B.L., VanDerWal, J., Williams, S.E. & Johnson, C.N. (2012) Biotic interactions influence the projected distribution of a specialist mammal under climate change. Diversity and Distributions, 18, 861-872.](https://onlinelibrary.wiley.com/doi/10.1111/j.1472-4642.2012.00922.x)
+
+- [Hof, A.R., Jansson, R. & Nilsson, C. (2012) How biotic interactions may alter future predictions of species distributions: Future threats to the persistence of the arctic fox in fennoscandia. Diversity and Distributions, 18, 554-562.](https://onlinelibrary.wiley.com/doi/10.1111/j.1472-4642.2011.00876.x)
+
+- [Giannini, T.C., Chapman, D.S., Saraiva, A.M., Alves-dos-Santos, I. & Biesmeijer, J.C. (2013) Improving species distribution models using biotic interactions: A case study of parasites, pollinators and plants. Ecography, 36, 649-656.](https://onlinelibrary.wiley.com/doi/10.1111/j.1600-0587.2012.07191.x)
+
+- [Atauchi, P.J., Peterson, A.T. & Flanagan, J. (2018) Species distribution models for peruvian plantcutter improve with consideration of biotic interactions. Journal of Avian Biology, 49, jav-01617.](https://onlinelibrary.wiley.com/doi/10.1111/jav.01617)
+
+- [Wisz, M.S., Pottier, J., Kissling, W.D., Pellissier, L., Lenoir, J. et al. (2013) The role of biotic interactions in shaping distributions and realised assemblages of species: Implications for species distribution modelling. Biological Reviews, 88, 15-30.](https://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.2012.00235.x)
+
+- [Belmaker, J., Zarnetske, P., Tuanmu, M.-N., Zonneveld, S., Record, S. et al. (2015) Empirical evidence for the scale dependence of biotic interactions. Global Ecology and Biogeography, 24, 750-761.](https://onlinelibrary.wiley.com/doi/10.1111/geb.12311)
 
 $~$
 
 ### Virtual species / simulation
 
-- [TBD]()
+- [Meynard, C.N., Leroy, B. & Kaplan, D.M. (2019) Testing methods in species distribution modelling using virtual species: What have we learnt and what are we missing? Ecography, 42, 2021-2036.](https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.04385)
 
+- [Inman, R., Franklin, J., Esque, T. & Nussear, K. (2021) Comparing sample bias correction methods for species distribution modeling using virtual species. Ecosphere, 12, e03422.](https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecs2.3422)
+
+- [Santini, L., Benítez-López, A., Maiorano, L., Čengić, M. & Huijbregts, M.A.J. (2021) Assessing the reliability of species distribution projections in climate change research. Diversity and Distributions, 27, 1035-1050.](https://onlinelibrary.wiley.com/doi/10.1111/ddi.13252)
+
+- [Grimmett, L., Whitsed, R. & Horta, A. (2021) Creating virtual species to test species distribution models: The importance of landscape structure, dispersal and population processes. Ecography, 44, 753-765.](https://onlinelibrary.wiley.com/doi/10.1111/ecog.05555)
+
+- [Smith, A.B. & Santos, M.J. (2020) Testing the ability of species distribution models to infer variable importance. Ecography, 43, 1801-1813.](https://onlinelibrary.wiley.com/doi/10.1111/ecog.05317)
+
+- [Leroy, B., Meynard, C.N., Bellard, C. & Courchamp, F. (2016) Virtualspecies, an r package to generate virtual species distributions. Ecography, 39, 599-607.](https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.01388)
 
 $~$
 
@@ -159,19 +190,14 @@ $~$
 
 ### Occurrence data cleaning
 
-- [`bRacatus` (Arlé, E., Zizka, A., Keil, P., Winter, M., Essl, F., Knight, T., Weigelt, P., Jiménez‐Muñoz, M. and Meyer, C. (2021), bRacatus: a method to estimate the accuracy and biogeographical status of georeferenced biological data. Methods in Ecology and Evolution.](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13629)
-- [TBD]()
+- [Arlé, E., Zizka, A., Keil, P., Winter, M., Essl, F., Knight, T., Weigelt, P., Jiménez‐Muñoz, M. and Meyer, C. (2021), bRacatus: a method to estimate the accuracy and biogeographical status of georeferenced biological data. Methods in Ecology and Evolution.](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13629)
 
-$~$
-
-### Environment data
-
-- [TBD]()
+- [Zizka, A., Silvestro, D., Andermann, T., Azevedo, J., Duarte Ritter, C. et al. (2019) Coordinatecleaner: Standardized cleaning of occurrence records from biological collection databases. Methods in Ecology and Evolution, 10, 744-751.](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13152)
 
 $~$
 
 ### Modeling algorithms
 
-- [TBD]()
+- [Merow, C., Smith, M. & Silander, J.A. (2013). A practical guide to Maxent: what it does, and why inputs and settings matter. Ecography , 36, 1–12.](https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0587.2013.07872.x)
 
 
