@@ -90,5 +90,6 @@ $~$
 
 **Afternoon session** (*Practical*)
 
+- Live walk-through ENMeval vignette: Video recording [here](https://youtu.be/HH3FenCqBMA)
 - Continue exercises, apply knowledge to individual projects
 
