@@ -10,14 +10,13 @@ output:
 ---
 
 Bob Muscarella  
-*Sapienza University, Rome*  
-*9-11 June, 2021*
 
 $~$
 
 ### Introduction
+This course was initially developed as a 3-day workshop at Sapienza University in June, 2021. Students have various options to work through at their own pace, following different specific lessons based on their prior knowledge and goals.
 
-**Learning objectives**: By the end of this course, you will be able to:
+**Learning objectives**: In general, by the end of this course, you will be able to:
 
 - Know the basic theory and concepts behind SDMs / ENMs
 - Design, build and evaluate SDMs / ENMs using automated R scripts
