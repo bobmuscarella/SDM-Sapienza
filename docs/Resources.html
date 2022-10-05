@@ -13,8 +13,8 @@
 
 <title>Additional Resources</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -63,6 +63,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -308,7 +312,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -324,7 +328,7 @@ div.tocify {
   <a href="syllabus.html">Course schedule</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     R exercises
      
     <span class="caret"></span>
@@ -366,28 +370,46 @@ div.tocify {
 
 <!-- $~$ -->
 <!-- ## Online tutorials and workshops -->
-<p>This course is a very brief introduction to the broad topic of SDMs / ENMs. There are lots of other excellent resources available online, some which are compiled here.</p>
+<p>This course is a very brief introduction to the broad topic of SDMs /
+ENMs. There are lots of other excellent resources available online, some
+which are compiled here.</p>
 <p><span class="math inline">\(~\)</span></p>
 <div id="tutorials-on-sdmenms" class="section level2">
 <h2>Tutorials on SDM/ENMs</h2>
 <ul>
-<li><a href="https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam">ENM2020 course (YouTube playlist with lectures)</a> <em>organized by T. Peterson</em>
+<li><a
+href="https://youtube.com/playlist?list=PLhEJuWmv8Jf67qSdifDvgOk5DOJsNNiam">ENM2020
+course (YouTube playlist with lectures)</a> <em>organized by T.
+Peterson</em>
 <ul>
-<li><a href="https://docs.google.com/spreadsheets/d/1RQu1XRKyYfrnFI2V1g677d0sf8tFxC2xUvb96cbP02s/edit?usp=sharing">Schedule with PDFs of presentations</a></li>
+<li><a
+href="https://docs.google.com/spreadsheets/d/1RQu1XRKyYfrnFI2V1g677d0sf8tFxC2xUvb96cbP02s/edit?usp=sharing">Schedule
+with PDFs of presentations</a></li>
 </ul></li>
-<li><a href="https://damariszurell.github.io/SDM-Intro/">Intro to SDM in R</a> <em>by D. Zurell</em></li>
-<li><a href="http://www.earthskysea.org/best-practices-in-species-distribution-modeling-a-workshop-in-r/">Best Practices in Species Distribution Modeling: A Workshop in R</a> <em>by A. Smith</em></li>
-<li><a href="https://rspatial.org/raster/sdm/index.html">Species distribution modeling in R</a> <em>by R. Hijmans and J. Elith</em></li>
+<li><a href="https://damariszurell.github.io/SDM-Intro/">Intro to SDM in
+R</a> <em>by D. Zurell</em></li>
+<li><a
+href="http://www.earthskysea.org/best-practices-in-species-distribution-modeling-a-workshop-in-r/">Best
+Practices in Species Distribution Modeling: A Workshop in R</a> <em>by
+A. Smith</em></li>
+<li><a href="https://rspatial.org/raster/sdm/index.html">Species
+distribution modeling in R</a> <em>by R. Hijmans and J. Elith</em></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="general-spatial-data-analysis-in-r" class="section level2">
 <h2>General spatial data analysis in R</h2>
 <ul>
-<li><a href="https://www.rspatial.org/raster/index.html">Spatial Data Science</a> <em>by R. Hijmans</em></li>
-<li><a href="https://keen-swartz-3146c4.netlify.app/">Spatial Data Science with applications in R</a> <em>by E. Pebesma and R. Bivand</em></li>
-<li><a href="https://geocompr.robinlovelace.net/">Geocomputation in R</a> <em>by R. Lovelace, J. Nowosad, J. Muenchow</em></li>
-<li><a href="https://www.neonscience.org/resources/learning-hub/tutorials">NEON data science tutorials</a></li>
+<li><a href="https://www.rspatial.org/raster/index.html">Spatial Data
+Science</a> <em>by R. Hijmans</em></li>
+<li><a href="https://keen-swartz-3146c4.netlify.app/">Spatial Data
+Science with applications in R</a> <em>by E. Pebesma and R.
+Bivand</em></li>
+<li><a href="https://geocompr.robinlovelace.net/">Geocomputation in
+R</a> <em>by R. Lovelace, J. Nowosad, J. Muenchow</em></li>
+<li><a
+href="https://www.neonscience.org/resources/learning-hub/tutorials">NEON
+data science tutorials</a></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
@@ -397,141 +419,355 @@ div.tocify {
 <div id="general" class="section level3">
 <h3>General</h3>
 <ul>
-<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.00845">Merow, C., Smith, M.J., Edwards, T.C., Jr, Guisan, A., McMahon, S.M., Normand, S., et al. (2014). What do we gain from simplicity versus complexity in species distribution models? Ecography , 37, 1267–1281.</a></li>
+<li><a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.00845">Merow,
+C., Smith, M.J., Edwards, T.C., Jr, Guisan, A., McMahon, S.M., Normand,
+S., et al. (2014). What do we gain from simplicity versus complexity in
+species distribution models? Ecography , 37, 1267–1281.</a></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="best-practices" class="section level3">
 <h3>Best practices</h3>
 <ul>
-<li><p><a href="pdfs/Zurell_etal_Ecography_2020.pdf">Zurell, D., Franklin, J., König, C., Bouchet, P.J., Dormann, C.F., Elith, J., et al. (2020). A standard protocol for reporting species distribution models. Ecography, 43, 1261–1277.</a></p></li>
-<li><p><a href="https://advances.sciencemag.org/content/5/1/eaat4858">Araújo, M. B., R. P. Anderson, A. M. Barbosa, C. M. Beale, C. F. Dormann, R. Early, R. A. Garcia, et al. 2019. “Standards for Distribution Models in Biodiversity Assessments.” Science Advances 5: eaat4858.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/geb.12993">Merow, C., Maitner, B.S., Owens, H.L., Kass, J.M., Enquist, B.J. et al. (2019) Species’ range model metadata standards: Rmms. Global Ecology and Biogeography, 28, 1912-1924.</a></p></li>
+<li><p><a href="pdfs/Zurell_etal_Ecography_2020.pdf">Zurell, D.,
+Franklin, J., König, C., Bouchet, P.J., Dormann, C.F., Elith, J., et
+al. (2020). A standard protocol for reporting species distribution
+models. Ecography, 43, 1261–1277.</a></p></li>
+<li><p><a
+href="https://advances.sciencemag.org/content/5/1/eaat4858">Araújo, M.
+B., R. P. Anderson, A. M. Barbosa, C. M. Beale, C. F. Dormann, R. Early,
+R. A. Garcia, et al. 2019. “Standards for Distribution Models in
+Biodiversity Assessments.” Science Advances 5: eaat4858.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/geb.12993">Merow,
+C., Maitner, B.S., Owens, H.L., Kass, J.M., Enquist, B.J. et al. (2019)
+Species’ range model metadata standards: Rmms. Global Ecology and
+Biogeography, 28, 1912-1924.</a></p></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="incorporating-adaptive-potential" class="section level3">
 <h3>Incorporating adaptive potential</h3>
 <ul>
-<li><p><a href="pdfs/adapt/Bush%20et%20al.%202016.pdf">Bush, A., Mokany, K., Catullo, R., Hoffmann, A., Kellermann, V. et al. (2016) Incorporating evolutionary adaptation in species distribution modelling reduces projected vulnerability to climate change. Ecology Letters, 19, 1468-1478.</a></p></li>
-<li><p><a href="pdfs/adapt/Chardon%20et%20al.%202020.pdf">Chardon, N.I., Pironon, S., Peterson, M.L. &amp; Doak, D.F. (2020) Incorporating intraspecific variation into species distribution models improves distribution predictions, but cannot predict species traits for a wide-spread plant species. Ecography, 43, 60-74.</a></p></li>
-<li><p><a href="pdfs/adapt/Chen%20et%20al.%202020.pdf">Chen, Q., Yin, Y., Zhao, R., Yang, Y., Teixeira da Silva, J.A. et al. (2020) Incorporating local adaptation into species distribution modeling of paeonia mairei, an endemic plant to china. Frontiers in Plant Science, 10, 1717.</a></p></li>
-<li><p><a href="pdfs/adapt/Hällfors_et_al-2016-Ecological_Applications.pdf">Hällfors, M.H., Liao, J., Dzurisin, J., Grundel, R., Hyvärinen, M. et al. (2016) Addressing potential local adaptation in species distribution models: Implications for conservation under climate change. Ecological Applications, 26, 1154-1169.</a></p></li>
-<li><p><a href="pdfs/adapt/Miller%20&amp;%20Holloway%202015.pdf">Miller, J.A. &amp; Holloway, P. (2015) Incorporating movement in species distribution models. Progress in Physical Geography: Earth and Environment, 39, 837-849.</a></p></li>
-<li><p><a href="pdfs/adapt/Peterson%20et%20al.%202018.pdf">Peterson, M.L., Doak, D.F. &amp; Morris, W.F. (2019) Incorporating local adaptation into forecasts of species’ distribution and abundance under climate change. Global Change Biology, 25, 775-793.</a></p></li>
-<li><p><a href="Razgour%20et%20al.%202019.pdf">Razgour, O., Forester, B., Taggart, J.B., Bekaert, M., Juste, J. et al. (2019) Considering adaptive genetic variation in climate change vulnerability assessment reduces species range loss projections. Proceedings of the National Academy of Sciences, 116, 10418.</a></p></li>
-<li><p><a href="Udenart_10%201007_s10530-015-0914-3.pdf">Uden, D.R., Allen, C.R., Angeler, D.G., Corral, L. &amp; Fricke, K.A. (2015) Adaptive invasive species distribution models: A framework for modeling incipient invasions. Biological Invasions, 17, 2831-2850.</a></p></li>
+<li><p><a href="pdfs/adapt/Bush%20et%20al.%202016.pdf">Bush, A., Mokany,
+K., Catullo, R., Hoffmann, A., Kellermann, V. et al. (2016)
+Incorporating evolutionary adaptation in species distribution modelling
+reduces projected vulnerability to climate change. Ecology Letters, 19,
+1468-1478.</a></p></li>
+<li><p><a href="pdfs/adapt/Chardon%20et%20al.%202020.pdf">Chardon, N.I.,
+Pironon, S., Peterson, M.L. &amp; Doak, D.F. (2020) Incorporating
+intraspecific variation into species distribution models improves
+distribution predictions, but cannot predict species traits for a
+wide-spread plant species. Ecography, 43, 60-74.</a></p></li>
+<li><p><a href="pdfs/adapt/Chen%20et%20al.%202020.pdf">Chen, Q., Yin,
+Y., Zhao, R., Yang, Y., Teixeira da Silva, J.A. et al. (2020)
+Incorporating local adaptation into species distribution modeling of
+paeonia mairei, an endemic plant to china. Frontiers in Plant Science,
+10, 1717.</a></p></li>
+<li><p><a
+href="pdfs/adapt/Hällfors_et_al-2016-Ecological_Applications.pdf">Hällfors,
+M.H., Liao, J., Dzurisin, J., Grundel, R., Hyvärinen, M. et al. (2016)
+Addressing potential local adaptation in species distribution models:
+Implications for conservation under climate change. Ecological
+Applications, 26, 1154-1169.</a></p></li>
+<li><p><a href="pdfs/adapt/Miller%20&amp;%20Holloway%202015.pdf">Miller,
+J.A. &amp; Holloway, P. (2015) Incorporating movement in species
+distribution models. Progress in Physical Geography: Earth and
+Environment, 39, 837-849.</a></p></li>
+<li><p><a href="pdfs/adapt/Peterson%20et%20al.%202018.pdf">Peterson,
+M.L., Doak, D.F. &amp; Morris, W.F. (2019) Incorporating local
+adaptation into forecasts of species’ distribution and abundance under
+climate change. Global Change Biology, 25, 775-793.</a></p></li>
+<li><p><a href="Razgour%20et%20al.%202019.pdf">Razgour, O., Forester,
+B., Taggart, J.B., Bekaert, M., Juste, J. et al. (2019) Considering
+adaptive genetic variation in climate change vulnerability assessment
+reduces species range loss projections. Proceedings of the National
+Academy of Sciences, 116, 10418.</a></p></li>
+<li><p><a href="Udenart_10%201007_s10530-015-0914-3.pdf">Uden, D.R.,
+Allen, C.R., Angeler, D.G., Corral, L. &amp; Fricke, K.A. (2015)
+Adaptive invasive species distribution models: A framework for modeling
+incipient invasions. Biological Invasions, 17, 2831-2850.</a></p></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="citizen-science-data" class="section level3">
 <h3>Citizen science data</h3>
 <ul>
-<li><p><a href="pdfs/citsci/Bradsworth%20et%20al.%202017.pdf">Bradsworth, N., White, J.G., Isaac, B. &amp; Cooke, R. (2017) Species distribution models derived from citizen science data predict the fine scale movements of owls in an urbanizing landscape. Biological Conservation, 213, 27-35.</a></p></li>
-<li><p><a href="pdfs/citsci/Feldman%20et%20al.%202021.pdf">Feldman, M.J., Imbeau, L., Marchand, P., Mazerolle, M.J., Darveau, M. et al. (2021) Trends and gaps in the use of citizen science derived data as input for species distribution models: A quantitative review. PLoS ONE, 16, e0234587.</a></p></li>
-<li><p><a href="pdfs/citsci/Fournier%20et%20al.%202017.pdf">Fournier, A.M.V., Sullivan, A.R., Bump, J.K., Perkins, M., Shieldcastle, M.C. et al. (2017) Combining citizen science species distribution models and stable isotopes reveals migratory connectivity in the secretive virginia rail. Journal of Applied Ecology, 54, 618-627.</a></p></li>
-<li><p><a href="pdfs/citsci/Gaul%20et%20al.%202020.pdf">Gaul, W., Sadykova, D., White, H.J., Leon-Sanchez, L., Caplat, P. et al. (2020) Data quantity is more important than its spatial bias for predictive species distribution modelling. PeerJ, 8, e10411.</a></p></li>
-<li><p><a href="pdfs/citsci/Matutini%20et%20al.%202021.pdf">Matutini, F., Baudry, J., Pain, G., Sineau, M. &amp; Pithon, J. (2021) How citizen science could improve species distribution models and their independent assessment. Ecology and Evolution, 11, 3028-3039.</a></p></li>
-<li><p><a href="pdfs/citsci/Milanesi%20et%20al.%202020.pdf">Milanesi, P., Mori, E. &amp; Menchetti, M. (2020) Observer-oriented approach improves species distribution models from citizen science data. Ecology and Evolution, 10, 12104-12114.</a></p></li>
-<li><p><a href="pdfs/citsci/Steen%20et%20al.%202019.pdf">Steen, V.A., Elphick, C.S. &amp; Tingley, M.W. (2019) An evaluation of stringent filtering to improve species distribution models from citizen science data. Diversity and Distributions, 25, 1857-1869.</a></p></li>
+<li><p><a
+href="pdfs/citsci/Bradsworth%20et%20al.%202017.pdf">Bradsworth, N.,
+White, J.G., Isaac, B. &amp; Cooke, R. (2017) Species distribution
+models derived from citizen science data predict the fine scale
+movements of owls in an urbanizing landscape. Biological Conservation,
+213, 27-35.</a></p></li>
+<li><p><a href="pdfs/citsci/Feldman%20et%20al.%202021.pdf">Feldman,
+M.J., Imbeau, L., Marchand, P., Mazerolle, M.J., Darveau, M. et
+al. (2021) Trends and gaps in the use of citizen science derived data as
+input for species distribution models: A quantitative review. PLoS ONE,
+16, e0234587.</a></p></li>
+<li><p><a href="pdfs/citsci/Fournier%20et%20al.%202017.pdf">Fournier,
+A.M.V., Sullivan, A.R., Bump, J.K., Perkins, M., Shieldcastle, M.C. et
+al. (2017) Combining citizen science species distribution models and
+stable isotopes reveals migratory connectivity in the secretive virginia
+rail. Journal of Applied Ecology, 54, 618-627.</a></p></li>
+<li><p><a href="pdfs/citsci/Gaul%20et%20al.%202020.pdf">Gaul, W.,
+Sadykova, D., White, H.J., Leon-Sanchez, L., Caplat, P. et al. (2020)
+Data quantity is more important than its spatial bias for predictive
+species distribution modelling. PeerJ, 8, e10411.</a></p></li>
+<li><p><a href="pdfs/citsci/Matutini%20et%20al.%202021.pdf">Matutini,
+F., Baudry, J., Pain, G., Sineau, M. &amp; Pithon, J. (2021) How citizen
+science could improve species distribution models and their independent
+assessment. Ecology and Evolution, 11, 3028-3039.</a></p></li>
+<li><p><a href="pdfs/citsci/Milanesi%20et%20al.%202020.pdf">Milanesi,
+P., Mori, E. &amp; Menchetti, M. (2020) Observer-oriented approach
+improves species distribution models from citizen science data. Ecology
+and Evolution, 10, 12104-12114.</a></p></li>
+<li><p><a href="pdfs/citsci/Steen%20et%20al.%202019.pdf">Steen, V.A.,
+Elphick, C.S. &amp; Tingley, M.W. (2019) An evaluation of stringent
+filtering to improve species distribution models from citizen science
+data. Diversity and Distributions, 25, 1857-1869.</a></p></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="model-evaluation" class="section level3">
 <h3>Model Evaluation</h3>
 <ul>
-<li><p><a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12261">Muscarella, R., Galante, P.J., Soley-Guardia, M., Boria, R.A., Kass, J.M., Uriarte, M., et al. (2014). ENMeval: An R package for conducting spatially independent evaluations and estimating optimal model complexity for Maxent ecological niche models. Methods Ecol. Evol., 5, 1198–1205.</a></p></li>
-<li><p><a href="https://doi.org/10.1111/2041-210X.13628">Kass, J.M., Muscarella, R., Galante, P.J., Bohl, C.L., Pinilla‐Buitrago, G.E., Boria, R.A., Soley‐Guardia, M. and Anderson, R.P. (2021), ENMeval 2.0: redesigned for customizable and reproducible modeling of species’ niches and distributions. Methods in Ecology and Evolution.)</a></p></li>
+<li><p><a
+href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12261">Muscarella,
+R., Galante, P.J., Soley-Guardia, M., Boria, R.A., Kass, J.M., Uriarte,
+M., et al. (2014). ENMeval: An R package for conducting spatially
+independent evaluations and estimating optimal model complexity for
+Maxent ecological niche models. Methods Ecol. Evol., 5,
+1198–1205.</a></p></li>
+<li><p><a href="https://doi.org/10.1111/2041-210X.13628">Kass, J.M.,
+Muscarella, R., Galante, P.J., Bohl, C.L., Pinilla‐Buitrago, G.E.,
+Boria, R.A., Soley‐Guardia, M. and Anderson, R.P. (2021), ENMeval 2.0:
+redesigned for customizable and reproducible modeling of species’ niches
+and distributions. Methods in Ecology and Evolution.)</a></p></li>
 </ul>
 <p><strong>pROC</strong></p>
 <ul>
-<li><a href="https://www.sciencedirect.com/science/article/pii/S0304380007006163">Peterson, A. T., Papeş, M., &amp; Soberón, J. (2008). Rethinking receiver operating characteristic analysis applications in ecological niche modeling. Ecological modelling, 213(1), 63-72.</a></li>
+<li><a
+href="https://www.sciencedirect.com/science/article/pii/S0304380007006163">Peterson,
+A. T., Papeş, M., &amp; Soberón, J. (2008). Rethinking receiver
+operating characteristic analysis applications in ecological niche
+modeling. Ecological modelling, 213(1), 63-72.</a></li>
 </ul>
 <p><strong>AUC</strong></p>
 <ul>
-<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1466-8238.2007.00358.x">Lobo, J. M., Jiménez‐Valverde, A., &amp; Real, R. (2008). AUC: a misleading measure of the performance of predictive distribution models. Global ecology and Biogeography, 17(2), 145-151.</a></li>
+<li><a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1466-8238.2007.00358.x">Lobo,
+J. M., Jiménez‐Valverde, A., &amp; Real, R. (2008). AUC: a misleading
+measure of the performance of predictive distribution models. Global
+ecology and Biogeography, 17(2), 145-151.</a></li>
 </ul>
 <p><strong>Continuous Boyce Index</strong></p>
 <ul>
-<li><a href="https://www.sciencedirect.com/science/article/pii/S0304380006002468">Hirzel, A. H., Le Lay, G., Helfer, V., Randin, C., &amp; Guisan, A. (2006). Evaluating the ability of habitat suitability models to predict species presences. Ecological Modelling, 199(2), 142-152.</a></li>
+<li><a
+href="https://www.sciencedirect.com/science/article/pii/S0304380006002468">Hirzel,
+A. H., Le Lay, G., Helfer, V., Randin, C., &amp; Guisan, A. (2006).
+Evaluating the ability of habitat suitability models to predict species
+presences. Ecological Modelling, 199(2), 142-152.</a></li>
 </ul>
 <p><strong>AIC for SDMs</strong></p>
 <ul>
-<li><p><a href="https://esajournals.onlinelibrary.wiley.com/doi/10.1890/10-1171.1">Warren, D. L., &amp; Seifert, S. N. (2011). Ecological niche modeling in Maxent: the importance of model complexity and the performance of model selection criteria. Ecological applications, 21(2), 335-342.</a></p></li>
-<li><p><a href="https://www.sciencedirect.com/science/article/pii/S1574954118302577">Velasco, J. A., &amp; González-Salazar, C. (2019). Akaike information criterion should not be a “test” of geographical prediction accuracy in ecological niche modelling. Ecological Informatics, 51, 25-32.</a></p></li>
+<li><p><a
+href="https://esajournals.onlinelibrary.wiley.com/doi/10.1890/10-1171.1">Warren,
+D. L., &amp; Seifert, S. N. (2011). Ecological niche modeling in Maxent:
+the importance of model complexity and the performance of model
+selection criteria. Ecological applications, 21(2),
+335-342.</a></p></li>
+<li><p><a
+href="https://www.sciencedirect.com/science/article/pii/S1574954118302577">Velasco,
+J. A., &amp; González-Salazar, C. (2019). Akaike information criterion
+should not be a “test” of geographical prediction accuracy in ecological
+niche modelling. Ecological Informatics, 51, 25-32.</a></p></li>
 </ul>
 <p><strong>Leave-one-out CV</strong></p>
 <ul>
-<li><a href="https://www.sciencedirect.com/science/article/pii/S0304380013004043">Shcheglovitova, M., &amp; Anderson, R. P. (2013). Estimating optimal complexity for ecological niche models: a jackknife approach for species with small sample sizes. Ecological Modelling, 269, 9-17</a></li>
+<li><a
+href="https://www.sciencedirect.com/science/article/pii/S0304380013004043">Shcheglovitova,
+M., &amp; Anderson, R. P. (2013). Estimating optimal complexity for
+ecological niche models: a jackknife approach for species with small
+sample sizes. Ecological Modelling, 269, 9-17</a></li>
 </ul>
 <p><strong>Spatial blocks</strong></p>
 <ul>
-<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.12227">Radosavljevic, A., &amp; Anderson, R. P. (2014). Making better Maxent models of species distributions: complexity, overfitting and evaluation. Journal of Biogeography, 41(4), 629-643.</a></li>
+<li><a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/jbi.12227">Radosavljevic,
+A., &amp; Anderson, R. P. (2014). Making better Maxent models of species
+distributions: complexity, overfitting and evaluation. Journal of
+Biogeography, 41(4), 629-643.</a></li>
 </ul>
 <p><strong>Block partitions in general</strong></p>
 <ul>
-<li><a href="https://onlinelibrary.wiley.com/doi/10.1111/ecog.02881">Roberts, D. R., Bahn, V., Ciuti, S., Boyce, M. S., Elith, J., Guillera‐Arroita, G., … &amp; Dormann, C. F. (2017). Cross‐validation strategies for data with temporal, spatial, hierarchical, or phylogenetic structure. Ecography, 40(8), 913-929.</a></li>
+<li><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/ecog.02881">Roberts,
+D. R., Bahn, V., Ciuti, S., Boyce, M. S., Elith, J., Guillera‐Arroita,
+G., … &amp; Dormann, C. F. (2017). Cross‐validation strategies for data
+with temporal, spatial, hierarchical, or phylogenetic structure.
+Ecography, 40(8), 913-929.</a></li>
 </ul>
 <p><strong>blockCV package</strong></p>
 <ul>
-<li><a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13107">Valavi, R., Elith, J., Lahoz‐Monfort, J. J., &amp; Guillera‐Arroita, G. (2019). block CV: An r package for generating spatially or environmentally separated folds for k‐fold cross‐validation of species distribution models. Methods in Ecology and Evolution, 10(2), 225-232.</a> and <a href="https://github.com/rvalavi/blockCV">R package</a></li>
+<li><a
+href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13107">Valavi,
+R., Elith, J., Lahoz‐Monfort, J. J., &amp; Guillera‐Arroita, G. (2019).
+block CV: An r package for generating spatially or environmentally
+separated folds for k‐fold cross‐validation of species distribution
+models. Methods in Ecology and Evolution, 10(2), 225-232.</a> and <a
+href="https://github.com/rvalavi/blockCV">R package</a></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="background-selection" class="section level3">
 <h3>Background selection</h3>
 <ul>
-<li><a href="https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/j.2041-210X.2011.00172.x">Barbet-Massin, M., Jiguet, F., Albert, C.H. &amp; Thuiller, W. (2012) Selecting pseudo-absences for species distribution models: How, where and how many? Methods in Ecology and Evolution, 3, 327-338.</a></li>
+<li><a
+href="https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/j.2041-210X.2011.00172.x">Barbet-Massin,
+M., Jiguet, F., Albert, C.H. &amp; Thuiller, W. (2012) Selecting
+pseudo-absences for species distribution models: How, where and how
+many? Methods in Ecology and Evolution, 3, 327-338.</a></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="sdms-as-biotic-variables" class="section level3">
 <h3>SDMs as biotic variables</h3>
 <ul>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.04886">Kass, J.M., Anderson, R.P., Espinosa-Lucas, A., Juárez-Jaimes, V., Martínez-Salas, E. et al. (2020) Biotic predictors with phenological information improve range estimates for migrating monarch butterflies in mexico. Ecography, 43, 341-352.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/jav.01743">Palacio, F.X. &amp; Girini, J.M. (2018) Biotic interactions in species distribution models enhance model performance and shed light on natural history of rare birds: A case study using the straight-billed reedhaunter limnoctites rectirostris. Journal of Avian Biology, 49, e01743.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1466-8238.2007.00345.x">Heikkinen, R.K., Luoto, M., Virkkala, R., Pearson, R.G. &amp; Körber, J.-H. (2007) Biotic interactions improve prediction of boreal bird distributions at macro-scales. Global Ecology and Biogeography, 16, 754-763.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1466-8238.2007.00359.x">Araújo, M.B. &amp; Luoto, M. (2007) The importance of biotic interactions for modelling species distributions under climate change. Global Ecology and Biogeography, 16, 743-753.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1472-4642.2012.00922.x">Bateman, B.L., VanDerWal, J., Williams, S.E. &amp; Johnson, C.N. (2012) Biotic interactions influence the projected distribution of a specialist mammal under climate change. Diversity and Distributions, 18, 861-872.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1472-4642.2011.00876.x">Hof, A.R., Jansson, R. &amp; Nilsson, C. (2012) How biotic interactions may alter future predictions of species distributions: Future threats to the persistence of the arctic fox in fennoscandia. Diversity and Distributions, 18, 554-562.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1600-0587.2012.07191.x">Giannini, T.C., Chapman, D.S., Saraiva, A.M., Alves-dos-Santos, I. &amp; Biesmeijer, J.C. (2013) Improving species distribution models using biotic interactions: A case study of parasites, pollinators and plants. Ecography, 36, 649-656.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/jav.01617">Atauchi, P.J., Peterson, A.T. &amp; Flanagan, J. (2018) Species distribution models for peruvian plantcutter improve with consideration of biotic interactions. Journal of Avian Biology, 49, jav-01617.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.2012.00235.x">Wisz, M.S., Pottier, J., Kissling, W.D., Pellissier, L., Lenoir, J. et al. (2013) The role of biotic interactions in shaping distributions and realised assemblages of species: Implications for species distribution modelling. Biological Reviews, 88, 15-30.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/geb.12311">Belmaker, J., Zarnetske, P., Tuanmu, M.-N., Zonneveld, S., Record, S. et al. (2015) Empirical evidence for the scale dependence of biotic interactions. Global Ecology and Biogeography, 24, 750-761.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.04886">Kass,
+J.M., Anderson, R.P., Espinosa-Lucas, A., Juárez-Jaimes, V.,
+Martínez-Salas, E. et al. (2020) Biotic predictors with phenological
+information improve range estimates for migrating monarch butterflies in
+mexico. Ecography, 43, 341-352.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/jav.01743">Palacio,
+F.X. &amp; Girini, J.M. (2018) Biotic interactions in species
+distribution models enhance model performance and shed light on natural
+history of rare birds: A case study using the straight-billed
+reedhaunter limnoctites rectirostris. Journal of Avian Biology, 49,
+e01743.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/j.1466-8238.2007.00345.x">Heikkinen,
+R.K., Luoto, M., Virkkala, R., Pearson, R.G. &amp; Körber, J.-H. (2007)
+Biotic interactions improve prediction of boreal bird distributions at
+macro-scales. Global Ecology and Biogeography, 16, 754-763.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/j.1466-8238.2007.00359.x">Araújo,
+M.B. &amp; Luoto, M. (2007) The importance of biotic interactions for
+modelling species distributions under climate change. Global Ecology and
+Biogeography, 16, 743-753.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/j.1472-4642.2012.00922.x">Bateman,
+B.L., VanDerWal, J., Williams, S.E. &amp; Johnson, C.N. (2012) Biotic
+interactions influence the projected distribution of a specialist mammal
+under climate change. Diversity and Distributions, 18,
+861-872.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/j.1472-4642.2011.00876.x">Hof,
+A.R., Jansson, R. &amp; Nilsson, C. (2012) How biotic interactions may
+alter future predictions of species distributions: Future threats to the
+persistence of the arctic fox in fennoscandia. Diversity and
+Distributions, 18, 554-562.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/j.1600-0587.2012.07191.x">Giannini,
+T.C., Chapman, D.S., Saraiva, A.M., Alves-dos-Santos, I. &amp;
+Biesmeijer, J.C. (2013) Improving species distribution models using
+biotic interactions: A case study of parasites, pollinators and plants.
+Ecography, 36, 649-656.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/jav.01617">Atauchi,
+P.J., Peterson, A.T. &amp; Flanagan, J. (2018) Species distribution
+models for peruvian plantcutter improve with consideration of biotic
+interactions. Journal of Avian Biology, 49, jav-01617.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/j.1469-185X.2012.00235.x">Wisz,
+M.S., Pottier, J., Kissling, W.D., Pellissier, L., Lenoir, J. et
+al. (2013) The role of biotic interactions in shaping distributions and
+realised assemblages of species: Implications for species distribution
+modelling. Biological Reviews, 88, 15-30.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/geb.12311">Belmaker,
+J., Zarnetske, P., Tuanmu, M.-N., Zonneveld, S., Record, S. et
+al. (2015) Empirical evidence for the scale dependence of biotic
+interactions. Global Ecology and Biogeography, 24, 750-761.</a></p></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="virtual-species-simulation" class="section level3">
 <h3>Virtual species / simulation</h3>
 <ul>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.04385">Meynard, C.N., Leroy, B. &amp; Kaplan, D.M. (2019) Testing methods in species distribution modelling using virtual species: What have we learnt and what are we missing? Ecography, 42, 2021-2036.</a></p></li>
-<li><p><a href="https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecs2.3422">Inman, R., Franklin, J., Esque, T. &amp; Nussear, K. (2021) Comparing sample bias correction methods for species distribution modeling using virtual species. Ecosphere, 12, e03422.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/ddi.13252">Santini, L., Benítez-López, A., Maiorano, L., Čengić, M. &amp; Huijbregts, M.A.J. (2021) Assessing the reliability of species distribution projections in climate change research. Diversity and Distributions, 27, 1035-1050.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/ecog.05555">Grimmett, L., Whitsed, R. &amp; Horta, A. (2021) Creating virtual species to test species distribution models: The importance of landscape structure, dispersal and population processes. Ecography, 44, 753-765.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/10.1111/ecog.05317">Smith, A.B. &amp; Santos, M.J. (2020) Testing the ability of species distribution models to infer variable importance. Ecography, 43, 1801-1813.</a></p></li>
-<li><p><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.01388">Leroy, B., Meynard, C.N., Bellard, C. &amp; Courchamp, F. (2016) Virtualspecies, an r package to generate virtual species distributions. Ecography, 39, 599-607.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.04385">Meynard,
+C.N., Leroy, B. &amp; Kaplan, D.M. (2019) Testing methods in species
+distribution modelling using virtual species: What have we learnt and
+what are we missing? Ecography, 42, 2021-2036.</a></p></li>
+<li><p><a
+href="https://esajournals.onlinelibrary.wiley.com/doi/10.1002/ecs2.3422">Inman,
+R., Franklin, J., Esque, T. &amp; Nussear, K. (2021) Comparing sample
+bias correction methods for species distribution modeling using virtual
+species. Ecosphere, 12, e03422.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/ddi.13252">Santini,
+L., Benítez-López, A., Maiorano, L., Čengić, M. &amp; Huijbregts, M.A.J.
+(2021) Assessing the reliability of species distribution projections in
+climate change research. Diversity and Distributions, 27,
+1035-1050.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/ecog.05555">Grimmett,
+L., Whitsed, R. &amp; Horta, A. (2021) Creating virtual species to test
+species distribution models: The importance of landscape structure,
+dispersal and population processes. Ecography, 44, 753-765.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/10.1111/ecog.05317">Smith,
+A.B. &amp; Santos, M.J. (2020) Testing the ability of species
+distribution models to infer variable importance. Ecography, 43,
+1801-1813.</a></p></li>
+<li><p><a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.01388">Leroy,
+B., Meynard, C.N., Bellard, C. &amp; Courchamp, F. (2016)
+Virtualspecies, an r package to generate virtual species distributions.
+Ecography, 39, 599-607.</a></p></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="integrating-dispersal" class="section level3">
 <h3>Integrating dispersal</h3>
 <ul>
-<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.00930">Nobis, M.P. &amp; Normand, S. (2014) Kissmig – a simple model for r to account for limited migration in analyses of species distributions. Ecography, 37, 1282-1287.</a></li>
+<li><a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.00930">Nobis,
+M.P. &amp; Normand, S. (2014) Kissmig – a simple model for r to account
+for limited migration in analyses of species distributions. Ecography,
+37, 1282-1287.</a></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="occurrence-data-cleaning" class="section level3">
 <h3>Occurrence data cleaning</h3>
 <ul>
-<li><p><a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13629">Arlé, E., Zizka, A., Keil, P., Winter, M., Essl, F., Knight, T., Weigelt, P., Jiménez‐Muñoz, M. and Meyer, C. (2021), bRacatus: a method to estimate the accuracy and biogeographical status of georeferenced biological data. Methods in Ecology and Evolution.</a></p></li>
-<li><p><a href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13152">Zizka, A., Silvestro, D., Andermann, T., Azevedo, J., Duarte Ritter, C. et al. (2019) Coordinatecleaner: Standardized cleaning of occurrence records from biological collection databases. Methods in Ecology and Evolution, 10, 744-751.</a></p></li>
+<li><p><a
+href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13629">Arlé,
+E., Zizka, A., Keil, P., Winter, M., Essl, F., Knight, T., Weigelt, P.,
+Jiménez‐Muñoz, M. and Meyer, C. (2021), bRacatus: a method to estimate
+the accuracy and biogeographical status of georeferenced biological
+data. Methods in Ecology and Evolution.</a></p></li>
+<li><p><a
+href="https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13152">Zizka,
+A., Silvestro, D., Andermann, T., Azevedo, J., Duarte Ritter, C. et
+al. (2019) Coordinatecleaner: Standardized cleaning of occurrence
+records from biological collection databases. Methods in Ecology and
+Evolution, 10, 744-751.</a></p></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="modeling-algorithms" class="section level3">
 <h3>Modeling algorithms</h3>
 <ul>
-<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0587.2013.07872.x">Merow, C., Smith, M. &amp; Silander, J.A. (2013). A practical guide to Maxent: what it does, and why inputs and settings matter. Ecography , 36, 1–12.</a></li>
+<li><a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0587.2013.07872.x">Merow,
+C., Smith, M. &amp; Silander, J.A. (2013). A practical guide to Maxent:
+what it does, and why inputs and settings matter. Ecography , 36,
+1–12.</a></li>
 </ul>
 </div>
 </div>
@@ -574,6 +810,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

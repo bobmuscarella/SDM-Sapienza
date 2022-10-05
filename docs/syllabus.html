@@ -13,8 +13,8 @@
 
 <title>Introduction to SDMs: theory and practice in R</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -63,6 +63,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -308,7 +312,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -324,7 +328,7 @@ div.tocify {
   <a href="syllabus.html">Course schedule</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     R exercises
      
     <span class="caret"></span>
@@ -359,7 +363,8 @@ div.tocify {
 
 
 
-<h1 class="title toc-ignore">Introduction to SDMs: theory and practice in R</h1>
+<h1 class="title toc-ignore">Introduction to SDMs: theory and practice
+in R</h1>
 
 </div>
 
@@ -368,45 +373,86 @@ div.tocify {
 <p><span class="math inline">\(~\)</span></p>
 <div id="introduction" class="section level3">
 <h3>Introduction</h3>
-<p>This course was initially developed as a 3-day workshop at Sapienza University in June, 2021. Students have various options to work through at their own pace, following different specific lessons based on their prior knowledge and goals.</p>
-<p><strong>Learning objectives</strong>: In general, by the end of this course, you will be able to:</p>
+<p>This course was initially developed as a 3-day workshop at Sapienza
+University in June, 2021. Students have various options to work through
+at their own pace, following different specific lessons based on their
+prior knowledge and goals.</p>
+<p><strong>Learning objectives</strong>: In general, by the end of this
+course, you will be able to:</p>
 <ul>
 <li>Know the basic theory and concepts behind SDMs / ENMs</li>
-<li>Design, build and evaluate SDMs / ENMs using automated R scripts</li>
-<li>Understand the strengths and limitations of SDMs / ENMs for different purposes</li>
-<li>Use SDMs / ENMs to describe, predict, and project species distributions in space and time</li>
+<li>Design, build and evaluate SDMs / ENMs using automated R
+scripts</li>
+<li>Understand the strengths and limitations of SDMs / ENMs for
+different purposes</li>
+<li>Use SDMs / ENMs to describe, predict, and project species
+distributions in space and time</li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="before-the-course" class="section level3">
 <h3>Before the course</h3>
 <p><strong>Reading</strong></p>
-<p>Please read these papers before the course begins as they provide important background information. We will discuss them on Day 1 of the course.</p>
+<p>Please read these papers before the course begins as they provide
+important background information. We will discuss them on Day 1 of the
+course.</p>
 <ul>
-<li><a href="pdfs/Elith%20and%20Leathwick%202009.pdf">Elith, J., &amp; Leathwick, J. R. (2009). Species distribution models: ecological explanation and prediction across space and time. Annual Review of Ecology, Evolution, and Systematics 40, 677-697.</a></li>
-<li><a href="pdfs/Elith%20and%20Graham%202009.pdf">Elith, J., &amp; Graham, C. H. (2009) Do they? How do they? WHY do they differ? On finding reasons for differing performances of species distribution models. Ecography 32(1), 66-77.</a></li>
-<li><a href="pdfs/Merow%20et%20al.%202014.pdf">Merow et al. (2014) What do we gain from simplicity versus complexity in species distribution models? Ecography, 37, 1267–1281.</a></li>
+<li><a href="pdfs/Elith%20and%20Leathwick%202009.pdf">Elith, J., &amp;
+Leathwick, J. R. (2009). Species distribution models: ecological
+explanation and prediction across space and time. Annual Review of
+Ecology, Evolution, and Systematics 40, 677-697.</a></li>
+<li><a href="pdfs/Elith%20and%20Graham%202009.pdf">Elith, J., &amp;
+Graham, C. H. (2009) Do they? How do they? WHY do they differ? On
+finding reasons for differing performances of species distribution
+models. Ecography 32(1), 66-77.</a></li>
+<li><a href="pdfs/Merow%20et%20al.%202014.pdf">Merow et al. (2014) What
+do we gain from simplicity versus complexity in species distribution
+models? Ecography, 37, 1267–1281.</a></li>
 </ul>
 <p><strong>R Exercises</strong></p>
-<p>To prepare for the course, we will use some tutorials produced by the excellent Data Carpentry organization. Follow through the exercises below to refresh your general R skills and get you started with geospatial data and analyses. You are free to skip around in these materials based on your prior knowledge but I encourage you to follow through everything.</p>
+<p>To prepare for the course, we will use some tutorials produced by the
+excellent Data Carpentry organization. Follow through the exercises
+below to refresh your general R skills and get you started with
+geospatial data and analyses. You are free to skip around in these
+materials based on your prior knowledge but I encourage you to follow
+through everything.</p>
 <ol style="list-style-type: decimal">
-<li><a href="https://datacarpentry.org/r-intro-geospatial/01-rstudio-intro/index.html">Data Carpentry: Introduction to R and RStudio</a></li>
-<li><a href="https://datacarpentry.org/organization-geospatial/">Data Carpentry: Introduction to Geospatial Concepts</a></li>
-<li><strong><em>Optional:</em></strong> <a href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction to Geospatial Raster and Vector Data with R</a>. To complete this exercise, you will first need to <a href="https://datacarpentry.org/geospatial-workshop/setup.html">follow the setup instructions</a>.</li>
+<li><a
+href="https://datacarpentry.org/r-intro-geospatial/01-rstudio-intro/index.html">Data
+Carpentry: Introduction to R and RStudio</a></li>
+<li><a href="https://datacarpentry.org/organization-geospatial/">Data
+Carpentry: Introduction to Geospatial Concepts</a></li>
+<li><strong><em>Optional:</em></strong> <a
+href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction
+to Geospatial Raster and Vector Data with R</a>. To complete this
+exercise, you will first need to <a
+href="https://datacarpentry.org/geospatial-workshop/setup.html">follow
+the setup instructions</a>.</li>
 </ol>
-<p><em>Note: If you are very new to R and want a more detailed introduction, I recommend:</em> <a href="https://datacarpentry.org/R-ecology-lesson/index.html">Data Carpentry: Data Analysis and Visualization in R for Ecologists</a>. <em>Note that going through this entire exercise will take about one full day.</em></p>
+<p><em>Note: If you are very new to R and want a more detailed
+introduction, I recommend:</em> <a
+href="https://datacarpentry.org/R-ecology-lesson/index.html">Data
+Carpentry: Data Analysis and Visualization in R for Ecologists</a>.
+<em>Note that going through this entire exercise will take about one
+full day.</em></p>
 <p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="day-1-introduction-data-acquisition-and-cleaning" class="section level3">
-<h3><strong>Day 1</strong>: Introduction: data acquisition and cleaning</h3>
+<div id="day-1-introduction-data-acquisition-and-cleaning"
+class="section level3">
+<h3><strong>Day 1</strong>: Introduction: data acquisition and
+cleaning</h3>
 <p><strong>Morning session</strong> (<em>Theory</em>)</p>
 <ul>
-<li><a href="lectures/0.%20Overview%20and%20introduction.pdf">Overview and introductions</a></li>
-<li><a href="lectures/1.%20The%20what%20how%20why%20of%20SDMs%20ENMs.pdf">Lecture 1: The what, how, why of SDMs/ENMs</a></li>
+<li><a href="lectures/0.%20Overview%20and%20introduction.pdf">Overview
+and introductions</a></li>
+<li><a
+href="lectures/1.%20The%20what%20how%20why%20of%20SDMs%20ENMs.pdf">Lecture
+1: The what, how, why of SDMs/ENMs</a></li>
 <li>Discussion of pre-course readings
 <ul>
 <li><em>What did you find most interesting / confusing?</em></li>
-<li><em>What seems to be the most challenging aspect of building species distribution model?</em></li>
+<li><em>What seems to be the most challenging aspect of building species
+distribution model?</em></li>
 </ul></li>
 </ul>
 <p><strong>Afternoon session</strong> (<em>Practical</em>)</p>
@@ -417,29 +463,40 @@ div.tocify {
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="day-2-models-algorithms-and-evaluations" class="section level3">
+<div id="day-2-models-algorithms-and-evaluations"
+class="section level3">
 <h3><strong>Day 2</strong>: Models: algorithms and evaluations</h3>
 <p><strong>Morning session</strong> (<em>Theory</em>)</p>
 <ul>
-<li><a href="lectures/2.%20Kass_mod_eval_sapienzaU_2021.pdf">Lecture 2: Model Evaluation</a> (guest lecture by <a href="https://scholar.google.com/citations?user=LM_UNdkAAAAJ&amp;hl=en">Jamie Kass</a>). Video recording <a href="https://youtu.be/GzF57egpIgQ">here</a></li>
+<li><a href="lectures/2.%20Kass_mod_eval_sapienzaU_2021.pdf">Lecture 2:
+Model Evaluation</a> (guest lecture by <a
+href="https://scholar.google.com/citations?user=LM_UNdkAAAAJ&amp;hl=en">Jamie
+Kass</a>). Video recording <a
+href="https://youtu.be/GzF57egpIgQ">here</a></li>
 </ul>
 <p><strong>Afternoon session</strong> (<em>Practical</em>)</p>
 <ul>
-<li>Discussion of background (psuedo-absence) point selection. Video recording <a href="https://youtu.be/M4UlF2xKaBs">here</a></li>
+<li>Discussion of background (psuedo-absence) point selection. Video
+recording <a href="https://youtu.be/M4UlF2xKaBs">here</a></li>
 <li><a href="Exercise3.html">Exercise 3: Overview of algorithms</a></li>
 <li><a href="Exercise4.html">Exercise 4: Model evaluation</a></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
-<div id="day-3-applications-possibilities-and-precautions" class="section level3">
-<h3><strong>Day 3</strong>: Applications: possibilities and precautions</h3>
+<div id="day-3-applications-possibilities-and-precautions"
+class="section level3">
+<h3><strong>Day 3</strong>: Applications: possibilities and
+precautions</h3>
 <p><strong>Morning session</strong> (<em>Theory</em>)</p>
 <ul>
-<li><a href="lectures/3.%20Potentials%20and%20pitfalls.pdf">Lecture 3: Applications: Potentials and pitfalls</a>. Video recording <a href="https://youtu.be/rw6fR_Nj0Ws">here</a></li>
+<li><a href="lectures/3.%20Potentials%20and%20pitfalls.pdf">Lecture 3:
+Applications: Potentials and pitfalls</a>. Video recording <a
+href="https://youtu.be/rw6fR_Nj0Ws">here</a></li>
 </ul>
 <p><strong>Afternoon session</strong> (<em>Practical</em>)</p>
 <ul>
-<li>Live walk-through ENMeval vignette: Video recording <a href="https://youtu.be/HH3FenCqBMA">here</a></li>
+<li>Live walk-through ENMeval vignette: Video recording <a
+href="https://youtu.be/HH3FenCqBMA">here</a></li>
 <li>Continue exercises, apply knowledge to individual projects</li>
 </ul>
 </div>
@@ -482,6 +539,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')

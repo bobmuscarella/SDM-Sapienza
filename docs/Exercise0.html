@@ -13,8 +13,8 @@
 
 <title>0. Getting started in R</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -80,6 +81,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -232,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -248,7 +252,7 @@ $(document).ready(function () {
   <a href="syllabus.html">Course schedule</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     R exercises
      
     <span class="caret"></span>
@@ -290,12 +294,24 @@ $(document).ready(function () {
 
 <div id="introduction" class="section level3">
 <h3>Introduction</h3>
-<p>To prepare for the course, we will use some tutorials produced by the excellent Data Carpentry organization. Follow through the exercises below to refresh your general R skills and get you started with geospatial data and analyses. The 3rd lesson is optional; to complete it, you will need to <a href="https://datacarpentry.org/geospatial-workshop/setup.html">follow the setup page here</a>.</p>
-<p>(You are free to skip around in these materials based on your prior knowledge but I encourage you to follow through everything)</p>
+<p>To prepare for the course, we will use some tutorials produced by the
+excellent Data Carpentry organization. Follow through the exercises
+below to refresh your general R skills and get you started with
+geospatial data and analyses. The 3rd lesson is optional; to complete
+it, you will need to <a
+href="https://datacarpentry.org/geospatial-workshop/setup.html">follow
+the setup page here</a>.</p>
+<p>(You are free to skip around in these materials based on your prior
+knowledge but I encourage you to follow through everything)</p>
 <ol style="list-style-type: decimal">
-<li><a href="https://datacarpentry.org/r-intro-geospatial/01-rstudio-intro/index.html">Data Carpentry: Introduction to R and RStudio</a></li>
-<li><a href="https://datacarpentry.org/organization-geospatial/">Data Carpentry: Introduction to Geospatial Concepts</a></li>
-<li><strong><em>Optional:</em></strong> <a href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction to Geospatial Raster and Vector Data with R</a></li>
+<li><a
+href="https://datacarpentry.org/r-intro-geospatial/01-rstudio-intro/index.html">Data
+Carpentry: Introduction to R and RStudio</a></li>
+<li><a href="https://datacarpentry.org/organization-geospatial/">Data
+Carpentry: Introduction to Geospatial Concepts</a></li>
+<li><strong><em>Optional:</em></strong> <a
+href="https://datacarpentry.org/r-raster-vector-geospatial/">Introduction
+to Geospatial Raster and Vector Data with R</a></li>
 </ol>
 <!-- # Getting started -->
 <!-- ### Install and load R -->

@@ -13,8 +13,8 @@
 
 <title>Bob Muscarella</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -60,6 +60,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -80,6 +81,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -232,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -248,7 +252,7 @@ $(document).ready(function () {
   <a href="syllabus.html">Course schedule</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     R exercises
      
     <span class="caret"></span>
@@ -303,14 +307,31 @@ $(document).ready(function () {
 <h1><strong>Intro to SDMs</strong></h1>
 <p>This short course includes:</p>
 <ul>
-<li>Lectures, readings, and discussions covering basic theory and concepts behind species distribution models (SDMs) and ecological niche models (ENMs)</li>
-<li>Practical experience in acquiring and cleaning species occurrence data, as well as designing, building and evaluating SDM and ENM using a variety of R packages</li>
-<li>Students will gain perspective on the potential applications, strengths, and limitations of SDMs/ENMs</li>
+<li>Lectures, readings, and discussions covering basic theory and
+concepts behind species distribution models (SDMs) and ecological niche
+models (ENMs)</li>
+<li>Practical experience in acquiring and cleaning species occurrence
+data, as well as designing, building and evaluating SDM and ENM using a
+variety of R packages</li>
+<li>Students will gain perspective on the potential applications,
+strengths, and limitations of SDMs/ENMs</li>
 </ul>
-<p>Course participants should have a general understanding of R programming. Participants are welcome (but not required) to join the course with their own data / project ideas. A pre-course reading list and R exercise will be provided after course registration is completed. Questions about the course should be sent to Bob Muscarella <a href="mailto:robert.muscarella@ebc.uu.se" class="email">robert.muscarella@ebc.uu.se</a>.</p>
-<p><strong>Get started by clicking on the <a href="https://bobmuscarella.github.io/SDM-course/syllabus.html">Course schedule</a></strong></p>
-<p>Return to <a href="https://bobmuscarella.weebly.com/index.html">the Muscarella Group homepage</a> <!--- (https://bobmuscarella.github.io/) --></p>
-<p>Visit the <a href="https://github.com/bobmuscarella/SDM-course">Github repository for this course</a></p>
+<p>Course participants should have a general understanding of R
+programming. Participants are welcome (but not required) to join the
+course with their own data / project ideas. A pre-course reading list
+and R exercise will be provided after course registration is completed.
+Questions about the course should be sent to Bob Muscarella <a
+href="mailto:robert.muscarella@ebc.uu.se"
+class="email">robert.muscarella@ebc.uu.se</a>.</p>
+<p><strong>Get started by clicking on the <a
+href="https://bobmuscarella.github.io/SDM-course/syllabus.html">Course
+schedule</a></strong></p>
+<p>Return to <a href="https://bobmuscarella.weebly.com/index.html">the
+Muscarella Group homepage</a>
+<!--- (https://bobmuscarella.github.io/) --></p>
+<p>Visit the <a
+href="https://github.com/bobmuscarella/SDM-course">Github repository for
+this course</a></p>
 </div>
 <div class="col-sm-6">
 <p><a> <img src="images/sdmlogo.png" /> </a></p>

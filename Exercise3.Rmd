@@ -63,5 +63,5 @@ $~$
 
 For this part of the exercise, we will work through [this tutorial by R Spatial](https://rspatial.org/raster/sdm/6_sdm_methods.html#). 
 
-For additional examples, I also highly recommend [Damaris Zurell's "SDM algorithms" exercise](https://damariszurell.github.io/HU-GCIB/5_SDM_algorithms.html).
+For additional examples, I also highly recommend [Damaris Zurell's "SDM algorithms" exercise](https://damariszurell.github.io/EEC-MGC/b6_SDM_algorithms.html#1_Introduction).
 

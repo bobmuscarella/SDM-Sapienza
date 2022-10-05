@@ -13,8 +13,8 @@
 
 <title>4. Evaluation</title>
 
-<script src="site_libs/header-attrs-2.8/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -63,6 +63,7 @@ if (window.hljs) {
 
 
 
+
 <style type = "text/css">
 .main-container {
   max-width: 940px;
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -308,7 +312,7 @@ div.tocify {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -324,7 +328,7 @@ div.tocify {
   <a href="syllabus.html">Course schedule</a>
 </li>
 <li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
     R exercises
      
     <span class="caret"></span>
@@ -368,23 +372,40 @@ div.tocify {
 <h3>Introduction</h3>
 <p>In this exercise, you will:</p>
 <ul>
-<li>Use <a href="https://github.com/jamiemkass/ENMeval"><code>ENMeval</code></a> to build and evaluate Maxent SDMs</li>
-<li>Get familiar with the <a href="https://odmap.wsl.ch/">ODMAP (Overview, Data, Model, Assessment and Prediction) protocol)</a></li>
+<li>Use <a
+href="https://jamiemkass.github.io/ENMeval/index.html"><code>ENMeval</code></a>
+to build and evaluate Maxent SDMs</li>
+<li>Get familiar with the <a href="https://odmap.wsl.ch/">ODMAP
+(Overview, Data, Model, Assessment and Prediction) protocol)</a></li>
 </ul>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="part-1-model-evaluation-with-enmeval" class="section level3">
 <h3>Part 1: Model evaluation with <code>ENMeval</code></h3>
-<p>In this exercise, we will work through the new <a href="https://jamiemkass.github.io/ENMeval/articles/ENMeval-2.0.0-vignette.html"><code>ENMeval</code> vignette</a>. Before beginning, you should download the development version of the package:</p>
-<pre class="r"><code>devtools::install_packages(&quot;jamiemkass/ENMeval&quot;)</code></pre>
-<p>You can read more about the <a href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13628">latest version of the ENMeval package in this paper</a>.</p>
+<p>In this exercise, we will work through the new <a
+href="https://jamiemkass.github.io/ENMeval/articles/ENMeval-2.0-vignette.html"><code>ENMeval</code>
+vignette</a>. Before beginning, you should download the development
+version of the package:</p>
+<pre class="r"><code>devtools::install_github(&quot;jamiemkass/ENMeval&quot;)</code></pre>
+<p>You can read more about the <a
+href="https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.13628">latest
+version of the ENMeval package in this paper</a>.</p>
 <p><span class="math inline">\(~\)</span></p>
 </div>
 <div id="part-2-odmap-protocol" class="section level3">
 <h3>Part 2: ODMAP protocol</h3>
-<p>Recently, the ODMAP protocol (Overview, Data, Model, Assessment and Prediction) was introduced by <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.05700">Zurell <em>et al.</em> (2020)</a> as a way to ensure quality and repeatability of SDMs.</p>
-<p>There is a web app to complete this protocol here: <a href="https://odmap.wsl.ch/">https://odmap.wsl.ch/</a></p>
-<p>For this exercise, complete <a href="https://odmap.wsl.ch/">the ODMAP protocol on the web app</a> using information from one of the previous R exercises (or just invent an example). You do not necessarily need to complete all the fields - the aim is to become familiar with the type of information included in the form, and to view a completed version.</p>
+<p>Recently, the ODMAP protocol (Overview, Data, Model, Assessment and
+Prediction) was introduced by <a
+href="https://onlinelibrary.wiley.com/doi/full/10.1111/ecog.05700">Zurell
+<em>et al.</em> (2020)</a> as a way to ensure quality and repeatability
+of SDMs.</p>
+<p>There is a web app to complete this protocol here: <a
+href="https://odmap.wsl.ch/">https://odmap.wsl.ch/</a></p>
+<p>For this exercise, complete <a href="https://odmap.wsl.ch/">the ODMAP
+protocol on the web app</a> using information from one of the previous R
+exercises (or just invent an example). You do not necessarily need to
+complete all the fields - the aim is to become familiar with the type of
+information included in the form, and to view a completed version.</p>
 <p><img src="images/workflow.jpg" style="width:50.0%" /></p>
 </div>
 
@@ -426,6 +447,9 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
 
     // move toc-ignore selectors from section div to header
     $('div.section.toc-ignore')
